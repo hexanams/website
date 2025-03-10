@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function BrainstormIdeateBuildSection() {
   return (
@@ -6,7 +7,9 @@ function BrainstormIdeateBuildSection() {
       {/* Container for the image and overlays */}
       <div className="relative w-full h-[500px]">
         {/* Main Image */}
-        <img
+        <Image
+          width={900}
+          height={900}
           src="/images/brainstorm-ideate-build.png"
           alt="Brainstorm, Ideate, Build"
           className="w-full h-full object-cover"

@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import aboutIcon from "./public/icons/aboutIcon.svg";
-import servicesIcon from "./public/icons/servicesIcon.svg";
-import portfolioIcon from "./public/icons/portfolioIcon.svg";
+import Image from "next/image";
 
 export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
@@ -65,7 +63,9 @@ export default function Navbar() {
             className="flex items-center rounded-full bg-gray-100 px-4 py-2 hover:bg-gray-200"
           >
             <span className="mr-2">Services</span>
-            <img
+            <Image
+              width={40}
+              height={40}
               src="/icons/serviceIcon.svg"
               alt="Services"
               className="text-orange-500 text-sm"
@@ -76,7 +76,9 @@ export default function Navbar() {
             className="flex items-center rounded-full bg-gray-100 px-4 py-2 hover:bg-gray-200"
           >
             <span className="mr-2">About</span>
-            <img
+            <Image
+              width={40}
+              height={40}
               src="/icons/aboutIcon.svg" alt="About"
               className="text-orange-500 text-sm"
             />
@@ -86,7 +88,9 @@ export default function Navbar() {
             className="flex items-center rounded-full bg-gray-100 px-4 py-2 hover:bg-gray-200"
           >
             <span className="mr-2">Portfolio</span>
-            <img
+            <Image
+              width={40}
+              height={40}
               src="/icons/portfolioIcon.svg"
               alt="Portfolio"
               className="text-orange-500 text-sm"

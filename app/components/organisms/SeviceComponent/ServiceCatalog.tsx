@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import infoimage from "../../../../public/images/infoimage.png";
-
+import Image from "next/image";
 // Example service data
 const servicesData = [
     {
@@ -178,7 +178,9 @@ export default function ServiceCatalog() {
                     {/* Image */}
                     <div className="flex justify-center md:justify-end">
                       {/* Use .src if 'image' is a StaticImageData object */}
-                      <img
+                      <Image
+                        height={400}
+                        width={400}
                         src={image.src}
                         alt={title}
                         className="max-w-full h-auto object-cover"

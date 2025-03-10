@@ -14,13 +14,17 @@ const Footer: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Capture the current ref in a local variable
+    const node = footerRef.current;
+    if (!node) return;
+
     // Create an intersection observer to detect when the footer is in view
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target); // Stop observing once it's visible
+          observer.unobserve(entry.target); // Stop observing once visible
         }
       },
       {
@@ -28,14 +32,11 @@ const Footer: FC = () => {
       }
     );
 
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
+    observer.observe(node);
 
+    // Cleanup function
     return () => {
-      if (footerRef.current) {
-        observer.unobserve(footerRef.current);
-      }
+      observer.unobserve(node);
     };
   }, []);
 

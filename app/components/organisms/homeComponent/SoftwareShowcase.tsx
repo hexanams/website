@@ -21,7 +21,7 @@ export default function SoftwareShowcase() {
           <span className="text-sm text-[#1B1C1E]">
             50+ reviews on{" "}
             <a
-              href="https://clutch.co"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-gray-100"
