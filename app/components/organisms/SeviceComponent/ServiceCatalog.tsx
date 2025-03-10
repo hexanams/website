@@ -115,85 +115,94 @@ const servicesData = [
       image: infoimage,
     },
   ];
+  export default function ServiceCatalog() {
+    // Track which indexes are expanded in the accordion
+    const [openIndexes, setOpenIndexes] = useState<number[]>([]);
   
-
-export default function ServiceCatalog() {
-  // Track which indexes are expanded in the accordion
-  const [openIndexes, setOpenIndexes] = useState<number[]>([]);
-
-  // Toggle accordion open/close for a specific service index
-  const toggleAccordion = (index: number) => {
-    if (openIndexes.includes(index)) {
-      // If already open, close it
-      setOpenIndexes(openIndexes.filter((i) => i !== index));
-    } else {
-      // Otherwise, open it
-      setOpenIndexes([...openIndexes, index]);
-    }
-  };return (
-    <section className="bg-[#004953] text-[#FFFFFF] py-18">
-      <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-3xl font-[400] w-[566px] leading-tight sm:text-6xl">
-          Turning Your Ideas Into Cutting-edge Technologies
-        </h2>
-
-        <div className="space-y-8">
-          {servicesData.map((service, index) => {
-            const { number, title, description, requestLink, requestLinkText, image } = service;
-            const isOpen = openIndexes.includes(index);
-
-            return (
-              <div key={index}>
-                <div className="flex items-center justify-between">
-                  <span className="mr-4 text-sm opacity-80">{number}</span>
-                  <h3 className="flex-1 text-lg font-medium sm:text-xl">
-                    {title}
-                  </h3>
-                  <button
-                    type="button"
-                    onClick={() => toggleAccordion(index)}
-                    className="ml-4 text-sm underline hover:text-gray-200"
-                  >
-                    More Information
-                  </button>
-                </div>
-
-                {isOpen && (
-                  <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {/* Description + Request Link */}
-                    <div>
-                      <p className="text-sm leading-relaxed sm:text-base">
-                        {description}
-                      </p>
-                      {requestLink && requestLinkText && (
-                        <Link
-                          href={requestLink}
-                          className="mt-2 inline-block text-sm underline hover:text-gray-200 sm:text-base"
-                        >
-                          {requestLinkText}
-                        </Link>
-                      )}
-                    </div>
-
-                    {/* Image */}
-                    <div className="flex justify-center md:justify-end">
-                      {/* Use .src if 'image' is a StaticImageData object */}
-                      <Image
-                        height={400}
-                        width={400}
-                        src={image.src}
-                        alt={title}
-                        className="max-w-full h-auto object-cover"
-                      />
-                    </div>
+    // Toggle accordion open/close for a specific service index
+    const toggleAccordion = (index: number) => {
+      if (openIndexes.includes(index)) {
+        // If already open, close it
+        setOpenIndexes(openIndexes.filter((i) => i !== index));
+      } else {
+        // Otherwise, open it
+        setOpenIndexes([...openIndexes, index]);
+      }
+    };
+  
+    return (
+      <section className="bg-[#004953] text-[#FFFFFF] py-16">
+        <div className="mx-auto max-w-4xl px-6">
+          {/* Heading */}
+          <h2 className="mb-10 text-3xl font-light leading-tight sm:text-6xl sm:leading-snug max-w-xl">
+            Turning Your Ideas Into Cutting-edge Technologies
+          </h2>
+  
+          {/* Services List */}
+          <div className="space-y-8">
+            {servicesData.map((service, index) => {
+              const {
+                number,
+                title,
+                description,
+                requestLink,
+                requestLinkText,
+                image,
+              } = service;
+              const isOpen = openIndexes.includes(index);
+  
+              return (
+                <div key={index}>
+                  {/* Accordion Header */}
+                  <div className="flex items-center justify-between">
+                    <span className="mr-4 text-sm opacity-80">{number}</span>
+                    <h3 className="flex-1 text-lg font-medium sm:text-xl">
+                      {title}
+                    </h3>
+                    <button
+                      type="button"
+                      onClick={() => toggleAccordion(index)}
+                      className="ml-4 text-sm underline hover:text-gray-200"
+                    >
+                      More Information
+                    </button>
                   </div>
-                )}
-              </div>
-            );
-          })}
+  
+                  {/* Accordion Content */}
+                  {isOpen && (
+                    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+                      {/* Description + Request Link */}
+                      <div>
+                        <p className="text-sm leading-relaxed sm:text-base">
+                          {description}
+                        </p>
+                        {requestLink && requestLinkText && (
+                          <Link
+                            href={requestLink}
+                            className="mt-2 inline-block text-sm underline hover:text-gray-200 sm:text-base"
+                          >
+                            {requestLinkText}
+                          </Link>
+                        )}
+                      </div>
+  
+                      {/* Image */}
+                      <div className="flex justify-center md:justify-end">
+                        <Image
+                          height={400}
+                          width={400}
+                          src={image.src}
+                          alt={title}
+                          className="max-w-full h-auto object-cover"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-
-      </div>
-    </section>
-  );
-}
+      </section>
+    );
+  }

@@ -10,7 +10,6 @@ export default function SoftwareShowcase() {
         {/* Rating + Reviews */}
         <div className="mb-6 flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-3 sm:space-y-0">
           <div className="flex items-center">
-            {/* 4 full stars + 1 half star to represent 4.5 */}
             <FaStar className="text-yellow-400" />
             <FaStar className="text-yellow-400" />
             <FaStar className="text-yellow-400" />
@@ -33,8 +32,9 @@ export default function SoftwareShowcase() {
 
         {/* Heading */}
         <h2 className="mb-4 text-4xl font-bold tracking-tight text-[#000000] sm:text-5xl">
-            Creating <span className="text-[#004953]">Software</span> 
-            <br />& Digital Excellence
+          Creating <span className="text-[#004953]">Software</span>
+          <br />
+          & Digital Excellence
         </h2>
 
         {/* Paragraph */}
@@ -49,10 +49,12 @@ export default function SoftwareShowcase() {
           <a
             href="#portfolio"
             className="
-              relative inline-flex items-center 
-              rounded-full bg-[#004953] px-6 py-3 
-              text-base font-medium text-white
-              transition-colors duration-200 
+              relative inline-flex items-center justify-center
+              w-[211px] h-[48px]
+              rounded-full border border-white
+              bg-[#004953] text-white
+              text-base font-medium
+              transition-colors duration-200
               hover:bg-[#006B6B]
               focus:outline-none focus:ring-2 focus:ring-teal-300
             "
@@ -61,12 +63,10 @@ export default function SoftwareShowcase() {
             {/* Circle popping out on the right */}
             <span
               className="
-                absolute -right-5 top-1/2 
-                flex h-10 w-10 
-                -translate-y-1/2 
-                items-center justify-center 
-                rounded-full bg-[#004953]
-                border border-white
+                absolute -right-5 top-1/2
+                flex h-10 w-10 -translate-y-1/2
+                items-center justify-center
+                rounded-full bg-[#004953] border border-white
               "
             >
               <FaArrowDown className="h-4 w-4" />

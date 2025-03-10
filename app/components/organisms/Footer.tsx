@@ -161,8 +161,8 @@ const Footer: FC = () => {
 
         {/* Bottom Section */}
         <div className="mt-4 flex flex-col items-center justify-between gap-4 md:mt-6 md:flex-row">
-          <p className="text-sm text-gray-500">&copy; 2025 HexAfrica</p>
-          <div className="flex items-center space-x-4 text-sm text-gray-500">
+          <p className="text-sm text-[#1B1C1E]">&copy;  2025  HexAfrica</p>
+          <div className="flex items-center space-x-4 text-sm text-[#1B1C1E]">
             <Link href="/privacy" className="hover:text-black transition-colors">
               Privacy Policy
             </Link>

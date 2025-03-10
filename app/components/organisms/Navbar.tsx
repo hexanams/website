@@ -46,7 +46,7 @@ export default function Navbar() {
       // If scrolled is true, fix it at the top (centered).
       // Otherwise, let it remain in normal flow (relative).
       className={`
-        z-50 transition-all duration-300
+        z-50 transition-all duration-300 mb-4.5 mt-3
         ${scrolled ? "fixed top-0 left-1/2 -translate-x-1/2" : "relative"}
       `}
     >

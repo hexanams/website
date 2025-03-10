@@ -53,7 +53,8 @@ const servicesData = [
   },
 ];
 
-export default function ServicesSection() {
+
+export default function ServiceSection() {
   // Track which indexes are expanded in the accordion
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
@@ -66,20 +67,32 @@ export default function ServicesSection() {
       // Otherwise, open it
       setOpenIndexes([...openIndexes, index]);
     }
-  };return (
-    <section className="bg-[#004953] text-[#FFFFFF] py-18">
+  };
+
+  return (
+    <section className="bg-[#004953] text-[#FFFFFF] py-16">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="mb-10 text-3xl font-[400] w-[566px] leading-tight sm:text-6xl">
+        {/* Heading */}
+        <h2 className="mb-10 text-3xl font-light leading-tight sm:text-6xl sm:leading-snug max-w-xl">
           Turning Your Ideas Into Cutting-edge Technologies
         </h2>
 
+        {/* Services List */}
         <div className="space-y-8">
           {servicesData.map((service, index) => {
-            const { number, title, description, requestLink, requestLinkText, image } = service;
+            const {
+              number,
+              title,
+              description,
+              requestLink,
+              requestLinkText,
+              image,
+            } = service;
             const isOpen = openIndexes.includes(index);
 
             return (
               <div key={index}>
+                {/* Accordion Header */}
                 <div className="flex items-center justify-between">
                   <span className="mr-4 text-sm opacity-80">{number}</span>
                   <h3 className="flex-1 text-lg font-medium sm:text-xl">
@@ -94,6 +107,7 @@ export default function ServicesSection() {
                   </button>
                 </div>
 
+                {/* Accordion Content */}
                 {isOpen && (
                   <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                     {/* Description + Request Link */}
@@ -113,7 +127,6 @@ export default function ServicesSection() {
 
                     {/* Image */}
                     <div className="flex justify-center md:justify-end">
-                      {/* Use .src if 'image' is a StaticImageData object */}
                       <Image
                         height={400}
                         width={400}
@@ -128,26 +141,6 @@ export default function ServicesSection() {
             );
           })}
         </div>
-
-        <div className="mt-10 text-center">
-        <Link
-            href="/services"
-            className="
-            inline-flex items-center justify-center
-            w-[211px] h-[48px]           /* Match Figma's width/height */
-            rounded-full
-            border-white          /* White border around the pill */
-            bg-[#004953] text-white      /* Teal background & white text */
-            text-sm font-semibold
-            transition-colors duration-200 
-            hover:bg-[#006B6B]
-            focus:outline-none focus:ring-2 focus:ring-teal-300
-            "
-        >
-            Explore Services
-        </Link>
-        </div>
-
       </div>
     </section>
   );

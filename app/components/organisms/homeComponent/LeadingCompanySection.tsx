@@ -32,7 +32,7 @@ export default function LeadingCompanySection() {
             {/* Button aligned to the right */}
             <div className="flex justify-end">
               <a
-                href="/about-us"
+                href="/about"
                 className="
                   inline-flex items-center rounded-full 
                   bg-black px-6 py-3 text-sm font-medium text-white 

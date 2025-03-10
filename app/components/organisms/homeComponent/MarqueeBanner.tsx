@@ -30,59 +30,45 @@ const BOTTOM_LINE_TEXT = [
   "CUSTOM SOFTWARE",
 ];
 
-function MarqueeBanner() {
+export default function MarqueeBanner() {
   return (
     <section className="w-full">
-      {/* 
-        1) TOP MARQUEE
-           - Teal angled background
-           - White text
-           - Scrolls left
-      */}
-      <div 
-        className="relative h-16 overflow-hidden flex items-center"
+      {/* TOP MARQUEE */}
+      <div
+        className="relative overflow-hidden flex items-center h-12 sm:h-16 md:h-20"
         style={{
           backgroundColor: "#004953",
           transform: "skewY(9deg)",
           transformOrigin: "center",
         }}
       >
-        <Marquee
-          gradient={false}
-          speed={50}
-          direction="left"
-          className="w-full text-center"
-        >
+        <Marquee gradient={false} speed={50} direction="left" className="w-full text-center">
           {TOP_LINE_TEXT.map((item, idx) => (
-            <span key={idx} className="mx-6 uppercase text-white">
+            <span
+              key={idx}
+              className="mx-3 sm:mx-4 md:mx-6 uppercase text-white text-xs sm:text-sm md:text-base"
+            >
               {item} *
             </span>
           ))}
         </Marquee>
       </div>
 
-      {/* 
-        2) BOTTOM MARQUEE
-           - Black angled background
-           - White text
-           - Scrolls right
-      */}
+      {/* BOTTOM MARQUEE */}
       <div
-        className="relative h-16 overflow-hidden flex items-center"
+        className="relative overflow-hidden flex items-center h-12 sm:h-16 md:h-20"
         style={{
           backgroundColor: "#000000",
           transform: "skewY(-3deg)",
           transformOrigin: "center",
         }}
       >
-        <Marquee
-          gradient={false}
-          speed={50}
-          direction="right"
-          className="w-full text-center"
-        >
+        <Marquee gradient={false} speed={50} direction="right" className="w-full text-center">
           {BOTTOM_LINE_TEXT.map((item, idx) => (
-            <span key={idx} className="mx-6 uppercase text-white">
+            <span
+              key={idx}
+              className="mx-3 sm:mx-4 md:mx-6 uppercase text-white text-xs sm:text-sm md:text-base"
+            >
               {item} *
             </span>
           ))}
@@ -91,5 +77,3 @@ function MarqueeBanner() {
     </section>
   );
 }
-
-export default MarqueeBanner;
