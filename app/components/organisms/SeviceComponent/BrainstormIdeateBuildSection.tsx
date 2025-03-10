@@ -41,7 +41,7 @@ function BrainstormIdeateBuildSection() {
 
         {/* Circle + Text #3: Ideate */}
         <div className="absolute flex items-center"
-             style={{ top: '25%', right: '10%' }}>
+             style={{ top: '39%', right: '17%' }}>
           <div
             className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#FF69B4] mr-2"
             /* #FF69B4 is a placeholder pink; replace with your Figma color */
