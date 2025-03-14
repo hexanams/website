@@ -7,7 +7,7 @@ import Navbar from "@/app/components/organisms/Navbar";
 import HeroBanner from "@/app/components/common/HeroBanner";
 import BrainstormIdeateBuildSection from "@/app/components/common/BrainstormIdeateBuildSection";
 import SubscribeSection from "@/app/components/common/SubscribeSection";
-import projectsData from "@/app/data/projectsData";
+import projectsData, { ProjectData } from "@/app/data/projectsData"; // Import ProjectData
 
 interface ProjectDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -15,7 +15,7 @@ interface ProjectDetailPageProps {
 
 export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const [slug, setSlug] = useState<string | null>(null);
-  const [project, setProject] = useState<any>(null);
+  const [project, setProject] = useState<ProjectData | null>(null); // Use ProjectData type
 
   useEffect(() => {
     async function fetchParams() {
@@ -23,7 +23,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       setSlug(resolvedParams.slug);
 
       // Find project after resolving slug
-      const foundProject = projectsData.find((p) => p.id === resolvedParams.slug);
+      const foundProject = projectsData.find((p) => p.id === resolvedParams.slug) || null;
       setProject(foundProject);
     }
 
