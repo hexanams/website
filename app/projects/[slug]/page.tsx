@@ -7,10 +7,12 @@ import projectsData from "@/app/data/projectsData";
 import BrainstormIdeateBuildSection from "@/app/components/common/BrainstormIdeateBuildSection";
 import SubscribeSection from "@/app/components/common/SubscribeSection";
 
+// Update the interface to include searchParams (which can be empty)
 interface ProjectDetailPageProps {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] };
 }
 
 // (Optional) Generate static pages for each project
@@ -46,8 +48,8 @@ export default function ProjectDetailPage({
           {/* Top image (desk/laptop) */}
           <div className="relative w-full h-auto mb-10">
             <Image
-              src={project!.topImage}
-              alt={project!.topImageAlt}
+              src={project.topImage}
+              alt={project.topImageAlt}
               width={1200}
               height={700}
               className="object-cover w-full rounded-md"
@@ -57,39 +59,36 @@ export default function ProjectDetailPage({
 
           {/* Title */}
           <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            {project!.projectTitle}
+            {project.projectTitle}
           </h1>
 
           {/* Intro Paragraph One */}
           <p className="mb-6 text-sm leading-relaxed text-gray-200 sm:text-base">
-            {project!.introParagraphOne}
+            {project.introParagraphOne}
           </p>
 
           {/* Intro Paragraph Two */}
           <p className="mb-10 text-sm leading-relaxed text-gray-200 sm:text-base">
-            {project!.introParagraphTwo}
+            {project.introParagraphTwo}
           </p>
 
-          
           {/* 2-Column layout with optional second image */}
           <div className="flex flex-col gap-8 md:flex-row md:items-start mb-10">
             <div className="flex-1">
-              {/* If Figma calls for extra bullet points or text, add them here */}
               {/* Section Title */}
               <h2 className="mb-4 text-xl font-semibold sm:text-2xl">
-                {project!.sectionTitle}
+                {project.sectionTitle}
               </h2>
 
               {/* Section Paragraph */}
               <p className="mb-8 text-sm leading-relaxed text-gray-200 sm:text-base">
-                {project!.sectionParagraph}
+                {project.sectionParagraph}
               </p>
-
             </div>
             <div className="flex-1 relative">
               <Image
-                src={project!.sectionImage}
-                alt={project!.sectionImageAlt}
+                src={project.sectionImage}
+                alt={project.sectionImageAlt}
                 width={600}
                 height={400}
                 className="object-cover w-full rounded-md"
@@ -99,12 +98,12 @@ export default function ProjectDetailPage({
 
           {/* Bottom Paragraph One */}
           <p className="mb-6 text-sm leading-relaxed text-gray-200 sm:text-base">
-            {project!.bottomParagraphOne}
+            {project.bottomParagraphOne}
           </p>
 
           {/* Bottom Paragraph Two */}
           <p className="mb-8 text-sm leading-relaxed text-gray-200 sm:text-base">
-            {project!.bottomParagraphTwo}
+            {project.bottomParagraphTwo}
           </p>
 
           {/* CTA Button */}
@@ -114,7 +113,7 @@ export default function ProjectDetailPage({
                hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 
               focus:ring-white"
           >
-            {project!.ctaLabel}
+            {project.ctaLabel}
           </a>
         </div>
       </section>
