@@ -17,7 +17,7 @@ export default function HeroBanner({
     <section className="w-full bg-white py-12 px-6">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row">
         {/* Left Column */}
-        <div className="relative w-full md:w-1/2 overflow-visible">
+        <div className="relative w-full md:w-1/2">
           {/* Highlight Circle */}
           <div
             className="hidden md:block absolute  top-[-8] left-40 h-16 w-16 rounded-full z-0"

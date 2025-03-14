@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/organisms/Navbar'
 import HeroBanner from '../components/common/HeroBanner'
 import ServiceCatalog from '../components/organisms/SeviceComponent/ServiceCatalog'
-import BrainstormIdeateBuildSection from '../components/organisms/SeviceComponent/BrainstormIdeateBuildSection'
+import BrainstormIdeateBuildSection from '../components/common/BrainstormIdeateBuildSection'
 import SubscribeSection from '../components/common/SubscribeSection'
 
 function page() {

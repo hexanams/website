@@ -6,9 +6,9 @@ import Navbar from "../Navbar";
 import ServicesSection from "./ServicesSection";
 import LeadingCompanySection from "./LeadingCompanySection";
 import LatestProjects from "./LatestProjects";
-import HearFromClients from "./HearFromClients";
-import TechnologyExpertise from "./TechnologyExpertise";
 import SubscribeSection from "../../common/SubscribeSection";
+import HearFromClients from "../../common/HearFromClients";
+import TechnologyExpertise from "../../common/TechnologyExpertise";
 
 function HomeHero() {
   return (

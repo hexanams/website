@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import BrainStormIdeateBuild from  "@/public/images/brainstorm-ideate-build.png"
 function BrainstormIdeateBuildSection() {
   return (
     <section className="relative w-full">
@@ -10,7 +10,7 @@ function BrainstormIdeateBuildSection() {
         <Image
           width={900}
           height={900}
-          src="/images/brainstorm-ideate-build.png"
+          src={BrainStormIdeateBuild}
           alt="Brainstorm, Ideate, Build"
           className="w-full h-full object-cover"
         />
