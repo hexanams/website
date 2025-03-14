@@ -9,7 +9,7 @@ import SubscribeSection from "@/app/components/common/SubscribeSection";
 
 interface ProjectDetailPageProps {
   params: {
-    slug: any;
+    slug: string;
   };
   searchParams?: { [key: string]: string | string[] };
 }
@@ -18,12 +18,12 @@ export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.id }));
 }
 
-export default async function ProjectDetailPage(
-  props: ProjectDetailPageProps
-): Promise<React.ReactElement> {
-  // Await the params to satisfy Next.js dynamic requirements
-  const resolvedParams = await Promise.resolve(props.params);
-  const { slug } = resolvedParams;
+export default async function ProjectDetailPage({
+  params,
+  searchParams,
+}: ProjectDetailPageProps): Promise<React.ReactElement> {
+  // Directly destructure params without awaiting
+  const { slug } = params;
   const project = projectsData.find((p) => p.id === slug);
 
   if (!project) {
