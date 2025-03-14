@@ -7,7 +7,6 @@ import projectsData from "@/app/data/projectsData";
 import BrainstormIdeateBuildSection from "@/app/components/common/BrainstormIdeateBuildSection";
 import SubscribeSection from "@/app/components/common/SubscribeSection";
 
-// Update the interface to include searchParams (which can be empty)
 interface ProjectDetailPageProps {
   params: {
     slug: string;
@@ -15,14 +14,13 @@ interface ProjectDetailPageProps {
   searchParams?: { [key: string]: string | string[] };
 }
 
-// (Optional) Generate static pages for each project
 export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.id }));
 }
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
-}: ProjectDetailPageProps): React.ReactElement {
+}: ProjectDetailPageProps): Promise<React.ReactElement> {
   const { slug } = params;
   const project = projectsData.find((p) => p.id === slug);
 
@@ -32,10 +30,10 @@ export default function ProjectDetailPage({
 
   return (
     <div>
-      {/* Navbar (if the Figma shows it on the detail page) */}
+      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Banner (if the Figma includes a top banner) */}
+      {/* Hero Banner */}
       <HeroBanner
         title="Project Detail"
         subtitle="Showcasing innovation, design, and technology—explore our work and see what we create!"
@@ -45,7 +43,7 @@ export default function ProjectDetailPage({
       {/* Main content section */}
       <section className="bg-[#262730] text-white py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-6">
-          {/* Top image (desk/laptop) */}
+          {/* Top image */}
           <div className="relative w-full h-auto mb-10">
             <Image
               src={project.topImage}
@@ -72,7 +70,7 @@ export default function ProjectDetailPage({
             {project.introParagraphTwo}
           </p>
 
-          {/* 2-Column layout with optional second image */}
+          {/* Section area */}
           <div className="flex flex-col gap-8 md:flex-row md:items-start mb-10">
             <div className="flex-1">
               {/* Section Title */}
@@ -96,12 +94,10 @@ export default function ProjectDetailPage({
             </div>
           </div>
 
-          {/* Bottom Paragraph One */}
+          {/* Bottom Paragraphs */}
           <p className="mb-6 text-sm leading-relaxed text-gray-200 sm:text-base">
             {project.bottomParagraphOne}
           </p>
-
-          {/* Bottom Paragraph Two */}
           <p className="mb-8 text-sm leading-relaxed text-gray-200 sm:text-base">
             {project.bottomParagraphTwo}
           </p>
@@ -109,14 +105,14 @@ export default function ProjectDetailPage({
           {/* CTA Button */}
           <a
             href="/contact-us"
-            className="inline-block px-6 py-3 leading-tight text-[#ffffff] underline font-semibold rounded-md 
-               hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 
-              focus:ring-white"
+            className="inline-block px-6 py-3 leading-tight text-[#ffffff] underline font-semibold rounded-md hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white"
           >
             {project.ctaLabel}
           </a>
         </div>
       </section>
+
+      {/* Additional sections */}
       <BrainstormIdeateBuildSection />
       <SubscribeSection />
     </div>
