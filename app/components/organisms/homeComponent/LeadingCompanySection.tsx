@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import leadingImage from "@/public/images/leading-company-video.png"
+import leadingImage from "@/public/images/leading-company-video.png";
 
 export default function LeadingCompanySection() {
   return (
@@ -12,13 +13,25 @@ export default function LeadingCompanySection() {
           {/* Left Column */}
           <div className="space-y-6">
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
+            >
               <span className="text-[#004953]">Leading Company</span> In Creating <br className="hidden sm:block" />
               Powerful Software &amp; Technology
-            </h2>
+            </motion.h2>
 
             {/* Paragraph */}
-            <p className="text-base sm:text-lg leading-relaxed text-[#1B1C1E]">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="text-base sm:text-lg leading-relaxed text-[#1B1C1E]"
+            >
               At HexAfrica, we’re passionate about building innovative digital solutions 
               that drive growth and efficiency. With expertise in software development, 
               mobile apps, and web services, we transform ideas into powerful, user-centric 
@@ -27,11 +40,19 @@ export default function LeadingCompanySection() {
               create meaningful change. Whether you’re a startup or an established business, 
               we partner with you to develop cutting-edge software that enhances user 
               engagement and drives impact. Let’s build the future together!
-            </p>
+            </motion.p>
 
             {/* Button aligned to the right */}
-            <div className="flex justify-end">
-              <a
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="flex justify-end"
+            >
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 href="/about"
                 className="
                   inline-flex items-center rounded-full 
@@ -42,21 +63,22 @@ export default function LeadingCompanySection() {
                 "
               >
                 Read More
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           </div>
 
           {/* Right Column (Image / Video) */}
           <div className="relative">
-            {/* Replace with your actual image path or use a plain <img> */}
+            {/* Image - No animation */}
             <Image
               src={leadingImage}
               alt="Team Meeting"
               width={800}
               height={500}
-              className="h-auto w-full object-cover"
+              className="h-auto w-full object-cover rounded-lg shadow-lg"
             />
-            {/* Play Button Overlay */}
+
+            {/* Play Button Overlay - No special hover glow effect */}
             <button
               type="button"
               className="
@@ -65,7 +87,7 @@ export default function LeadingCompanySection() {
                 hover:bg-black/50
               "
             >
-              {/* Simple SVG play icon; replace with your own if needed */}
+              {/* Play Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

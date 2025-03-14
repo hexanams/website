@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import leadingImage from "@/public/images/leading-company-video.png"
+import leadingImage from "@/public/images/leading-company-video.png";
 
 export default function LeadingCompanyShowcase() {
   return (
@@ -10,11 +11,24 @@ export default function LeadingCompanyShowcase() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-2">
         {/* Left Column: Heading & Paragraph */}
         <div>
-          <h2 className="mb-4 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="mb-4 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl"
+          >
             <span className="text-[#004953]">Leading Company</span> In Creating <br />
             Powerful Software &amp; Technology
-          </h2>
-          <p className="mb-6 text-base leading-relaxed text-gray-700 sm:text-lg">
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="mb-6 text-base leading-relaxed text-gray-700 sm:text-lg"
+          >
             At HexAfrica, we’re passionate about building innovative digital solutions
             that drive growth and efficiency. With expertise in software development,
             mobile apps, and web services, we transform ideas into powerful,
@@ -24,19 +38,20 @@ export default function LeadingCompanyShowcase() {
             startup or an established business, we partner with you to develop
             cutting-edge software that enhances user engagement and drives impact.
             Let’s build the future together!
-          </p>
+          </motion.p>
         </div>
 
-        {/* Right Column: Image or Video Placeholder */}
+        {/* Right Column: Image */}
         <div className="relative">
           <Image
-            src={leadingImage} // Replace with your actual path
+            src={leadingImage}
             alt="Team Meeting"
             width={800}
             height={500}
-            className="h-auto w-full object-cover"
+            className="h-auto w-full object-cover rounded-lg shadow-md"
             priority
           />
+
           {/* Optional Play Button Overlay */}
           <button
             type="button"
@@ -46,7 +61,7 @@ export default function LeadingCompanyShowcase() {
               hover:bg-black/50
             "
           >
-            {/* Simple play icon (replace if needed) */}
+            {/* Simple play icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"

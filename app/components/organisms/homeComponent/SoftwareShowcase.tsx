@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { FaStar, FaStarHalfAlt, FaArrowDown } from "react-icons/fa";
 
 export default function SoftwareShowcase() {
@@ -8,7 +9,13 @@ export default function SoftwareShowcase() {
     <section className="bg-white py-12">
       <div className="mx-auto max-w-3xl px-4 text-center">
         {/* Rating + Reviews */}
-        <div className="mb-6 flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-3 sm:space-y-0">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-6 flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-3 sm:space-y-0"
+        >
           <div className="flex items-center">
             <FaStar className="text-yellow-400" />
             <FaStar className="text-yellow-400" />
@@ -28,25 +35,44 @@ export default function SoftwareShowcase() {
               Clutch.co
             </a>
           </span>
-        </div>
+        </motion.div>
 
         {/* Heading */}
-        <h2 className="mb-4 text-4xl font-bold tracking-tight text-[#000000] sm:text-5xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-4 text-4xl font-bold tracking-tight text-[#000000] sm:text-5xl"
+        >
           Creating <span className="text-[#004953]">Software</span>
           <br />
           & Digital Excellence
-        </h2>
+        </motion.h2>
 
         {/* Paragraph */}
-        <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mx-auto mb-8 max-w-xl text-base leading-relaxed"
+        >
           Building innovative software solutions and driving digital excellence.
           We create seamless, scalable, and user-centric products that transform
           ideas into reality. Let&apos;s innovate together!
-        </p>
+        </motion.p>
 
         {/* CTA Button */}
-        <div>
-          <a
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             href="#portfolio"
             className="
               relative inline-flex items-center justify-center
@@ -61,7 +87,9 @@ export default function SoftwareShowcase() {
           >
             <span>Explore our Portfolio</span>
             {/* Circle popping out on the right */}
-            <span
+            <motion.span
+              animate={{ x: [0, 5, 0] }}
+              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
               className="
                 absolute -right-5 top-1/2
                 flex h-10 w-10 -translate-y-1/2
@@ -70,9 +98,9 @@ export default function SoftwareShowcase() {
               "
             >
               <FaArrowDown className="h-4 w-4" />
-            </span>
-          </a>
-        </div>
+            </motion.span>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 interface HeroBannerProps {
   title: string;
@@ -19,17 +20,36 @@ export default function HeroBanner({
         {/* Left Column */}
         <div className="relative w-full md:w-1/2">
           {/* Highlight Circle */}
-          <div
-            className="hidden md:block absolute  top-[-8] left-40 h-16 w-16 rounded-full z-0"
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="hidden md:block absolute top-[-8] left-40 h-16 w-16 rounded-full z-0"
             style={{ backgroundColor: highlightColor }}
           />
-          {/* Title & Subtitle */}
-          <h1 className="relative z-10 text-4xl font-bold text-black sm:text-5xl lg:text-6xl">
+
+          {/* Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="relative z-10 text-4xl font-bold text-black sm:text-5xl lg:text-6xl"
+          >
             {title}
-          </h1>
-          <p className="relative z-10 mt-4 text-base text-gray-700 sm:text-lg">
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="relative z-10 mt-4 text-base text-gray-700 sm:text-lg"
+          >
             {subtitle}
-          </p>
+          </motion.p>
         </div>
 
         {/* Right Column (blank) */}

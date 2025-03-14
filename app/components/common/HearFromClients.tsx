@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import clientInterview from "@/public/images/client-interview.png";
 
@@ -8,7 +9,7 @@ const clientsData = [
   {
     name: "Micheal Faraday",
     role: "CEO Mount Technologies",
-    image:clientInterview,
+    image: clientInterview,
   },
   {
     name: "Samantha Brooks",
@@ -20,24 +21,18 @@ const clientsData = [
     role: "Founder TechNova",
     image: clientInterview,
   },
-  // ... add as many clients as you like
 ];
 
 export default function HearFromClients() {
-  // Track which client is currently visible
   const [currentClientIndex, setCurrentClientIndex] = useState(0);
-
-  // Get the client object at the current index
   const currentClient = clientsData[currentClientIndex];
 
-  // Move to the previous client (wrap around if at start)
   const handlePrev = () => {
     setCurrentClientIndex((prevIndex) =>
       prevIndex === 0 ? clientsData.length - 1 : prevIndex - 1
     );
   };
 
-  // Move to the next client (wrap around if at end)
   const handleNext = () => {
     setCurrentClientIndex((prevIndex) =>
       prevIndex === clientsData.length - 1 ? 0 : prevIndex + 1
@@ -50,21 +45,35 @@ export default function HearFromClients() {
         {/* Left Column: Title, Subheading, Arrows, Client Info */}
         <div className="space-y-6">
           {/* Heading */}
-          <h2 className="text-3xl font-bold sm:text-4xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold sm:text-4xl"
+          >
             Hear From Our <span className="text-[#004953]">Clients</span>
-          </h2>
+          </motion.h2>
 
           {/* Subheading */}
-          <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-base leading-relaxed text-gray-600 sm:text-lg"
+          >
             Empowering businesses with cutting-edge software solutions &mdash;
             hear how our clients have transformed with our expertise.
-          </p>
+          </motion.p>
 
           {/* Arrows + Client Info */}
           <div className="space-y-4">
             {/* Navigation Arrows */}
             <div className="flex items-center space-x-4">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 type="button"
                 onClick={handlePrev}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-[#004953] text-[#004953] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:bg-[#004953] focus:text-[#FFFFFF]"
@@ -80,9 +89,11 @@ export default function HearFromClients() {
                 >
                   <path d="M15 18l-6-6 6-6" />
                 </svg>
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 type="button"
                 onClick={handleNext}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-[#004953] text-[#004953] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:bg-[#004953] focus:text-[#FFFFFF]"
@@ -98,26 +109,46 @@ export default function HearFromClients() {
                 >
                   <path d="M9 18l6-6-6-6" />
                 </svg>
-              </button>
+              </motion.button>
             </div>
 
             {/* Current Client Info */}
-            <div>
-              <h3 className="text-lg font-semibold">{currentClient.name}</h3>
-              <p className="text-sm text-gray-500">{currentClient.role}</p>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentClient.name}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h3 className="text-lg font-semibold">{currentClient.name}</h3>
+                <p className="text-sm text-gray-500">{currentClient.role}</p>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 
         {/* Right Column: Image/Video with Play Button */}
         <div className="relative">
-          <Image
-            src={currentClient.image}
-            alt={currentClient.name}
-            width={800}
-            height={500}
-            className="h-auto w-full object-cover"
-          />
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentClient.image.src}
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -30 }}
+              transition={{ duration: 0.5 }}
+              className="w-full"
+            >
+              <Image
+                src={currentClient.image}
+                alt={currentClient.name}
+                width={800}
+                height={500}
+                className="h-auto w-full object-cover rounded-lg shadow-md"
+              />
+            </motion.div>
+          </AnimatePresence>
+
           {/* Play Button Overlay */}
           <button
             type="button"

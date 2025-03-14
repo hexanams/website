@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/app/data/projectsData";
@@ -13,18 +14,46 @@ export default function LatestProjects(): React.ReactElement {
     <section className="bg-[#262730] text-[#FFFFFF] py-12">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Heading */}
-        <h2 className="mb-8 text-3xl font-bold sm:text-4xl">Latest Projects</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-8 text-3xl font-bold sm:text-4xl"
+        >
+          Latest Projects
+        </motion.h2>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          {latestProjects.map((project) => (
-            <div key={project.id} className="space-y-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 },
+            },
+          }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2"
+        >
+          {latestProjects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+              className="space-y-3"
+            >
               <Image
                 src={project.cardImage}
                 alt={project.cardAlt}
                 width={500}
                 height={339}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full object-cover rounded-lg shadow-md"
               />
 
               <h3 className="text-xl font-semibold sm:text-2xl">
@@ -39,13 +68,21 @@ export default function LatestProjects(): React.ReactElement {
               >
                 Explore Project
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA Button at the bottom */}
-        <div className="mt-10 text-center">
-          <a
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-10 text-center"
+        >
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             href="/portfolio"
             className="
               inline-flex items-center rounded-full 
@@ -56,8 +93,8 @@ export default function LatestProjects(): React.ReactElement {
             "
           >
             Explore Portfolio
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

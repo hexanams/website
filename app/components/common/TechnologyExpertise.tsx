@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const techData = [
@@ -35,22 +36,53 @@ export default function TechnologyExpertise() {
       {/* Content Container */}
       <div className="relative mx-auto max-w-7xl px-6">
         {/* Heading */}
-        <h2 className="text-3xl font-bold sm:text-4xl">Technology Experts</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold sm:text-4xl"
+        >
+          Technology Experts
+        </motion.h2>
 
         {/* Subheading */}
-        <p className="mt-2 mb-8 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-lg">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mt-2 mb-8 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-lg"
+        >
           With deep technology expertise and commitment to innovation, we deliver 
           cutting-edge software solutions that empower businesses to scale, optimize 
           operations, and stay ahead in a rapidly evolving digital landscape.
-        </p>
+        </motion.p>
 
         {/* Technology Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.15 },
+            },
+          }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
           {techData.map((tech, index) => (
-            <div
+            <motion.div
               key={index}
-              className="
-                flex flex-col  
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col  
                 rounded-lg bg-[#1B1C1E] p-6 
                 transition-colors 
                 hover:bg-[#2A2B2D]
@@ -68,9 +100,9 @@ export default function TechnologyExpertise() {
 
               {/* Technology Name */}
               <h3 className="text-base font-medium sm:text-lg">{tech.name}</h3>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
