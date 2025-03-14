@@ -9,7 +9,7 @@ import SubscribeSection from "@/app/components/common/SubscribeSection";
 
 interface ProjectDetailPageProps {
   params: {
-    slug: string;
+    slug: any;
   };
   searchParams?: { [key: string]: string | string[] };
 }
