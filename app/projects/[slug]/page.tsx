@@ -7,13 +7,6 @@ import projectsData from "@/app/data/projectsData";
 import BrainstormIdeateBuildSection from "@/app/components/common/BrainstormIdeateBuildSection";
 import SubscribeSection from "@/app/components/common/SubscribeSection";
 
-interface ProjectDetailPageProps {
-  params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] };
-}
-
 export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.id }));
 }
@@ -21,8 +14,10 @@ export async function generateStaticParams() {
 export default async function ProjectDetailPage({
   params,
   searchParams,
-}: ProjectDetailPageProps): Promise<React.ReactElement> {
-  // Directly destructure params without awaiting
+}: {
+  params: { slug: string };
+  searchParams?: { [key: string]: string | string[] };
+}): Promise<React.ReactElement> {
   const { slug } = params;
   const project = projectsData.find((p) => p.id === slug);
 
