@@ -18,10 +18,12 @@ export async function generateStaticParams() {
   return projectsData.map((project) => ({ slug: project.id }));
 }
 
-export default async function ProjectDetailPage({
-  params,
-}: ProjectDetailPageProps): Promise<React.ReactElement> {
-  const { slug } = params;
+export default async function ProjectDetailPage(
+  props: ProjectDetailPageProps
+): Promise<React.ReactElement> {
+  // Await the params to satisfy Next.js dynamic requirements
+  const resolvedParams = await Promise.resolve(props.params);
+  const { slug } = resolvedParams;
   const project = projectsData.find((p) => p.id === slug);
 
   if (!project) {
@@ -94,10 +96,12 @@ export default async function ProjectDetailPage({
             </div>
           </div>
 
-          {/* Bottom Paragraphs */}
+          {/* Bottom Paragraph One */}
           <p className="mb-6 text-sm leading-relaxed text-gray-200 sm:text-base">
             {project.bottomParagraphOne}
           </p>
+
+          {/* Bottom Paragraph Two */}
           <p className="mb-8 text-sm leading-relaxed text-gray-200 sm:text-base">
             {project.bottomParagraphTwo}
           </p>
