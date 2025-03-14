@@ -87,7 +87,7 @@ const Footer: FC = () => {
               </li>
               <li>
                 <Link
-                  href="/portfolio"
+                  href="/projects"
                   className="hover:text-black transition-colors"
                 >
                   Portfolio
