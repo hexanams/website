@@ -26,8 +26,8 @@ export default function WhatWeOfferSection() {
               <h3 className="mb-2 text-xl font-semibold">Custom Software Development</h3>
               <p className="text-sm leading-relaxed text-gray-300">
                 We craft tailored software solutions that enhance business operations,
-                improve efficiency, and drive innovation. Whether it's enterprise
-                applications or custom SaaS products, we've got you covered.
+                improve efficiency, and drive innovation. Whether it&apos;s enterprise
+                applications or custom SaaS products, we&apos;ve got you covered.
               </p>
             </div>
 
