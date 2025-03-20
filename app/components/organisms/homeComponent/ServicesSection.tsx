@@ -162,7 +162,7 @@ export default function ServiceSection() {
         <div className="text-center mt-10">
           <Link
             href="/services"
-            className="inline-flex items-center justify-center px-8 py-3 bg-[#006B6B] text-white text-base font-semibold rounded-full hover:bg-[#004953] focus:outline-none focus:ring-2 focus:ring-teal-300"
+            className="inline-flex items-center justify-center border border-[#ffffff] px-8 py-3 text-white text-base bg-[#004953]/10 font-semibold rounded-full hover:bg-[#004953] focus:outline-none focus:ring-2 focus:ring-teal-300"
           >
             Explore Services
           </Link>
