@@ -35,10 +35,10 @@ export default function MarqueeBanner() {
     <section className="w-full">
       {/* TOP MARQUEE */}
       <div
-        className="relative overflow-hidden flex items-center h-12 sm:h-16 md:h-20"
+        className="relative overflow-hidden flex items-center justify-center h-14  md:h-16"
         style={{
           backgroundColor: "#004953",
-          transform: "skewY(9deg)",
+          transform: "skewY(8deg)",
           transformOrigin: "center",
         }}
       >
@@ -46,7 +46,7 @@ export default function MarqueeBanner() {
           {TOP_LINE_TEXT.map((item, idx) => (
             <span
               key={idx}
-              className="mx-3 sm:mx-4 md:mx-6 uppercase text-white text-xs sm:text-sm md:text-base"
+              className="mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
             >
               {item} *
             </span>
@@ -56,10 +56,10 @@ export default function MarqueeBanner() {
 
       {/* BOTTOM MARQUEE */}
       <div
-        className="relative overflow-hidden flex items-center h-12 sm:h-16 md:h-20"
+        className="relative overflow-hidden flex items-center justify-center h-14 md:h-16"
         style={{
           backgroundColor: "#000000",
-          transform: "skewY(-3deg)",
+          transform: "skewY(-8deg)",
           transformOrigin: "center",
         }}
       >
@@ -67,7 +67,7 @@ export default function MarqueeBanner() {
           {BOTTOM_LINE_TEXT.map((item, idx) => (
             <span
               key={idx}
-              className="mx-3 sm:mx-4 md:mx-6 uppercase text-white text-xs sm:text-sm md:text-base"
+              className="mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
             >
               {item} *
             </span>

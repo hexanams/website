@@ -11,8 +11,8 @@ export default function LatestProjects(): React.ReactElement {
   const latestProjects = projectsData.slice(0, 4);
 
   return (
-    <section className="bg-[#262730] text-[#FFFFFF] py-12">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[#262730] text-[#FFFFFF] mx-auto py-20">
+      <div className="mx-auto max-w-4xl container px-6">
         {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

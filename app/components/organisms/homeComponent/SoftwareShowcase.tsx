@@ -6,7 +6,7 @@ import { FaStar, FaStarHalfAlt, FaArrowDown } from "react-icons/fa";
 
 export default function SoftwareShowcase() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-7">
       <div className="mx-auto max-w-3xl px-4 text-center">
         {/* Rating + Reviews */}
         <motion.div
@@ -16,6 +16,7 @@ export default function SoftwareShowcase() {
           viewport={{ once: true }}
           className="mb-6 flex flex-col items-center justify-center space-y-2 sm:flex-row sm:space-x-3 sm:space-y-0"
         >
+          <div className="flex flex-col items-center justify-center">
           <div className="flex items-center">
             <FaStar className="text-yellow-400" />
             <FaStar className="text-yellow-400" />
@@ -24,17 +25,23 @@ export default function SoftwareShowcase() {
             <FaStarHalfAlt className="text-yellow-400" />
             <span className="ml-2 text-sm font-medium">4.5</span>
           </div>
-          <span className="text-sm text-[#1B1C1E]">
-            50+ reviews on{" "}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-gray-100"
-            >
-              Clutch.co
-            </a>
-          </span>
+
+          <div className="">
+            <span className="text-sm font-[400] text-[#1B1C1E]">
+              50+ reviews on{" "}
+            </span>
+            <span>
+              <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" hover:underline hover:text-[#004953]"
+                >
+                  Clutch.co
+                </a>
+            </span>
+          </div>
+          </div>
         </motion.div>
 
         {/* Heading */}
@@ -43,7 +50,7 @@ export default function SoftwareShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-4 text-4xl font-bold tracking-tight text-[#000000] sm:text-5xl"
+          className="mb-4 text-4xl font-[400] tracking-tight text-[#000000] sm:text-[62px] sm:leading-[100%]"
         >
           Creating <span className="text-[#004953]">Software</span>
           <br />
@@ -56,7 +63,7 @@ export default function SoftwareShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mx-auto mb-8 max-w-xl text-base leading-relaxed"
+          className="mx-auto mb-8  lg:w-[656px] h-[46px] text-base leading-relaxed"
         >
           Building innovative software solutions and driving digital excellence.
           We create seamless, scalable, and user-centric products that transform
@@ -73,10 +80,9 @@ export default function SoftwareShowcase() {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            href="#portfolio"
+            href="\projects"
             className="
-              relative inline-flex items-center justify-center
-              w-[211px] h-[48px]
+              relative inline-flex items-center justify-center w-80 h-[48px]
               rounded-full border border-white
               bg-[#004953] text-white
               text-base font-medium
@@ -97,7 +103,7 @@ export default function SoftwareShowcase() {
                 rounded-full bg-[#004953] border border-white
               "
             >
-              <FaArrowDown className="h-4 w-4" />
+              {" "}<FaArrowDown className="h-4 w-7" />
             </motion.span>
           </motion.a>
         </motion.div>

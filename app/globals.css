@@ -1,4 +1,26 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("/fonts/Aspekta-Regular.woff2") format("woff2"),
+       url("/fonts/Aspekta-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aspekta";
+  src: url("/fonts/Aspekta-Bold.woff2") format("woff2"),
+       url("/fonts/Aspekta-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Apply globally */
+html {
+  font-family: "Aspekta", sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;

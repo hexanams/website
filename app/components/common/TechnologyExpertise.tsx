@@ -5,18 +5,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const techData = [
-  { name: "Figma", icon: "/icons/tech-figma.png" },
-  { name: "AWS", icon: "/icons/tech-aws.png" },
-  { name: "Flutter", icon: "/icons/tech-flutter.png" },
-  { name: "Azure", icon: "/icons/tech-azure.png" },
-  { name: "NodeJS", icon: "/icons/tech-nodejs.png" },
-  { name: "WordPress", icon: "/icons/tech-wordpress.png" },
-  { name: "React", icon: "/icons/tech-react.png" },
-  { name: "PHP", icon: "/icons/tech-php.png" },
-  { name: "JavaScript", icon: "/icons/tech-js.png" },
-  { name: "Photoshop", icon: "/icons/tech-photoshop.png" },
-  { name: "WooCommerce", icon: "/icons/tech-woocommerce.png" },
-  { name: "Google Analytics", icon: "/icons/tech-ga.png" },
+  { name: "Figma", icon: "/icons/tech-figma.svg" },
+  { name: "AWS", icon: "/icons/tech-aws.svg" },
+  { name: "Flutter", icon: "/icons/tech-flutter.svg" },
+  { name: "Azure", icon: "/icons/tech-azure.svg" },
+  { name: "NodeJS", icon: "/icons/tech-nodejs.svg" },
+  { name: "WordPress", icon: "/icons/tech-wordpress.svg" },
+  { name: "React", icon: "/icons/tech-react.svg" },
+  { name: "PHP", icon: "/icons/tech-php.svg" },
+  { name: "JavaScript", icon: "/icons/tech-js.svg" },
+  { name: "Photoshop", icon: "/icons/tech-photoshop.svg" },
+  { name: "WooCommerce", icon: "/icons/tech-woocommerce.svg" },
+  { name: "Google Analytics", icon: "/icons/tech-ga.svg" },
 ];
 
 export default function TechnologyExpertise() {

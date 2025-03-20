@@ -69,7 +69,7 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="bg-[#004953] text-[#FFFFFF] py-16">
+    <section className="bg-[#004953] text-[#FFFFFF] mx-auto py-16">
       <div className="mx-auto max-w-4xl px-6">
         {/* Heading */}
         <motion.h2
@@ -77,13 +77,13 @@ export default function ServiceSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-10 text-3xl font-light leading-tight sm:text-6xl sm:leading-snug max-w-xl"
+          className="mb-8 text-3xl font-light leading-tight sm:text-6xl sm:leading-snug max-w-xl"
         >
           Turning Your Ideas Into Cutting-edge Technologies
         </motion.h2>
 
         {/* Services List */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {servicesData.map((service, index) => {
             const { number, title, description, requestLink, requestLinkText, image } = service;
             const isOpen = openIndexes.includes(index);
@@ -95,6 +95,7 @@ export default function ServiceSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
+                className="border-b border-[#FFFFFF] pb-6"
               >
                 {/* Accordion Header */}
                 <div className="flex items-center justify-between">
@@ -155,6 +156,16 @@ export default function ServiceSection() {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Explore Services Button */}
+        <div className="text-center mt-10">
+          <Link
+            href="/services"
+            className="inline-flex items-center justify-center px-8 py-3 bg-[#006B6B] text-white text-base font-semibold rounded-full hover:bg-[#004953] focus:outline-none focus:ring-2 focus:ring-teal-300"
+          >
+            Explore Services
+          </Link>
         </div>
       </div>
     </section>

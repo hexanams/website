@@ -8,8 +8,8 @@ import projectsData from "@/app/data/projectsData";
 
 export default function OurProjects(): React.ReactElement {
   return (
-    <section className="bg-[#262730] text-white py-12">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[#262730] text-white py-20">
+      <div className="mx-auto max-w-4xl container px-6">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export default function OurProjects(): React.ReactElement {
               }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
               whileHover={{ scale: 1.03 }}
-              className="space-y-3 bg-[#303236] p-4 rounded-lg shadow-lg transition-transform"
+              className="space-y-3  p-4 rounded-lg shadow-lg transition-transform"
             >
               <Image
                 src={project.cardImage}

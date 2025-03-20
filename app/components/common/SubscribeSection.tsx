@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function SubscribeSection() {
   return (
-    <section className="bg-[#1B1C1E] text-white py-12 px-6">
+    <section className="bg-[#1B1C1E] text-white h-[464px] py-32  px-6">
       <div className="mx-auto max-w-3xl text-center">
         {/* Heading */}
         <motion.h2
@@ -13,7 +13,7 @@ export default function SubscribeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-4 text-3xl font-bold sm:text-4xl"
+          className="mb-4 text-3xl font-bold sm:text-5xl"
         >
           Subscribe To Our Newsletter
         </motion.h2>
@@ -24,7 +24,7 @@ export default function SubscribeSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-8 text-sm leading-relaxed text-gray-300 sm:text-base"
+          className="mb-8 text-sm leading-relaxed text-[#FFFFFF] sm:text-base"
         >
           Stay updated with the latest in tech and innovation! Subscribe to our
           newsletter for exclusive insights, updates, and expert tips straight
@@ -46,7 +46,7 @@ export default function SubscribeSection() {
             placeholder="Enter your email address"
             className="
               w-full
-              h-12
+              h-[70px]
               pl-4 pr-28
               rounded-full
               bg-[#2A2B2D]
@@ -65,6 +65,8 @@ export default function SubscribeSection() {
             whileTap={{ scale: 0.9 }}
             type="submit"
             className="
+              w-[30%]
+              h-[70%]
               absolute
               right-1
               top-1/2
@@ -72,9 +74,9 @@ export default function SubscribeSection() {
               rounded-full
               bg-[#004953]
               px-5 py-2
-              text-sm font-semibold text-white
+              md:text-[20px] text-center text-sm font-semibold text-white
               transition-colors duration-200
-              hover:bg-[#006B6B]
+              hover:bg-[#004953]/9
               focus:outline-none focus:ring-2 focus:ring-teal-500
             "
           >

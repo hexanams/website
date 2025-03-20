@@ -37,7 +37,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`z-50 transition-all duration-300 ${scrolled ? "fixed top-0 left-1/2 -translate-x-1/2" : "relative"}`}
+      className={`z-50 transition-all pt-4 pb-12 duration-300 ${scrolled ? "fixed top-0 left-1/2 -translate-x-1/2" : "relative"}`}
     >
       {/* Navbar Container */}
       <div className="mx-auto flex w-[90vw] max-w-[900px] items-center justify-between rounded-full bg-white shadow-md px-4 py-3">

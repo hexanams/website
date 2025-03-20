@@ -7,7 +7,8 @@ import Image from "next/image";
 
 export default function WhatWeOfferSection() {
   return (
-    <section className="mx-auto relative bg-[#1B1C1E] text-white py-20 px-6">
+    <section className="relative bg-[#1B1C1E] text-white py-20 px-6">
+      <div className="container mx-auto">
       {/* Highlight SVG */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
@@ -128,6 +129,7 @@ export default function WhatWeOfferSection() {
             ))}
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   );
