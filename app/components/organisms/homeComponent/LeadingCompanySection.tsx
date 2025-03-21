@@ -12,25 +12,19 @@ export default function LeadingCompanySection() {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            <span className="text-[#004953]">Digital Disruption?</span> We’re On It!{" "}
+            <span className="text-[#004953]">Digital Disruption?</span> We&apos;re On It!{" "}
           </h2>
           <p className="text-base sm:text-lg leading-relaxed">
-            At Hex Innovations, we don’t just build products—we shape the future of your ideas together.
+            At Hex Innovations, we don&apos;t just build products—we shape the future of your ideas together.
             Our team transforms bold ideas into high-performance solutions that drive real business impact.
-            Whether it's intuitive mobile apps, powerful enterprise software, or seamless web platforms,
-            we craft technology that doesn’t just follow trends—it sets them.
-
+            Whether it&apos;s intuitive mobile apps, powerful enterprise software, or seamless web platforms,
+            we craft technology that doesn&apos;t just follow trends—it sets them.
           </p>
         </div>
       </div>
 
       {/* 2. BOTTOM (Image flush left + Button on right) */}
-      {/* 
-         -mx-6 removes the default horizontal padding on the section,
-           allowing the image to “bleed” to the left edge of the viewport.
-      */}
-      <div className="flex flex-col md:flex-row items-center justify-between  md:-ml-8">
-
+      <div className="flex flex-col md:flex-row items-center justify-between md:-ml-8">
         {/* IMAGE */}
         <div className="relative w-full md:w-3/5">
           <Image

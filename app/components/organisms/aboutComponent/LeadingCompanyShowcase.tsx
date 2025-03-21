@@ -12,33 +12,26 @@ export default function LeadingCompanyShowcase() {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            <span className="text-[#004953]">Great products</span> isn’t just about code{" "}
-            
-            it’s about people.
+            <span className="text-[#004953]">Great products</span> isn&apos;t just about code{" "}
+            it&apos;s about people.
           </h2>
           <p className="text-base sm:text-lg leading-relaxed">
-              It all started with a questionable idea—a hilariously outrageous website that almost got us
-              arrested in Africa. (Let’s just say, some jokes don’t land well with everyone!) 
-              But instead of ending up behind bars, we channeled our creativity into something 
-              even better—building powerful, innovative software that actually changed the game.
-              Today, Hex is a wild mix of brilliant designers, genius developers, mind-blowing video 
-              editors, and a few crazy thinkers who refuse to settle for average. We craft digital experiences,
-               push boundaries, and create software that doesn’t just work—it wows.
-              We disrupt, innovate, and have a little fun while we’re at it. So, 
-              if you're looking for a team that’s as passionate as they are slightly unhinged (in the best way),
-               you’re in the right place. 🚀
-
+            It all started with a questionable idea—a hilariously outrageous website that almost got us
+            arrested in Africa. (Let&apos;s just say, some jokes don&apos;t land well with everyone!) 
+            But instead of ending up behind bars, we channeled our creativity into something 
+            even better—building powerful, innovative software that actually changed the game.
+            Today, Hex is a wild mix of brilliant designers, genius developers, mind-blowing video 
+            editors, and a few crazy thinkers who refuse to settle for average. We craft digital experiences,
+            push boundaries, and create software that doesn&apos;t just work—it wows.
+            We disrupt, innovate, and have a little fun while we&apos;re at it. So, 
+            if you&apos;re looking for a team that&apos;s as passionate as they are slightly unhinged (in the best way),
+            you&apos;re in the right place. 🚀
           </p>
         </div>
       </div>
 
       {/* 2. BOTTOM (Image flush left + Button on right) */}
-      {/* 
-         -mx-6 removes the default horizontal padding on the section,
-           allowing the image to “bleed” to the left edge of the viewport.
-      */}
-      <div className="flex flex-col md:flex-row items-center justify-between  md:-ml-8">
-
+      <div className="flex flex-col md:flex-row items-center justify-between md:-ml-8">
         {/* IMAGE */}
         <div className="relative w-full md:w-3/5">
           <Image
@@ -68,8 +61,6 @@ export default function LeadingCompanyShowcase() {
             </svg>
           </button>
         </div>
-
-       
       </div>
     </section>
   );
