@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import HighlightSVG from "@/public/icons/highlight.svg"; 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WhatWeOfferSection() {
   return (
@@ -35,7 +36,7 @@ export default function WhatWeOfferSection() {
           viewport={{ once: true }}
           className="mb-16 text-5xl font-bold sm:text-5xl"
         >
-          What We Offer
+         Our Culture: Innovate, Build, Love
         </motion.h2>
 
         {/* Two-column Layout */}
@@ -57,19 +58,19 @@ export default function WhatWeOfferSection() {
             {/* Service Items */}
             {[
               {
-                title: "Custom Software Development",
+                title: "Creative First, Code Second",
                 description:
-                  "We craft tailored software solutions that enhance business operations, improve efficiency, and drive innovation. Whether it’s enterprise applications or custom SaaS products, we’ve got you covered.",
+                  "Every project starts with deep thinking, brainstorming, and a sprinkle of wild ideas before we even write a single line of code.",
               },
               {
-                title: "Web & Mobile App Development",
+                title: "Collaboration is Key",
                 description:
-                  "Build stunning, high-performance web and mobile applications with our expert development team. We focus on user experience, scalability, and seamless functionality across all devices.",
+                  "Designers, developers, video editors, and strategists work hand in hand to bring products to life with seamless execution",
               },
               {
-                title: "Blockchain & Web3 Solutions",
+                title: "Pushing Boundaries",
                 description:
-                  "Leverage the power of blockchain technology with secure and decentralized solutions, including smart contracts, NFT platforms, and decentralized apps (dApps).",
+                  " We don’t do “just good enough.” We challenge ourselves to build products that solves real problems, surprises, and actually makes a difference.",
               },
             ].map((item, index) => (
               <motion.div
@@ -98,14 +99,14 @@ export default function WhatWeOfferSection() {
             {/* Service Items */}
             {[
               {
-                title: "AI & Machine Learning",
+                title: "Fast, Fun, and Fearless",
                 description:
-                  "Enhance your business with AI-driven solutions, including predictive analytics, chatbots, automation, and intelligent decision-making tools.",
+                  "Innovation shouldn’t feel like a chore. We experiment, iterate, and move fast—without ever losing our sense of humor",
               },
               {
-                title: "UI/UX Design & Branding",
+                title: "Built with Love",
                 description:
-                  "Create visually appealing and user-friendly designs with our UI/UX expertise. From wireframes to interactive prototypes, we ensure a seamless user experience.",
+                  "Passion fuels everything we do. We craft every product with care, empathy, and a genuine love for creating solutions that matter.",
               },
             ].map((item, index) => (
               <motion.div
@@ -127,6 +128,18 @@ export default function WhatWeOfferSection() {
                 <p className="text-sm leading-relaxed text-gray-300">{item.description}</p>
               </motion.div>
             ))}
+            {/* Get In Touch Button */}
+            <div className="pt-6">
+                <Link href="/contact-us">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-white text-black font-semibold py-3 px-6 rounded-lg shadow-md transition hover:bg-gray-200"
+                  >
+                    Get In Touch
+                  </motion.button>
+                </Link>
+              </div>
           </div>
         </motion.div>
       </div>

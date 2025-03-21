@@ -12,21 +12,14 @@ export default function LeadingCompanySection() {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            <span className="text-[#004953]">Leading Company</span> In Creating{" "}
-            <br className="hidden sm:block" />
-            Powerful Software &amp; Technology
+            <span className="text-[#004953]">Digital Disruption?</span> We’re On It!{" "}
           </h2>
           <p className="text-base sm:text-lg leading-relaxed">
-            At HexAfrica, we’re passionate about building innovative digital
-            solutions that drive growth and efficiency. With expertise in
-            software development, mobile apps, and web services, we transform
-            ideas into powerful, user-centric products. Our team is dedicated
-            to delivering seamless, scalable, and intuitive solutions to meet
-            your unique needs. We believe in the power of technology to create
-            meaningful change. Whether you’re a startup or an established
-            business, we partner with you to develop cutting-edge software
-            that enhances user engagement and drives impact. Let’s build the
-            future together!
+            At Hex Innovations, we don’t just build products—we shape the future of your ideas together.
+            Our team transforms bold ideas into high-performance solutions that drive real business impact.
+            Whether it's intuitive mobile apps, powerful enterprise software, or seamless web platforms,
+            we craft technology that doesn’t just follow trends—it sets them.
+
           </p>
         </div>
       </div>
@@ -80,7 +73,7 @@ export default function LeadingCompanySection() {
               focus:outline-none focus:ring-2 focus:ring-[#1B1C1E]
             "
           >
-            Read More
+            Get in touch
           </a>
         </div>
       </div>

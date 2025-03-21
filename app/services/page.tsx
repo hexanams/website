@@ -11,7 +11,7 @@ function page() {
       <Navbar />
       <HeroBanner
         title="Services"
-        subtitle="Empowering your business with cutting-edge software, web, and mobile solutions! Let's build something great together!"
+        subtitle="Let’s just say that we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!"
         highlightColor="#C8FF00"
       />
       <ServiceCatalog />

@@ -31,19 +31,19 @@ export default function TechnologyExpertise() {
       }}
     >
       {/* Teal overlay */}
-      <div className="absolute inset-0 bg-[#0D4F4F]/90" />
+      <div className="absolute inset-0 bg-[#0D4F4F]/90 "/>
 
       {/* Content Container */}
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6 ">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-3xl font-bold sm:text-4xl"
+          className="text-4xl font-bold sm:text-[64px] sm:leading-[72px]"
         >
-          Technology Experts
+          Our Technologies
         </motion.h2>
 
         {/* Subheading */}
@@ -52,7 +52,7 @@ export default function TechnologyExpertise() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mt-2 mb-8 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-lg"
+          className="mt-2 mb-8 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-[16px]"
         >
           With deep technology expertise and commitment to innovation, we deliver 
           cutting-edge software solutions that empower businesses to scale, optimize 

@@ -52,7 +52,7 @@ export default function SoftwareShowcase() {
           viewport={{ once: true }}
           className="mb-4 text-4xl font-[400] tracking-tight text-[#000000] sm:text-[62px] sm:leading-[100%]"
         >
-          Creating <span className="text-[#004953]">Software</span>
+          We create <span className="text-[#004953]">Software</span>
           <br />
           & Digital Excellence
         </motion.h2>
@@ -91,7 +91,7 @@ export default function SoftwareShowcase() {
               focus:outline-none focus:ring-2 focus:ring-teal-300
             "
           >
-            <span>Explore our Portfolio</span>
+            <span>Learn About Us</span>
             {/* Circle popping out on the right */}
             <motion.span
               animate={{ x: [0, 5, 0] }}

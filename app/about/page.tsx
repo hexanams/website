@@ -14,14 +14,14 @@ function page() {
       <Navbar />
       <HeroBanner
         title="About Us"
-        subtitle="Innovative solutions, seamless experiences—transforming ideas into powerful digital products. Let’s build the future together!"
+        subtitle="From Chaos to Code - Read our story below"
         highlightColor="#C8FF00"
       />
       <main className="w-full">
         {/* Hero Image - full width */}
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
           <Image
-            src={ourTeam} // Replace with your actual image path
+            src={ourTeam} 
             alt="Our Team"
             fill
             className="object-cover"

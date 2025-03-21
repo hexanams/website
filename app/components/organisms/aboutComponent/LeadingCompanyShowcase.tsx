@@ -12,21 +12,22 @@ export default function LeadingCompanyShowcase() {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            <span className="text-[#004953]">Leading Company</span> In Creating{" "}
-            <br className="hidden sm:block" />
-            Powerful Software &amp; Technology
+            <span className="text-[#004953]">Great products</span> isn’t just about code{" "}
+            
+            it’s about people.
           </h2>
           <p className="text-base sm:text-lg leading-relaxed">
-            At HexAfrica, we’re passionate about building innovative digital
-            solutions that drive growth and efficiency. With expertise in
-            software development, mobile apps, and web services, we transform
-            ideas into powerful, user-centric products. Our team is dedicated
-            to delivering seamless, scalable, and intuitive solutions to meet
-            your unique needs. We believe in the power of technology to create
-            meaningful change. Whether you’re a startup or an established
-            business, we partner with you to develop cutting-edge software
-            that enhances user engagement and drives impact. Let’s build the
-            future together!
+              It all started with a questionable idea—a hilariously outrageous website that almost got us
+              arrested in Africa. (Let’s just say, some jokes don’t land well with everyone!) 
+              But instead of ending up behind bars, we channeled our creativity into something 
+              even better—building powerful, innovative software that actually changed the game.
+              Today, Hex is a wild mix of brilliant designers, genius developers, mind-blowing video 
+              editors, and a few crazy thinkers who refuse to settle for average. We craft digital experiences,
+               push boundaries, and create software that doesn’t just work—it wows.
+              We disrupt, innovate, and have a little fun while we’re at it. So, 
+              if you're looking for a team that’s as passionate as they are slightly unhinged (in the best way),
+               you’re in the right place. 🚀
+
           </p>
         </div>
       </div>

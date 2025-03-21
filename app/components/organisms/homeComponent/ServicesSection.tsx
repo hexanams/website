@@ -12,7 +12,7 @@ const servicesData = [
     number: "01/",
     title: "Software Design",
     description:
-      "Craft intuitive and user-centric software designs that ensure seamless user experiences. Our expert team specializes in UI/UX, wireframing, and system architecture tailored to your business needs.",
+      "We work closely with our clients to understand their vision, objectives, and challenges, ensuring that the software we design aligns perfectly with their needs. Our expert designers focus on user experience (UX) and user interface (UI) design, creating intuitive, visually appealing, and functional software solutions. From concept to final design, we ensure that your software is not only aesthetically pleasing but also practical and scalable for future growth.",
     requestLink: "/contact-us",
     requestLinkText: "Request for a Service",
     image: infoimage,
@@ -21,7 +21,7 @@ const servicesData = [
     number: "02/",
     title: "Software Development",
     description:
-      "Transform your ideas into reality with our expert software development services. From intuitive mobile apps to powerful web solutions, we build scalable, user-friendly, and innovative products tailored to your needs. Let's create something amazing together!",
+      "Our development process is centered on turning your ideas into fully functional software solutions. Whether you need a simple tool or a complex enterprise solution, our team follows industry best practices, agile methodologies, and testing to deliver software that meets your business requirements. We offer end-to-end support, from architecture planning and coding to deployment and continuous maintenance, ensuring that your software evolves with your business.",
     requestLink: "/contact-us",
     requestLinkText: "Request for a Service",
     image: infoimage,
@@ -30,7 +30,7 @@ const servicesData = [
     number: "03/",
     title: "Mobile Application Development",
     description:
-      "We build high-performance mobile applications for iOS and Android, ensuring seamless user experiences and powerful functionality. Whether it's native or cross-platform, we have you covered.",
+      "Our team builds custom iOS and Android applications that are optimized for performance, security, and excellence user experiences. We work with you through every stage, from ideation and design to development and deployment, ensuring the final product meets your unique requirements. With a focus on responsive design, smooth functionality, and integration with backend systems, we your businesses create mobile solutions that stand out.",
     requestLink: "/contact-us",
     requestLinkText: "Request for a Service",
     image: infoimage,
@@ -39,16 +39,16 @@ const servicesData = [
     number: "04/",
     title: "Web Applications",
     description:
-      "Create dynamic, scalable, and responsive web applications that elevate your business. Our team delivers high-quality solutions tailored to meet your requirements.",
+      "Our web application development services empower businesses with dynamic, responsive, and high-performance web solutions. We create web applications that are tailored to your needs, ensuring a smooth user experience across all devices. Whether it’s an internal business tool, a customer-facing portal, or a large-scale SaaS platform, we leverage modern frameworks and cloud-based technologies to build scalable and secure applications.",
     requestLink: "/contact-us",
     requestLinkText: "Request for a Service",
     image: infoimage,
   },
   {
     number: "05/",
-    title: "Cloud Solutions",
+    title: "E-commerce Solutions",
     description:
-      "Leverage the power of the cloud to scale your business effortlessly. We provide cloud-based solutions, including migration, deployment, and management of cloud infrastructure.",
+      "We build powerful, scalable e-commerce platforms that provide seamless shopping experiences for customers. Our solutions include custom-built online stores, marketplace integrations, payment gateway setup, and inventory management systems. Whether you need a Shopify, Magento, WooCommerce, or a fully custom solution, we ensure high performance, mobile responsiveness, and user-friendly navigation. From UI/UX design to backend development, we help businesses maximize their online sales potential.",
     requestLink: "/contact-us",
     requestLinkText: "Request for a Service",
     image: infoimage,
@@ -79,7 +79,7 @@ export default function ServiceSection() {
           viewport={{ once: true }}
           className="mb-8 text-3xl font-light leading-tight sm:text-6xl sm:leading-snug max-w-xl"
         >
-          Turning Your Ideas Into Cutting-edge Technologies
+          Got An Idea? We’re On It!
         </motion.h2>
 
         {/* Services List */}
@@ -162,7 +162,9 @@ export default function ServiceSection() {
         <div className="text-center mt-10">
           <Link
             href="/services"
-            className="inline-flex items-center justify-center border border-[#ffffff] px-8 py-3 text-white text-base bg-[#004953]/10 font-semibold rounded-full hover:bg-[#004953] focus:outline-none focus:ring-2 focus:ring-teal-300"
+            className="inline-flex items-center justify-center border border-white px-8 py-3 text-white text-base bg-[#004953]/10 font-semibold rounded-full transition-all duration-300 ease-in-out 
+                      hover:bg-[#004953] hover:border-[#004953] hover:shadow-lg hover:scale-105 
+                      focus:outline-none focus:ring-2 focus:ring-teal-300 active:scale-95"
           >
             Explore Services
           </Link>

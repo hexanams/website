@@ -3,7 +3,7 @@
 import React, { FC, useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer: FC = () => {
   const footerRef = useRef<HTMLElement | null>(null);
@@ -21,9 +21,7 @@ const Footer: FC = () => {
           observer.unobserve(entry.target);
         }
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
     observer.observe(node);
@@ -89,33 +87,50 @@ const Footer: FC = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             className="space-y-2"
           >
-            <p className="text-sm text-[#1B1C1E]">
-              123 Adiola Odeku Street,
-              <br />
-              Victoria Island, Lagos, Nigeria.
-            </p>
-            <p className="text-sm text-[#1B1C1E]">Hex@africa.mail</p>
-            <p className="text-sm text-[#1B1C1E]">+234 56565656</p>
+            <p className="text-sm text-[#1B1C1E]">Federal Capital Territory Abuja, Nigeria.</p>
+            <p className="text-sm text-[#1B1C1E]">Hello@hexng.com</p>
+            <p className="text-sm text-[#1B1C1E]">+234 7063749967</p>
 
             {/* Social Icons */}
             <div className="mt-3 flex items-center space-x-4">
-              {[FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram].map((Icon, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ duration: 0.3 }}
+              {/* LinkedIn */}
+              <motion.div whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }}>
+                <Link
+                  href="https://www.linkedin.com/company/hex-innovations/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-[#1B1C1E] hover:text-black transition-colors"
                 >
-                  <Link
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="text-[#1B1C1E] hover:text-black transition-colors"
-                  >
-                    <Icon size={18} />
-                  </Link>
-                </motion.div>
-              ))}
+                  <FaLinkedinIn size={18} />
+                </Link>
+              </motion.div>
+
+              {/* Twitter (X) */}
+              <motion.div whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }}>
+                <Link
+                  href="https://x.com/_HEX_I"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className="text-[#1B1C1E] hover:text-black transition-colors"
+                >
+                  <FaTwitter size={18} />
+                </Link>
+              </motion.div>
+
+              {/* Instagram */}
+              <motion.div whileHover={{ scale: 1.2 }} transition={{ duration: 0.3 }}>
+                <Link
+                  href="https://www.instagram.com/_hex_i/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-[#1B1C1E] hover:text-black transition-colors"
+                >
+                  <FaInstagram size={18} />
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -135,7 +150,7 @@ const Footer: FC = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
           className="mt-4 flex flex-col items-center justify-between gap-4 md:mt-6 md:flex-row"
         >
-          <p className="text-sm text-[#1B1C1E]">&copy; 2025 HexAfrica</p>
+          <p className="text-sm text-[#1B1C1E]">&copy; {new Date().getFullYear()} HexInnovations</p>
           <div className="flex items-center space-x-4 text-sm text-[#1B1C1E]">
             <Link href="/privacy" className="hover:text-black transition-colors">
               Privacy Policy
