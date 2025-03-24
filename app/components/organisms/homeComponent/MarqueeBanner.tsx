@@ -2,6 +2,8 @@
 
 import React from "react";
 import Marquee from "react-fast-marquee";
+import star from "@/public/icons/star.svg";
+import Image from "next/image";
 
 const TOP_LINE_TEXT = [
   "COLLABORATION",
@@ -18,16 +20,16 @@ const TOP_LINE_TEXT = [
 ];
 
 const BOTTOM_LINE_TEXT = [
-  "HUMHUB DEVELOPMENT",
-  "BRANDING",
-  "OPTIMIZATION",
-  "MORE SERVICES",
-  "SEO ENHANCEMENT",
-  "PRODUCT STRATEGY",
-  "SECURITY & PERFORMANCE",
-  "DEVOPS SOLUTIONS",
-  "SAAS DEVELOPMENT",
-  "CUSTOM SOFTWARE",
+  "Software Development",
+  "Mobile Apps",
+  "Web Applications",
+  "Consulting",
+  "Product Discovery",
+  "UI/UX",
+  "DevOps Solutions",
+  "Product Strategy",
+  "Tech Innovations",
+  "SaaS Solutions",
 ];
 
 export default function MarqueeBanner() {
@@ -35,7 +37,7 @@ export default function MarqueeBanner() {
     <section className="w-full">
       {/* TOP MARQUEE */}
       <div
-        className="relative overflow-hidden flex items-center justify-center h-10  md:h-16"
+        className="relative overflow-hidden flex items-center justify-center h-10 md:h-16"
         style={{
           backgroundColor: "#004953",
           transform: "skewY(8deg)",
@@ -46,9 +48,10 @@ export default function MarqueeBanner() {
           {TOP_LINE_TEXT.map((item, idx) => (
             <span
               key={idx}
-              className="mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
+              className="flex items-center gap-1 mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
             >
-              {item} *
+              {item} {" "}
+              <Image src={star} alt="star icon" width={10} height={10} />
             </span>
           ))}
         </Marquee>
@@ -67,9 +70,10 @@ export default function MarqueeBanner() {
           {BOTTOM_LINE_TEXT.map((item, idx) => (
             <span
               key={idx}
-              className="mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
+              className="flex items-center gap-1 mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
             >
-              {item} *
+              {item} {" "}
+              <Image src={star} alt="star icon" width={10} height={10} />
             </span>
           ))}
         </Marquee>

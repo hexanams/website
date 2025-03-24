@@ -1,9 +1,48 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 
 export default function ContactFormSection() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    if (!formRef.current) {
+      setMessage("Form reference not found.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await emailjs.sendForm(
+        "service_g1bh28s", 
+        "template_v95o2oi", 
+        formRef.current, 
+        "GoBSE9kEEsaDoS7vJ" 
+      );
+
+      console.log("EmailJS Response:", response);
+      if (response.status === 200) {
+        setMessage("Message sent successfully!");
+        formRef.current.reset();
+      } else {
+        setMessage("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setMessage("Failed to send message. Please check your form and try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="bg-[#004953] text-white py-20 px-6">
       <div className="mx-auto max-w-4xl">
@@ -20,6 +59,8 @@ export default function ContactFormSection() {
 
         {/* Form */}
         <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
           initial="hidden"
           whileInView="visible"
           variants={{
@@ -34,10 +75,10 @@ export default function ContactFormSection() {
         >
           {/* Form Fields */}
           {[
-            { type: "text", placeholder: "First Name" },
-            { type: "text", placeholder: "Last Name" },
-            { type: "email", placeholder: "Email" },
-            { type: "text", placeholder: "Subject" },
+            { name: "firstName", type: "text", placeholder: "First Name" },
+            { name: "lastName", type: "text", placeholder: "Last Name" },
+            { name: "email", type: "email", placeholder: "Email" },
+            { name: "subject", type: "text", placeholder: "Subject" },
           ].map((field, index) => (
             <motion.div
               key={index}
@@ -49,8 +90,10 @@ export default function ContactFormSection() {
               className="flex flex-col"
             >
               <input
+                name={field.name}
                 type={field.type}
                 placeholder={field.placeholder}
+                required
                 className="
                   w-full border-b border-white bg-transparent
                   py-3 text-base text-white placeholder-white
@@ -70,8 +113,10 @@ export default function ContactFormSection() {
             className="flex flex-col sm:col-span-2"
           >
             <textarea
+              name="message"
               placeholder="Message"
               rows={5}
+              required
               className="
                 w-full border-b border-white bg-transparent
                 py-3 text-base text-white placeholder-white
@@ -93,6 +138,7 @@ export default function ContactFormSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
+              disabled={loading}
               className="
                 rounded-full border border-white
                 px-8 py-2
@@ -102,10 +148,13 @@ export default function ContactFormSection() {
                 focus:outline-none focus:ring-2 focus:ring-white
               "
             >
-              Submit
+              {loading ? "Sending..." : "Submit"}
             </motion.button>
           </motion.div>
         </motion.form>
+
+        {/* Success or Error Message */}
+        {message && <p className="text-center mt-4 text-green-300">{message}</p>}
       </div>
     </section>
   );
