@@ -12,7 +12,7 @@ export default function LeadingCompanyShowcase() {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            <span className="text-[#004953]">Great products</span> isn&apos;t just about code{" "}
+            <span className="text-[#004953]">Great products</span> isn&apos;t just about code,{" "}
             it&apos;s about people.
           </h2>
           <p className="text-base sm:text-lg leading-relaxed">
@@ -20,6 +20,8 @@ export default function LeadingCompanyShowcase() {
             arrested in Africa. (Let&apos;s just say, some jokes don&apos;t land well with everyone!) 
             But instead of ending up behind bars, we channeled our creativity into something 
             even better—building powerful, innovative software that actually changed the game.
+          </p>
+          <p className="text-base sm:text-lg leading-relaxed pt-4">
             Today, Hex is a wild mix of brilliant designers, genius developers, mind-blowing video 
             editors, and a few crazy thinkers who refuse to settle for average. We craft digital experiences,
             push boundaries, and create software that doesn&apos;t just work—it wows.

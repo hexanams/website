@@ -15,8 +15,10 @@ export default function LeadingCompanySection() {
             <span className="text-[#004953]">Digital Disruption?</span> We&apos;re On It!{" "}
           </h2>
           <p className="text-base sm:text-lg leading-relaxed">
-            At Hex Innovations, we don&apos;t just build products—we shape the future of your ideas together.
-            Our team transforms bold ideas into high-performance solutions that drive real business impact.
+          You focus on big the ideas, launching globally and we&apos;ll handle the code. From ideation to launch, 
+          we make digital magic happen—no stress, no mess, one line of code at a time!
+          </p>
+          <p className="text-base sm:text-lg leading-relaxed pt-4">
             Whether it&apos;s intuitive mobile apps, powerful enterprise software, or seamless web platforms,
             we craft technology that doesn&apos;t just follow trends—it sets them.
           </p>

@@ -13,7 +13,7 @@ export default function ContactPage() {
       <HeroBanner
         title="Contact Us"
         subtitle="Have a project in mind? Let's bring it to life! 🚀 Contact us today!"
-        highlightColor="#C8FF00"
+        highlightColor="#E3FF52"
       />
 
       {/* Contact Form Section */}

@@ -47,7 +47,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <HeroBanner
         title="Project Detail"
         subtitle="Showcasing innovation, design, and technology—explore our work and see what we create!"
-        highlightColor="#C8FF00"
+        highlightColor="#E3FF52"
       />
 
       {/* Main content section */}

@@ -15,7 +15,7 @@ function page() {
       <HeroBanner
         title="About Us"
         subtitle="From Chaos to Code - Read our story below"
-        highlightColor="#C8FF00"
+        highlightColor="#E3FF52"
       />
       <main className="w-full">
         {/* Hero Image - full width */}

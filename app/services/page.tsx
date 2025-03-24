@@ -12,7 +12,7 @@ function page() {
       <HeroBanner
         title="Services"
         subtitle="Let’s just say that we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!"
-        highlightColor="#C8FF00"
+        highlightColor="#E3FF52"
       />
       <ServiceCatalog />
       <BrainstormIdeateBuildSection />

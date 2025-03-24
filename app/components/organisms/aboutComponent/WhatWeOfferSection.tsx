@@ -85,11 +85,11 @@ export default function WhatWeOfferSection() {
                 <motion.h3
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="mb-2 text-xl font-semibold"
+                  className="mb-2 text-[24px] font-bold"
                 >
                   {item.title}
                 </motion.h3>
-                <p className="text-sm leading-relaxed text-gray-300">{item.description}</p>
+                <p className="text-[16px] leading-relaxed font-medium text-gray-300">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -121,11 +121,11 @@ export default function WhatWeOfferSection() {
                 <motion.h3
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="mb-2 text-xl font-semibold"
+                  className="mb-2 text-[24px] font-bold"
                 >
                   {item.title}
                 </motion.h3>
-                <p className="text-sm leading-relaxed text-gray-300">{item.description}</p>
+                <p className="text-[16px] leading-relaxed font-medium text-gray-300">{item.description}</p>
               </motion.div>
             ))}
             {/* Get In Touch Button */}

@@ -63,7 +63,7 @@ export default function SoftwareShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mx-auto mb-8  lg:w-[656px] h-[46px] text-base leading-relaxed"
+          className="mx-auto mb-8 font-[400] lg:w-[656px] h-[46px] text-base leading-relaxed"
         >
           Building innovative software solutions and driving digital excellence.
           We create seamless, scalable, and user-centric products that transform
