@@ -65,9 +65,8 @@ export default function SoftwareShowcase() {
           viewport={{ once: true }}
           className="mx-auto mb-8 font-[400] lg:w-[656px] h-[46px] text-base leading-relaxed"
         >
-          Building innovative software solutions and driving digital excellence.
-          We create seamless, scalable, and user-centric products that transform
-          ideas into reality. Let&apos;s innovate together!
+          You focus on big the ideas, launching globally and we&apos;ll handle the code. From ideation to launch,
+           we make digital magic happen—no stress, no mess, one line of code at a time!
         </motion.p>
 
         {/* CTA Button */}

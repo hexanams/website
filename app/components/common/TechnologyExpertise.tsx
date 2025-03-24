@@ -54,9 +54,8 @@ export default function TechnologyExpertise() {
           viewport={{ once: true }}
           className="mt-2 mb-8 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-[16px]"
         >
-          With deep technology expertise and commitment to innovation, we deliver 
-          cutting-edge software solutions that empower businesses to scale, optimize 
-          operations, and stay ahead in a rapidly evolving digital landscape.
+          Our team leverages the latest tools and frameworks to build software that drives efficiency, 
+          enhances performance, and keeps businesses ahead in an ever-evolving digital world.
         </motion.p>
 
         {/* Technology Grid */}
