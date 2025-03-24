@@ -35,7 +35,7 @@ export default function MarqueeBanner() {
     <section className="w-full">
       {/* TOP MARQUEE */}
       <div
-        className="relative overflow-hidden flex items-center justify-center h-14  md:h-16"
+        className="relative overflow-hidden flex items-center justify-center h-10  md:h-16"
         style={{
           backgroundColor: "#004953",
           transform: "skewY(8deg)",
@@ -56,10 +56,10 @@ export default function MarqueeBanner() {
 
       {/* BOTTOM MARQUEE */}
       <div
-        className="relative overflow-hidden flex items-center justify-center h-14 md:h-16"
+        className="relative overflow-hidden flex items-center mt-[-40] w-full justify-center h-10 md:h-16"
         style={{
           backgroundColor: "#000000",
-          transform: "skewY(-8deg)",
+          transform: "skewY(-2deg)",
           transformOrigin: "center",
         }}
       >

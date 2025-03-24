@@ -83,7 +83,7 @@ export default function SoftwareShowcase() {
             className="
               relative inline-flex items-center justify-center w-80 h-[48px]
               rounded-full border border-white
-              bg-[#004953] text-white
+              bg-[#004953] text-white mt-7
               text-base font-medium
               transition-colors duration-200
               hover:bg-[#006B6B]
