@@ -4,6 +4,7 @@ import React, { FC, useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer: FC = () => {
   const footerRef = useRef<HTMLElement | null>(null);
@@ -46,7 +47,9 @@ const Footer: FC = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="space-y-4"
           >
-            <h3 className="text-[24px] font-bold text-[#1B1C1E]">HEX Africa</h3>
+            <div className="text-[24px] font-bold text-[#1B1C1E]">
+              <Image width={100} height={100} src="/icons/HEX-logo.svg" alt="Hex Innovations Logo" />
+              </div>
             <p className="text-sm leading-relaxed text-[#1B1C1E]">
               Building innovative software solutions and driving digital
               excellence. We create seamless, scalable, and user-centric

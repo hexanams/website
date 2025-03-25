@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Softwaredesign from "@/public/images/software-design.png";
-import Softwaredevelopment from "@/public/images/software-development.png";
-import Mobileappdevelopment from "@/public/images/mobileapp.png";
-import Webapp from "@/public/images/Web-Development.png";
-import Ecommerce from "@/public/images/e-commerce.png";
+import Softwaredesign from "@/public/images/SOFTWARE-DESIGN.svg";
+import Softwaredevelopment from "@/public/images/SOFTWARE-DEVELOPMENT.svg";
+import Mobileappdevelopment from "@/public/images/MOBILE-APPLICATION-DEVELOPMENT.svg";
+import Webapp from "@/public/images/WEB-DEVELOPMENT.svg";
+import Ecommerce from "@/public/images/E-COMMERCE-SOLUTIONS.svg";
 // Example service data
 const servicesData = [
   {

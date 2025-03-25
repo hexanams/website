@@ -5,17 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-import softwaredesign from "@/public/images/software-design.png";
-import softwaredevelopment from "@/public/images/software-development.png";
-import mobileappdevelopment from "@/public/images/mobileapp.png";
-import Webapp from "@/public/images/Web-Development.png";
-import AiMachineLearning from "@/public/images/AI-Machine-Learning.png";
-import ecommerce from "@/public/images/e-commerce.png";
-import SeoDigital from "@/public/images/SEO-Digital-Marketing.png";
-import CyberSecurity from "@/public/images/cyber-security.png";
-import UiUxDesign from "@/public/images/UI-UX-Consulting.png";
-import BlockChainDev from "@/public/images/Blockchain-Development.png";
-import DevOps from "@/public/images/dev-ops.png";
+import softwaredesign from "@/public/images/SOFTWARE-DESIGN.svg";
+import softwaredevelopment from "@/public/images/SOFTWARE-DEVELOPMENT.svg";
+import mobileappdevelopment from "@/public/images/MOBILE-APPLICATION-DEVELOPMENT.svg";
+import Webapp from "@/public/images/WEB-DEVELOPMENT.svg";
+import AiMachineLearning from "@/public/images/Ai-MACHINE-LEARNING.svg";
+import ecommerce from "@/public/images/E-COMMERCE-SOLUTIONS.svg";
+import SeoDigital from "@/public/images/SEO-DIGITAL-MARKETING.svg";
+import CyberSecurity from "@/public/images/CYBER-SECURITY.svg";
+import UiUxDesign from "@/public/images/UI-UX-CONSULTING.svg";
+import BlockChainDev from "@/public/images/BLOCKCHAIN-DEVELOPMENT.svg";
+import DevOps from "@/public/images/DEVOPs-INFRASTRUCTURE.svg";
 
 // Example service data
 const servicesData = [
