@@ -1,5 +1,4 @@
 import React from "react";
-import HomeHero from "./components/organisms/homeComponent/HomeHero";
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/app/components/organisms/Footer";
