@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Hex Innovations",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo.svg", // Replace with actual OG image URL
+        url: "https://hexng.com/icons/HEX-logo.svg", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "Innovative solutions in software, AI, and web development.",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo.svg", // Replace with actual Twitter image URL
+        url: "https://hexng.com/icons/HEX-logo.svg", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",

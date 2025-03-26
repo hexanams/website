@@ -48,7 +48,7 @@ const Footer: FC = () => {
             className="space-y-4"
           >
             <div className="text-[24px] font-bold text-[#1B1C1E]">
-              <Image width={100} height={100} src="/icons/HEX-logo.svg" alt="Hex Innovations Logo" />
+              <Image width={100} height={100} src="/icons/HEX-logo-second-png.png" alt="Hex Innovations Logo" />
               </div>
             <p className="text-sm leading-relaxed text-[#1B1C1E]">
               Building innovative software solutions and driving digital
