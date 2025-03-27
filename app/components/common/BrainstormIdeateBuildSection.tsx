@@ -32,7 +32,7 @@ export default function BrainstormIdeateBuildSection() {
           width={900}
           height={900}
           src={BrainStormIdeateBuild}
-          alt="Brainstorm, Ideate, Build"
+          alt="Hex Innovations is a global software development Brainstorm, Ideate, Build"
           className="w-full h-full object-cover"
         />
 

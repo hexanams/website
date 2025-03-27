@@ -32,7 +32,7 @@ export default function LeadingCompanySection() {
         <div className="relative w-full md:w-3/5">
           <Image
             src={leadingImage}
-            alt="Team Meeting"
+            alt="Hex Innovations is a global software development Team Meeting"
             width={800}
             height={500}
             className="w-full h-auto object-cover"

@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/app/components/organisms/Footer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   title: "Hex Innovations | Software & Digital Excellence",
-  description: "Hex Innovations specializes in cutting-edge software development, mobile applications, AI solutions, and digital transformation.",
-  keywords: "software development, digital transformation, AI solutions, mobile applications, web development, cybersecurity",
+  description: "Hex Innovations is a global software development agency delivering custom, agile solutions for digital transformation and enterprise growth. Discover innovation that scales.",
+  keywords: "Global Software Development, International Software Agency, Custom Software Solutions, Offshore Software Development, Agile Software Development, Digital Transformation Services, Enterprise Software Development, Scalable Software Solutions, Technology Innovation, Software Development Outsourcing",
   openGraph: {
     title: "Hex Innovations | Software & Digital Excellence",
     description: "Innovative solutions in software, AI, and web development.",

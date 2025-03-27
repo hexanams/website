@@ -51,7 +51,7 @@ export default function MarqueeBanner() {
               className="flex items-center gap-1 mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
             >
               {item} {" "}
-              <Image src={star} alt="star icon" width={10} height={10} />
+              <Image src={star} alt="Hex Innovations is a global software development star icon" width={10} height={10} />
             </span>
           ))}
         </Marquee>
@@ -73,7 +73,7 @@ export default function MarqueeBanner() {
               className="flex items-center gap-1 mx-4 sm:mx-6 md:mx-8 uppercase text-white text-xs sm:text-sm md:text-base"
             >
               {item} {" "}
-              <Image src={star} alt="star icon" width={10} height={10} />
+              <Image src={star} alt="Hex Innovations is a global software development star icon" width={10} height={10} />
             </span>
           ))}
         </Marquee>

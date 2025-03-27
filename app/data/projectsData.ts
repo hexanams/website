@@ -37,12 +37,12 @@ const projectsData: ProjectData[] = [
   {
     id: "clisha-review",
     cardImage: cardImage,
-    cardAlt: "Clisha Review",
+    cardAlt: "Clisha Review Hex Innovations is a global software development",
     cardTitle: "Clisha Review",
     cardDescription:
       "We specialize in seamless, scalable, and user-centric solutions that help you stand out in a competitive digital landscape. Our expertise spans cutting-edge web and mobile development, AI-powered innovations, and intuitive UI/UX design.",
     topImage: topImage,
-    topImageAlt: "Laptop with code on the desk",
+    topImageAlt: "Hex Innovations is a global software development Laptop with code on the desk",
     projectTitle: "Clisha Review",
     introParagraphOne:
       "At [Your Company Name], we are passionate about building innovative digital solutions that drive growth and efficiency. With expertise in software development, mobile apps, cloud solutions, and more, we help our clients stay ahead of the competition.",
@@ -52,7 +52,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "Transform your ideas into reality with our expert software development services. From concept to deployment, we build robust and user-centric products that drive growth. Let’s create something amazing together!",
     sectionImage: sectionImage,
-    sectionImageAlt: "Code snippet or second relevant image",
+    sectionImageAlt: "Hex Innovations is a global software development",
     bottomParagraphOne:
       "At [Your Company Name], we take pride in staying at the forefront of technology. We combine modern frameworks, best practices, and a user-first mindset to deliver solutions that stand out in today’s digital landscape.",
     bottomParagraphTwo:
@@ -68,7 +68,7 @@ const projectsData: ProjectData[] = [
     cardDescription:
       "Transform your ideas into reality with our expert software development services. We build intuitive, scalable, and high-performing mobile applications that ensure seamless user experiences and help businesses grow in today’s competitive digital landscape.",
     topImage: topImage,
-    topImageAlt: "Mobile App Hero Image",
+    topImageAlt: "Mobile App Hero Image Hex Innovations is a global software development",
     projectTitle: "Creqe Mobile App",
     introParagraphOne:
       "At [Your Company Name], we craft cutting-edge mobile experiences designed to engage users and drive growth. Our team excels in building scalable, intuitive apps that stand out in today's market.",
@@ -89,12 +89,12 @@ const projectsData: ProjectData[] = [
   {
     id: "neo-dashboard",
     cardImage: cardImage,
-    cardAlt: "Neo Dashboard",
+    cardAlt: "Neo Dashboard Hex Innovations is a global software development",
     cardTitle: "Neo Dashboard",
     cardDescription:
       "Empower decision-making with a dynamic and intuitive dashboard solution designed for real-time analytics, data-driven insights, and seamless business intelligence. Our technology ensures businesses can track performance, identify trends, and optimize operations effectively.",
     topImage: topImage,
-    topImageAlt: "Dashboard Hero Image",
+    topImageAlt: "Dashboard Hero Image Hex Innovations is a global software development",
     projectTitle: "Neo Dashboard",
     introParagraphOne:
       "Neo Dashboard is built to provide real-time insights and analytics for businesses of all sizes. Our focus is on delivering complex data in a simplified format.",
@@ -104,7 +104,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "Our advanced analytics modules pull data from multiple sources, updating key performance indicators in real time. You’ll have a clear view of your operations at any moment.",
     sectionImage: sectionImage,
-    sectionImageAlt: "Neo Dashboard code snippet",
+    sectionImageAlt: "Neo Dashboard code snippet Hex Innovations is a global software development",
     bottomParagraphOne:
       "Security and scalability are at the core of Neo Dashboard’s architecture, ensuring safe and smooth handling of high-volume data as your business grows.",
     bottomParagraphTwo:
@@ -115,12 +115,12 @@ const projectsData: ProjectData[] = [
   {
     id: "skyfarm-website",
     cardImage: cardImage,
-    cardAlt: "SkyFarm Website",
+    cardAlt: "SkyFarm Website Hex Innovations is a global software development",
     cardTitle: "SkyFarm Website",
     cardDescription:
       "A next-level website designed to showcase and manage modern urban farming practices. Our solutions integrate seamless UI/UX, e-commerce features, and automation to drive efficiency, increase engagement, and empower sustainable agricultural initiatives.",
     topImage: topImage,
-    topImageAlt: "SkyFarm Website Hero Image",
+    topImageAlt: "SkyFarm Website Hero Image Hex Innovations is a global software development",
     projectTitle: "SkyFarm Website",
     introParagraphOne:
       "SkyFarm's mission is to revolutionize urban agriculture with innovative solutions for vertical farming. We designed a website that captures their vision and connects with stakeholders.",
@@ -130,7 +130,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "Every page on the SkyFarm website is thoughtfully designed to engage visitors and provide the information they need. We ensured intuitive navigation and captivating visuals that reflect the brand's eco-friendly ethos.",
     sectionImage: sectionImage,
-    sectionImageAlt: "SkyFarm Website snippet",
+    sectionImageAlt: "SkyFarm Website snippet Hex Innovations is a global software development",
     bottomParagraphOne:
       "Behind the scenes, robust backend systems support product listings, order management, and customer feedback loops, ensuring smooth day-to-day operations.",
     bottomParagraphTwo:
@@ -141,12 +141,12 @@ const projectsData: ProjectData[] = [
   {
     id: "verito-enterprise",
     cardImage: cardImage,
-    cardAlt: "Verito Enterprise",
+    cardAlt: "Verito Enterprise Hex Innovations is a global software development",
     cardTitle: "Verito Enterprise",
     cardDescription:
       "A custom enterprise solution built for efficiency, scalability, and seamless collaboration. Our advanced platform integrates project management, analytics, automation, and security, allowing businesses to streamline operations and enhance productivity.",
     topImage: topImage,
-    topImageAlt: "Verito Enterprise Hero Image",
+    topImageAlt: "Verito Enterprise Hero Image Hex Innovations is a global software development",
     projectTitle: "Verito Enterprise",
     introParagraphOne:
       "Verito Enterprise was developed with large-scale teams and complex workflows in mind, offering a centralized platform for project management, communication, and analytics.",
@@ -156,7 +156,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "Our solution merges CRM, ERP, and analytics modules into one cohesive ecosystem. This single source of truth ensures accurate data flow and minimal redundancy.",
     sectionImage: sectionImage,
-    sectionImageAlt: "Verito Enterprise code snippet",
+    sectionImageAlt: "Verito Enterprise code snippet Hex Innovations is a global software development",
     bottomParagraphOne:
       "With enterprise-grade security and robust access controls, sensitive data is protected, while still enabling stakeholders to access critical information when they need it.",
     bottomParagraphTwo:
@@ -167,12 +167,12 @@ const projectsData: ProjectData[] = [
   {
     id: "roadsync-e-commerce",
     cardImage: cardImage,
-    cardAlt: "RoadSync E-Commerce",
+    cardAlt: "RoadSync E-Commerce Hex Innovations is a global software development",
     cardTitle: "RoadSync E-Commerce",
     cardDescription:
       "An end-to-end e-commerce platform optimized for high-volume and diverse product catalogs. Our system offers seamless inventory management, secure payments, and personalized shopping experiences to help businesses scale effortlessly.",
     topImage: topImage,
-    topImageAlt: "RoadSync E-Commerce Hero Image",
+    topImageAlt: "RoadSync E-Commerce Hero Image Hex Innovations is a global software development",
     projectTitle: "RoadSync E-Commerce",
     introParagraphOne:
       "RoadSync E-Commerce caters to businesses looking to sell products and services online with ease. Its modular design supports expansions, integrations, and heavy traffic.",
@@ -182,7 +182,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "Beyond a simple storefront, RoadSync connects with social media, physical retail points, and third-party logistics providers, offering a cohesive shopping journey for customers.",
     sectionImage: sectionImage,
-    sectionImageAlt: "RoadSync code snippet",
+    sectionImageAlt: "RoadSync code snippet Hex Innovations is a global software development",
     bottomParagraphOne:
       "Adaptive layout and mobile responsiveness ensure that customers enjoy a consistent experience, whether they're on a desktop, tablet, or smartphone.",
     bottomParagraphTwo:
@@ -193,12 +193,12 @@ const projectsData: ProjectData[] = [
   {
     id: "aquadex-data",
     cardImage: cardImage,
-    cardAlt: "Aquadex Data Platform",
+    cardAlt: "Aquadex Data Platform Hex Innovations is a global software development",
     cardTitle: "Aquadex Data Platform",
     cardDescription:
       "A high-performance data platform designed to monitor, analyze, and protect water resources. With real-time data tracking, predictive analytics, and AI-driven insights, we empower organizations to drive sustainable water management strategies.",
     topImage: topImage,
-    topImageAlt: "Aquadex Data Hero Image",
+    topImageAlt: "Aquadex Data Hero Image Hex Innovations is a global software development",
     projectTitle: "Aquadex Data Platform",
     introParagraphOne:
       "Aquadex is a robust data platform for environmental agencies and water management organizations. It tracks water quality metrics, usage patterns, and real-time sensor inputs.",
@@ -208,7 +208,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "From small-scale local communities to sprawling utilities, Aquadex adapts to various needs. Its modular architecture supports custom analytics, forecasting, and alert systems.",
     sectionImage: sectionImage,
-    sectionImageAlt: "Aquadex code snippet",
+    sectionImageAlt: "Aquadex code snippet Hex Innovations is a global software development",
     bottomParagraphOne:
       "Cutting-edge security measures protect sensitive environmental data while enabling researchers, technicians, and decision-makers to collaborate effectively.",
     bottomParagraphTwo:
@@ -219,12 +219,12 @@ const projectsData: ProjectData[] = [
   {
     id: "enigma-automation",
     cardImage: cardImage,
-    cardAlt: "Enigma Automation Suite",
+    cardAlt: "Enigma Automation Suite Hex Innovations is a global software developments",
     cardTitle: "Enigma Automation Suite",
     cardDescription:
       "An intelligent automation platform streamlining repetitive tasks and boosting productivity. Using AI-driven workflows and robotic process automation, we help businesses reduce manual workload and optimize efficiency at scale.",
     topImage: topImage,
-    topImageAlt: "Enigma Automation Hero Image",
+    topImageAlt: "Enigma Automation Hero Image Hex Innovations is a global software development",
     projectTitle: "Enigma Automation Suite",
     introParagraphOne:
       "Enigma Automation Suite combines AI-driven workflows and robotic process automation to eliminate mundane tasks and free up teams for high-value projects.",
@@ -234,7 +234,7 @@ const projectsData: ProjectData[] = [
     sectionParagraph:
       "Our platform’s core AI engine continuously learns from user actions, making suggestions to optimize processes further. RPA bots handle repetitive tasks, ensuring speed and accuracy.",
     sectionImage: sectionImage,
-    sectionImageAlt: "Enigma Automation code snippet",
+    sectionImageAlt: "Enigma Automation code snippet Hex Innovations is a global software development",
     bottomParagraphOne:
       "Enigma’s automation potential spans multiple industries, including finance, healthcare, and manufacturing, reducing costs and turnaround times.",
     bottomParagraphTwo:

@@ -48,13 +48,11 @@ const Footer: FC = () => {
             className="space-y-4"
           >
             <div className="text-[24px] font-bold text-[#1B1C1E]">
-              <Image width={100} height={100} src="/icons/HEX-logo-second-png.png" alt="Hex Innovations Logo" />
-              </div>
+              <Image width={100} height={100} src="/icons/HEX-logo-second-png.png" alt="Hex Innovations is a global software development Hex Innovations Logo" />
+            </div>
             <p className="text-sm leading-relaxed text-[#1B1C1E]">
-              Building innovative software solutions and driving digital
-              excellence. We create seamless, scalable, and user-centric
-              products that transform ideas into reality. Let&apos;s innovate
-              together!
+              At Hex Innovations,
+              We build scalable, user-focused products that turns ideas into reality. Let&apos;s create the future together!
             </p>
           </motion.div>
 

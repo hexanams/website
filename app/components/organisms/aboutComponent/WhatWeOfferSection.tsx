@@ -20,7 +20,7 @@ export default function WhatWeOfferSection() {
       >
         <Image 
           src={HighlightSVG} 
-          alt="Highlight" 
+          alt="Discover innovation that scales Highlight" 
           className="w-full h-full"
           width={100}
           height={100} 

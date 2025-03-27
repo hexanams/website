@@ -22,7 +22,7 @@ function page() {
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
           <Image
             src={ourTeam} 
-            alt="Our Team"
+            alt="Hex Innovations - Software & Digital Excellence Our Team"
             fill
             className="object-cover"
             priority

@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Left: Brand */}
         <div className="mr-auto">
           <Link href="/" className="text-xl font-bold">
-            <Image width={100} height={100} src="/icons/HEX-second.svg" alt="Hex Innovations Logo" />
+            <Image width={100} height={100} src="/icons/HEX-second.svg" alt="HexHex Innovations is a global software development  Innovations Logo" />
           </Link>
         </div>
 
