@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next"; 
+import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/app/components/organisms/Footer";
 
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     siteName: "Hex Innovations",
     images: [
       {
-        // Using PNG instead of SVG for better compatibility.
-        url: "/public/icons/HEX-logo-second-png.png", 
+        // Ensure this PNG is optimized and accessible
+        url: "https://hexng.com/icons/HEX-logo-second-png.png?v=1", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Innovative solutions in software, AI, and web development.",
     images: [
       {
-        url: "https://hexng.com/_next/image?url=%2Ficons%2FHEX-logo-second-png.png&w=256&q=75", 
+        url: "https://hexng.com/icons/HEX-logo-second-png.png?v=1", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",

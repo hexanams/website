@@ -1,4 +1,3 @@
-// In your Home page file (e.g., app/page.tsx or pages/index.tsx)
 import React from "react";
 import HomeHero from "./components/organisms/homeComponent/HomeHero";
 import type { Metadata } from 'next';
@@ -6,9 +5,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Hex Innovations | Global Software Development Agency",
   description:
-    "Hex Innovations delivers innovative software development solutions globally. We transform ideas into scalable, high-performance digital products.",
+    "Hex Innovations is a global software development agency delivering custom, agile solutions for digital transformation and enterprise growth. Discover innovation that scales.",
   keywords:
-    "Home, Global Software Development, Digital Transformation, Software Agency, Hex Innovations",
+    "Global Software Development, International Software Agency, Custom Software Solutions, Offshore Software Development, Agile Software Development, Digital Transformation Services, Enterprise Software Development, Scalable Software Solutions, Technology Innovation, Software Development Outsourcing",
   openGraph: {
     title: "Hex Innovations | Global Software Development Agency",
     description:
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Hex Innovations",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo.png",
+        url: "https://hexng.com/icons/HEX-logo-second-png.png?v=1",
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Global Software Development Agency",
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
       "Discover innovative software development solutions at Hex Innovations. We create cutting-edge technology products for global enterprises.",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo.png",
+        url: "https://hexng.com/icons/HEX-logo-second-png.png?v=1",
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Global Software Development Agency",
