@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next";
+import type { Metadata } from "next"; 
 import "./globals.css";
 import Footer from "@/app/components/organisms/Footer";
 
@@ -14,20 +14,22 @@ export const metadata: Metadata = {
     siteName: "Hex Innovations",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo.svg", 
+        // Using PNG instead of SVG for better compatibility.
+        url: "https://hexng.com/icons/HEX-logo.png", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",
       },
     ],
     type: "website",
-  },twitter: {
+  },
+  twitter: {
     card: "summary_large_image",
     title: "Hex Innovations | Software & Digital Excellence",
     description: "Innovative solutions in software, AI, and web development.",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo.svg", 
+        url: "https://hexng.com/icons/HEX-logo-second-png.png", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",
