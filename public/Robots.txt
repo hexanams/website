@@ -1,0 +1,10 @@
+User-agent: *
+# Block access to admin or login pages, if any exist
+Disallow: /admin/
+Disallow: /login/
+
+# Allow all other content to be crawled
+Allow: /
+
+# Reference to your sitemap
+Sitemap: https://hexng.com/sitemap.xml

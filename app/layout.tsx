@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     images: [
       {
         // Ensure this PNG is optimized and accessible
-        url: "https://hexng.com/icons/HEX-logo-second-png.png?v=1", 
+        url: "https://hexng.com/icons/HEX-logo-second-png.png", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Innovative solutions in software, AI, and web development.",
     images: [
       {
-        url: "https://hexng.com/icons/HEX-logo-second-png.png?v=1", 
+        url: "https://hexng.com/icons/HEX-logo-second-png.png", 
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Software & Digital Excellence",
