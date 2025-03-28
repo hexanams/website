@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Hex Innovations",
     images: [
       {
-        url: "/icons/HEX-white.png",
+        url: "https://hexng.com/icons/HEX-white.png",
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Contact Us",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Reach out to Hex Innovations for global software development solutions. Let's build innovative technology together.",
     images: [
       {
-        url: "/icons/HEX-white.png",
+        url: "https://hexng.com/icons/HEX-white.png",
         width: 1200,
         height: 630,
         alt: "Hex Innovations - Contact Us",
