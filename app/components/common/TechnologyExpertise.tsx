@@ -31,19 +31,19 @@ export default function TechnologyExpertise() {
       }}
     >
       {/* Teal overlay */}
-      <div className="absolute inset-0 bg-[#0D4F4F]/90 "/>
-
+      <div className="absolute inset-0 bg-[#0D4F4F]/90" />
+      <div className="relative container mx-auto px-4 sm:px-8 lg:px-15 lg:py-14">
       {/* Content Container */}
-      <div className="relative mx-auto max-w-7xl px-6 ">
+      <div className="relative mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-4xl font-bold sm:text-[64px] sm:leading-[72px]"
+          className="text-4xl font-bold sm:text-[64px] sm:leading-[72px] mb-4"
         >
-          Our Technologies
+          Technology Expertise
         </motion.h2>
 
         {/* Subheading */}
@@ -52,7 +52,7 @@ export default function TechnologyExpertise() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mt-2 mb-8 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-[16px]"
+          className="mt-0 mb-10 max-w-2xl text-base leading-relaxed text-gray-100 sm:text-[16px]"
         >
           Our team leverages the latest tools and frameworks to build software that drives efficiency, 
           enhances performance, and keeps businesses ahead in an ever-evolving digital world.
@@ -81,11 +81,7 @@ export default function TechnologyExpertise() {
               }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col  
-                rounded-lg bg-[#1B1C1E] p-6 
-                transition-colors 
-                hover:bg-[#2A2B2D]
-              "
+              className="flex flex-col rounded-lg bg-[#1B1C1E] p-6 transition-colors hover:bg-[#2A2B2D]"
             >
               {/* Icon */}
               <div className="mb-4 relative h-12 w-12">
@@ -102,6 +98,7 @@ export default function TechnologyExpertise() {
             </motion.div>
           ))}
         </motion.div>
+      </div>
       </div>
     </section>
   );

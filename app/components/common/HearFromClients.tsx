@@ -67,9 +67,9 @@ export default function HearFromClients() {
         </div>
 
         {/* Bottom Section: Client Info & Image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-around">
           {/* LEFT COLUMN: Arrows, Name, Role */}
-          <div className="flex flex-col items-center justify-space-between md:items-start">
+          <div className="flex flex-col items-center justify-space-between space-y-6 md:-mr-[15rem]">
           <div>
                 <h3 className="text-xl font-semibold">{currentClient.name}</h3>
                 <p className="text-gray-600">{currentClient.role}</p>
@@ -133,6 +133,7 @@ export default function HearFromClients() {
               </svg>
             </button>
           </div>
+
         </div>
       </div>
     </section>

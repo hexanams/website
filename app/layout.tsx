@@ -49,7 +49,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/web-app-manifest-512x512.png" />
+        <link rel="icon" type="image/png" href="/web-app-manifest-192x192.png" />
         <link rel="apple-touch-icon" href="/web-app-manifest-512x512.png" />
       </head>
       <body className="antialiased">
