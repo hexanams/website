@@ -1,8 +1,14 @@
 import { StaticImageData } from "next/image";
-import cardImage from "@/public/images/clisha-review.png";
+//import cardImage from "@/public/images/clisha-review.png";
 import sectionImage from "@/public/images/cardImage.png";
 import topImage from "@/public/images/topImage-projectDetails.png";
 // If you have a second image, import it here (e.g., codeSnippet)
+import clishaReviewCover from "@/public/images/ClishaReview_cover.svg";
+import ICUResetCover from "@/public/images/ICUReset_Cover.svg";
+import ClaudiaCover from "@/public/images/Claudia_cover.svg";
+import HexSoftwareCover from "@/public/images/HexSoftware_cover.svg";
+import kinderlyCover from "@/public/images/KinderlyMobileApp_cover.svg";
+import ClishaSocialCover from "@/public/images/ClishaSocial_cover.svg";
 
 export interface ProjectData {
   // Fields for the "card" display in OurProjects
@@ -36,7 +42,7 @@ export interface ProjectData {
 const projectsData: ProjectData[] = [
   {
     id: "kinderly-app",
-    cardImage: cardImage,
+    cardImage: kinderlyCover,
     cardAlt: "Kinderly parenting app with AI advice tailored to your child",
     cardTitle: "Kinderly",
     cardDescription: "The first parenting app delivering AI-powered guidance personalized to each child’s development, health, and behavior.",
@@ -54,29 +60,10 @@ const projectsData: ProjectData[] = [
     ctaLabel: "Start Free Trial",
   },
 
-  {
-    id: "mindfulpath-therapy",
-    cardImage: cardImage,
-    cardAlt: "Serene river and mossy rocks symbolizing calm and healing",
-    cardTitle: "MindfulPath Therapy",
-    cardDescription: "Personalized, compassionate mental health support through expert-led therapy sessions in a safe, non-judgmental environment.",
-    topImage: topImage,
-    topImageAlt: "Tranquil nature scene to evoke mental well-being and peace",
-    projectTitle: "MindfulPath: Your Journey to Mental Well-Being",
-    introParagraphOne: "At MindfulPath, we believe mental well-being is a journey best traveled with support. Our licensed therapists provide personalized care tailored to your unique experiences and goals, empowering you every step of the way.",
-    introParagraphTwo: "Whether you’re seeking individual, couples, child & adolescent, workplace, or specialized therapy, MindfulPath offers a safe, inclusive space to explore, heal, and grow. Start your path to a healthier mind today.",
-    sectionTitle: "Comprehensive Therapy Services",
-    sectionParagraph: "From one-on-one sessions to targeted programs, our services combine evidence-based techniques with empathetic guidance—ensuring you receive the right support, at the right time, in the way that fits your life.",
-    sectionImage: sectionImage,
-    sectionImageAlt: "Collage of therapy settings: individual, couples, child, workplace",
-    bottomParagraphOne: "Our accredited professionals uphold the highest standards of care, offering flexible scheduling, both virtual and in-person options, and strict confidentiality—so you can focus fully on your growth.",
-    bottomParagraphTwo: "Take the first step toward lasting change. Whether you’re navigating stress, relationship challenges, or personal development, MindfulPath is here to guide and support you on your journey to well-being.",
-    ctaLabel: "Book Your First Session"
-  },
 
   {
     id: "clisha-review",
-    cardImage: cardImage,
+    cardImage: clishaReviewCover,
     cardAlt: "Clisha Review dashboard showing review analytics and QR code",
     cardTitle: "Clisha Review",
     cardDescription:
@@ -102,7 +89,7 @@ const projectsData: ProjectData[] = [
   
   {
     id: "icu-community",
-    cardImage: cardImage,
+    cardImage: ICUResetCover,
     cardAlt: "ICU Community platform interface showcasing features and functionalities",
     cardTitle: "ICU Community",
     cardDescription: "Build, grow, and engage your community like never before with ICU Community's all-in-one platform, designed to empower and transform your digital experiences.",
@@ -122,7 +109,7 @@ const projectsData: ProjectData[] = [
   
   {
     id: "Claudia-Psychology",
-    cardImage: cardImage,
+    cardImage: ClaudiaCover,
     cardAlt: "Claudia Psychology platform interface showcasing therapy and consultation services",
     cardTitle: "Claudia Psychology",
     cardDescription: "Take the first step towards a life of empowerment and fulfillment with our expert therapy services. Whether you're seeking individual therapy, support for your family, or help in the workplace, Mental Wellbeing is here to guide you.",
@@ -134,7 +121,7 @@ const projectsData: ProjectData[] = [
     sectionTitle: "Therapy Services We Offer",
     sectionParagraph: "We offer a wide range of therapeutic services to support individuals at various stages of life. Whether you're navigating personal struggles, managing a family, or seeking professional guidance, we have a program designed for you.",
     sectionImage: sectionImage,
-    sectionImageAlt: "Claudia Psychology platform showcasing professional therapy session with clients",
+    sectionImageAlt: "Mental Wellbeing professional therapy session with clients",
     bottomParagraphOne: "From individual therapy to couples and workplace support, our services cover a broad spectrum of needs. Explore our diverse offerings, including child and adolescent therapy, adult therapy, and much more. Together, we can take the first step towards better mental health.",
     bottomParagraphTwo: "Get started today by booking your first session. Our easy-to-navigate platform allows you to schedule and manage your therapy appointments with ease, ensuring that you receive the support you need, when you need it.",
     ctaLabel: "Book Your Appointment Now"
@@ -142,7 +129,7 @@ const projectsData: ProjectData[] = [
   
   {
     id: "clisha-social",
-    cardImage: cardImage,
+    cardImage: ClishaSocialCover,
     cardAlt: "Clisha Social platform interface showcasing automated social media management features",
     cardTitle: "Clisha Social",
     cardDescription: "Manage your social media effortlessly with Clisha Social's all-in-one platform, designed to streamline content creation, scheduling, and community engagement.",
@@ -159,6 +146,34 @@ const projectsData: ProjectData[] = [
     bottomParagraphTwo: "Clisha Social offers flexible pricing plans tailored to your needs. Whether you're a small business or a large enterprise, our platform helps you automate and streamline your social media management. Join Clisha Social today and start growing your online presence.",
     ctaLabel: "Start Managing Your Social Media Today"
   },
+
+  {
+    id: "Hex-Software",
+    cardImage: HexSoftwareCover,
+    cardAlt: "African Talent Hiring Service platform empowering businesses to hire top talent across Africa",
+    cardTitle: "African Talent Hiring Service",
+    cardDescription: "We help businesses connect with Africa's best talent, providing a seamless and efficient HR platform to build, hire, and launch teams that drive success. From development to customer service, we’ve got the talent you need to scale.",
+    topImage: topImage,
+    topImageAlt: "African talent from various industries working remotely",
+    projectTitle: "African Talent Hiring Service",
+    introParagraphOne: "At African Talent Hiring Service, we specialize in empowering businesses to easily hire top professionals from across Africa. With access to a network of talented developers, designers, marketers, and business experts, we make it simple for you to scale your teams efficiently.",
+    introParagraphTwo: "Our platform connects you with skilled professionals from diverse sectors, including full-stack development, UI/UX design, mobile app development, and more. Whether you're a startup or a large enterprise, we provide tailored solutions to help you grow.",
+    sectionTitle: "Maximize Your HR Impact",
+    sectionParagraph: "Streamline your hiring process and find the perfect fit for your team. From creating job listings to managing candidate profiles and tracking project progress, our platform simplifies every step of your recruitment journey.",
+    sectionImage: sectionImage,
+    sectionImageAlt: "African talent working remotely on laptops and collaborating virtually",
+    bottomParagraphOne: "Our mission is to bridge the gap between global businesses and Africa’s brightest professionals. By offering easy access to a wide range of talent across multiple industries, we ensure that your hiring process is both fast and effective.",
+    bottomParagraphTwo: "With flexible pricing plans, a user-friendly interface, and a diverse range of experts, we’re committed to helping you build exceptional teams that deliver outstanding results.",
+    ctaLabel: "Start Hiring Now"
+  },
+  
+
+
+
+
+
+
+
 
   // {
   //   id: "creqe-mobile-app",
