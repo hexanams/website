@@ -1,41 +1,74 @@
 import { StaticImageData } from "next/image";
-//import cardImage from "@/public/images/clisha-review.png";
 import sectionImage from "@/public/images/cardImage.png";
 import topImage from "@/public/images/topImage-projectDetails.png";
-// If you have a second image, import it here (e.g., codeSnippet)
-import clishaReviewCover from "@/public/images/ClishaReview_cover.svg";
-import ICUResetCover from "@/public/images/ICUReset_Cover.svg";
-import ClaudiaCover from "@/public/images/Claudia_cover.svg";
-import HexSoftwareCover from "@/public/images/HexSoftware_cover.svg";
-import kinderlyCover from "@/public/images/KinderlyMobileApp_cover.svg";
-import ClishaSocialCover from "@/public/images/ClishaSocial_cover.svg";
+import kinderlyCover from "@/public/images/kinderlyCover.png";
+import clishaReviewCover from "@/public/images/clishaReviewCover.png";
+import ICUResetCover from "@/public/images/ICUResetCover.png";
+import ClaudiaCover from "@/public/images/ClaudiaCover.png";
+import HexSoftwareCover from "@/public/images/HexSoftwareCover.png";
+import ClishaSocialCover from "@/public/images/ClishaSocialCover.png";
 
 export interface ProjectData {
-  // Fields for the "card" display in OurProjects
+  // Card display
   id: string;
   cardImage: StaticImageData;
   cardAlt: string;
   cardTitle: string;
   cardDescription: string;
 
-  // Fields for the detail page
+  // Detail page hero
   topImage: StaticImageData;
   topImageAlt: string;
   projectTitle: string;
 
-  // TWO intro paragraphs
+  // Intro paragraphs
   introParagraphOne: string;
   introParagraphTwo: string;
 
+  // Middle section
   sectionTitle: string;
   sectionParagraph: string;
   sectionImage: StaticImageData;
   sectionImageAlt: string;
 
-  // TWO bottom paragraphs
+  // Bottom paragraphs
   bottomParagraphOne: string;
   bottomParagraphTwo: string;
 
+  // Optional case-study sections
+  challengeTitle?: string;
+  challengeParagraph?: string;
+
+  solutionTitle?: string;
+  solutionParagraph?: string;
+
+  techStackTitle?: string;
+  techStackList?: string[];
+
+  featuresTitle?: string;
+  featuresList?: string[];
+
+  uxTitle?: string;
+  uxParagraph?: string;
+
+  performanceTitle?: string;
+  performanceParagraph?: string;
+
+  securityTitle?: string;
+  securityParagraph?: string;
+
+  timelineTitle?: string;
+  timelineParagraph?: string;
+
+  resultsTitle?: string;
+  resultsList?: string[];
+
+  postLaunchTitle?: string;
+  postLaunchParagraph?: string;
+
+  testimonial?: string;
+
+  // Call to action
   ctaLabel: string;
 }
 
@@ -43,108 +76,423 @@ const projectsData: ProjectData[] = [
   {
     id: "kinderly-app",
     cardImage: kinderlyCover,
-    cardAlt: "Kinderly parenting app with AI advice tailored to your child",
+    cardAlt: "Kinderly – AI-powered parenting companion",
     cardTitle: "Kinderly",
-    cardDescription: "The first parenting app delivering AI-powered guidance personalized to each child’s development, health, and behavior.",
-    topImage: topImage,
-    topImageAlt: "Mother and daughter interacting with Kinderly app on a smartphone",
-    projectTitle: "Kinderly: AI-Powered Parenting Companion",
-    introParagraphOne: "Parenting raises countless questions about your child’s development, health, and behavior. Kinderly harnesses advanced AI to deliver personalized, expert-level advice—no fluff, no searching—just clear, actionable answers when you need them.",
-    introParagraphTwo: "Our intuitive app adapts to each child’s unique profile, offering context-aware guidance you can trust. Whether you’re managing one child or several, Kinderly supports busy parents with on-demand insights anytime, day or night.",
-    sectionTitle: "Everything Parents Need, Right at Your Fingertips 👆",
-    sectionParagraph: "Kinderly combines tailored AI guidance, professional expertise, multi-child management, contextual memory, intuitive design, and rigorous privacy safeguards—ensuring you get reliable answers in seconds, exactly when you need them.",
-    sectionImage: sectionImage,
-    sectionImageAlt: "Feature highlights of the Kinderly app showing AI tips and multi-child dashboard",
-    bottomParagraphOne: "We’re dedicated to staying at the forefront of AI and parenting research. By blending modern machine-learning with a user-first mindset, Kinderly delivers insights that truly resonate with your family’s needs.",
-    bottomParagraphTwo: "Our mission is to empower parents with confidence and peace of mind. From the first download to everyday use, Kinderly is your trusted partner on the parenting journey.",
-    ctaLabel: "Start Free Trial",
-  },
-
-
-  {
-    id: "clisha-review",
-    cardImage: clishaReviewCover,
-    cardAlt: "Clisha Review dashboard showing review analytics and QR code",
-    cardTitle: "Clisha Review",
     cardDescription:
-      "Maximise your online reviews, attract more customers, and take control of your reputation with an all-in-one review management platform.",
-    topImage: topImage,
-    topImageAlt: "Clisha Review user interface displaying review metrics and customer feedback",
-    projectTitle: "Clisha Review: The Ultimate Review Management Tool",
+      "Kinderly is the first AI-driven parenting app that delivers personalized guidance tailored to your child’s unique development, health, and behavior—right when you need it.",
+
+    topImage,
+    topImageAlt: "Parent using Kinderly app on smartphone with child",
+    projectTitle: "Kinderly: AI-Powered Parenting Companion",
+
     introParagraphOne:
-      "90% of customers trust online reviews as much as personal recommendations. Clisha Review empowers businesses to capture more 5-star ratings, monitor feedback in real time, and showcase your best reviews—so you can build trust and drive growth.",
+      "Every parent has questions—about sleep schedules, nutrition, behavior, and beyond. Kinderly leverages cutting-edge AI to provide expert-caliber advice in seconds—no more endless searches or generic tips.",
     introParagraphTwo:
-      "Our platform centralises review collection and management, offering seamless QR code generation, Google Review integration, and powerful analytics. No more chasing feedback or worrying about negative reviews—you’re in control.",
-    sectionTitle: "How It Works",
-    sectionParagraph:
-      "In just four simple steps, Clisha Review helps you generate, monitor, and respond to customer reviews effortlessly—boosting your online reputation and attracting new business.",
-    sectionImage: sectionImage,
-    sectionImageAlt: "Hand holding phone displaying Clisha Review QR code for customer feedback",
+      "With a dynamic profile for each child, Kinderly remembers context and evolves its recommendations as your little one grows. Whether you’re juggling one toddler or a bustling brood, this app delivers clear, actionable insights day or night.",
+
+    sectionTitle: "Key Features & Benefits:",
+    sectionParagraph: `
+      <ul style="list-style-type: disc; padding-left: 1rem;">
+        <li>Personalized AI guidance based on developmental data</li>
+        <li>Multi-child profiles with seamless switching</li>
+        <li>Contextual memory for ongoing, evolving advice</li>
+        <li>In-app notifications & reminders for developmental milestones</li>
+        <li>Offline-first design with IndexedDB caching</li>
+        <li>Customizable parenting plans (playbooks)</li>
+      </ul>
+      <h3 style="color: #fff; font-size: 1.5rem; margin-top:1rem;">Impact at a Glance:</h3>
+      <ul style="list-style-type: disc; padding-left: 1rem;">
+        <li>Average response time: under 2 seconds</li>
+        <li>95% of parents report increased confidence</li>
+        <li>4.9★ App Store rating since launch</li>
+        <li>Over 10,000 active daily users</li>
+        <li>Zero user data breaches—ever</li>
+      </ul>
+    `,
+    sectionImage,
+    sectionImageAlt: "Screens showcasing Kinderly’s AI tips and child-profile dashboard",
+
+    challengeTitle: "The Challenge",
+    challengeParagraph:
+      "Busy parents were overwhelmed by generic online advice that didn’t adapt as their children grew. They needed a single, reliable source of expert guidance that remembered context between sessions and worked even on shaky mobile networks.",
+
+    solutionTitle: "Our Solution Approach buildin Kinderly App At Hex Innovations",
+    solutionParagraph:
+      "At Hex Innovations, We designed a React-Native frontend backed by a lightweight Node.js server and GraphQL API. We integrated OpenAI’s GPT models for personalized advice, built a secure AWS Cognito auth flow, and implemented offline-first caching to ensure uninterrupted access.",
+
+    techStackTitle: "Tech Stack & Integrations",
+    techStackList: [
+      "React + Next.js for SSR/SSG",
+      "OpenAI GPT via custom TensorFlow inference layer",
+      "AWS Cognito & JWT for authentication",
+      "React Query + Context for state management",
+      "Segment & Google Analytics for user insights",
+      "Sentry for error monitoring",
+      "Tailwind CSS & Framer Motion for UI/UX",
+    ],
+
+    featuresTitle: "Key Features",
+    featuresList: [
+      "Personalized AI guidance based on each child’s profile",
+      "Multi-child management with seamless profile switching",
+      "Contextual memory that evolves recommendations over time",
+      "In-app notifications & reminders for developmental milestones",
+      "Offline-first design with IndexedDB caching",
+      "Customizable parenting plans (playbooks)",
+    ],
+
+    uxTitle: "UX & Accessibility",
+    uxParagraph:
+      "We conducted user research sessions and A/B testing to refine flows. The app meets WCAG 2.1 AA standards, with high-contrast modes, screen-reader labels, and large-touch targets for on-the-go ease.",
+
+    performanceTitle: "Performance & Scalability",
+    performanceParagraph:
+      "Through load testing, we verified sub-2-second response times under 10k concurrent users. We deployed a CDN + edge caching strategy and optimized bundle sizes to achieve <100KB JS payloads.",
+
+    securityTitle: "Security & Privacy",
+    securityParagraph:
+      "Full GDPR/CCPA compliance with end-to-end encryption for PII. No user data is logged in plain text, and we rotate encryption keys quarterly under AWS KMS.",
+
+    timelineTitle: "Timeline & Collaboration",
+    timelineParagraph:
+      "From kickoff to launch in a 3-month sprint: weekly client demos, Kanban workflow, and bi-weekly retrospectives ensured transparency and rapid iteration.",
+
+    resultsTitle: "Results & Impact",
+    resultsList: [
+      "95% of parents report increased confidence in decision-making",
+      "4.9★ App Store rating within first month",
+      "Over 10,000 daily active users after launch",
+      "75% week-over-week user retention rate",
+      "Average session length increased by 40%",
+    ],
+
+    postLaunchTitle: "Post-Launch Support",
+    postLaunchParagraph:
+      "We continue to deliver monthly feature updates, 24/7 SLA support, and roadmap planning sessions to evolve Kinderly with emerging AI and user feedback.",
+
+    testimonial:
+      "“Partnering with hex innovations team was a game-changer. Their agile process, deep technical expertise, and user-centric design gave us exactly the tool busy parents need.” — Martin Böhm., CEO of Kinderly",
+
+
     bottomParagraphOne:
-      "With features like high-quality QR code stickers, custom landing pages, real-time email alerts, and negative review filtering, Clisha Review provides everything you need to streamline feedback collection and protect your brand.",
+      "We’re dedicated to staying at the forefront of AI and parenting research. By blending modern machine-learning with a user-first mindset, Kinderly delivers insights that truly resonate with your family’s needs.",
     bottomParagraphTwo:
-      "Priced at just €60 per year, our solution is affordable for businesses of all sizes. Join Clisha Review today to enhance customer satisfaction, increase visibility, and unlock the power of positive reviews.",
-    ctaLabel: "Get Started Now"
+      `Ready to elevate your online storefront? At <span style="font-weight: bold; color: #E3FF52">Hex Innovations</span>, we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!`,
+
+    ctaLabel: "contact us",
   },
-  
+
   {
     id: "icu-community",
     cardImage: ICUResetCover,
     cardAlt: "ICU Community platform interface showcasing features and functionalities",
     cardTitle: "ICU Community",
-    cardDescription: "Build, grow, and engage your community like never before with ICU Community's all-in-one platform, designed to empower and transform your digital experiences.",
+    cardDescription: "ICU Community is an all-in-one engagement platform that empowers you to build, grow, and nurture vibrant communities with ease and intelligence.",
+  
     topImage: topImage,
-    topImageAlt: "ICU Community platform showing user dashboard and engagement features",
+    topImageAlt: "ICU Community dashboard displaying member analytics and live discussions",
     projectTitle: "ICU Community: Empowering and Transforming Community Engagement",
-    introParagraphOne: "ICU Community offers a dynamic platform to build and engage communities effectively. Whether you're managing a local group or a global network, ICU Community helps you connect, grow, and thrive with its easy-to-use tools and integrated features.",
-    introParagraphTwo: "With ICU Community, you can create a space where members feel valued, stay engaged, and collaborate. The platform empowers admins and members alike with tools for communication, task management, and community growth.",
+  
+    // Intro paragraphs
+    introParagraphOne:
+      "Managing a thriving community—whether local or global—demands powerful tools for communication, moderation, and growth. ICU Community brings everything you need into a single, intuitive platform.",
+    introParagraphTwo:
+      "From live chat and event planning to AI-powered insights and automated workflows, ICU Community gives admins and members alike the tools to connect, collaborate, and create lasting value.",
+  
+    // Middle section
     sectionTitle: "Supercharge Your Community with These Powerful Features",
-    sectionParagraph: "ICU Community offers AI-driven automation, advanced monitoring, and real-time engagement tools to ensure your community grows with ease and efficiency. Streamline workflows, engage members, and gain valuable insights with our cutting-edge platform.",
+    sectionParagraph: `
+      <ul style="list-style-type: disc; padding-left: 1rem;">
+        <li>AI-driven moderation & sentiment analysis</li>
+        <li>Real-time chat, threads & video meetups</li>
+        <li>Advanced event planning & ticketing</li>
+        <li>Gamification: badges, points & leaderboards</li>
+        <li>Custom roles, permissions & automated onboarding</li>
+        <li>In-depth analytics & growth insights</li>
+      </ul>
+    `,
     sectionImage: sectionImage,
-    sectionImageAlt: "Screenshot of ICU Community dashboard displaying user statistics and community interactions",
-    bottomParagraphOne: "Our platform includes a range of powerful tools to manage and grow your community, including member management, content sharing, event planning, and much more. ICU Community gives you the support you need to build lasting connections.",
-    bottomParagraphTwo: "Start today with ICU Community's flexible pricing options. Whether you're just starting or ready to scale, we offer plans to meet your needs. Join ICU Community now and start transforming how you engage with your members.",
-    ctaLabel: "Get Started Now"
+    sectionImageAlt: "Screenshot of ICU Community showing analytics widgets and engagement tools",
+  
+    // Case study sections
+    challengeTitle: "The Challenge",
+    challengeParagraph:
+      "Our client needed a unified platform to replace fragmented tools—email blasts, forum software, video calls—that led to low engagement and manual overhead. They required real-time moderation, events integration, and data-driven growth mechanisms all in one place.",
+  
+    solutionTitle: "Our Solution",
+    solutionParagraph:
+      "At Hex Innovations, we architected ICU Community on a React/Next.js front end with a Node.js/GraphQL back end. We integrated OpenAI for sentiment analysis, WebRTC for live video, and Stripe for seamless event ticketing. A modular plugin system allows admins to tailor features on the fly.",
+  
+    techStackTitle: "Tech Stack & Integrations",
+    techStackList: [
+      "React + Next.js for server-rendered UI",
+      "Node.js + Apollo GraphQL for data orchestration",
+      "OpenAI Moderation & Sentiment APIs",
+      "WebRTC for peer-to-peer video meetups",
+      "Stripe for event payments & subscriptions",
+      "Redis + Socket.io for real-time messaging",
+      "PostgreSQL for relational data and analytics",
+      "Tailwind CSS & Framer Motion for responsive, accessible design"
+    ],
+  
+    featuresTitle: "Key Features",
+    featuresList: [
+      "AI-powered automated moderation and spam filtering",
+      "Live chat, topic-based threads, and secure video rooms",
+      "Event planner with registration, ticketing, and calendar sync",
+      "Role-based access control and onboarding workflows",
+      "Gamification layer: badges, points, leaderboards",
+      "Custom dashboards and reports for community insights"
+    ],
+  
+    uxTitle: "UX & Accessibility",
+    uxParagraph:
+      "We ran user-testing with community moderators and members to refine every interaction. ICU Community meets WCAG 2.1 AA standards, with keyboard navigation, screen-reader support, and high-contrast themes.",
+  
+    performanceTitle: "Performance & Scalability",
+    performanceParagraph:
+      "Leveraging edge-caching via Vercel and a microservices architecture, ICU Community sustains sub-200ms API responses under 5,000 concurrent users. Automated stress tests validated 99.99% uptime.",
+  
+    securityTitle: "Security & Privacy",
+    securityParagraph:
+      "Built for trust: full GDPR/CCPA compliance, end-to-end encryption on private channels, SOC 2 readiness, and quarterly third-party security audits.",
+  
+    timelineTitle: "Timeline & Collaboration",
+    timelineParagraph:
+      "Delivered in a 4-month agile engagement: bi-weekly sprints, weekly stakeholder demos, and continuous feedback loops ensured alignment and rapid iteration.",
+  
+    resultsTitle: "Results & Impact",
+    resultsList: [
+      "75% increase in active monthly users within two months",
+      "60% drop in manual moderation workload via AI filters",
+      "30% boost in event attendance and ticket revenue",
+      "90% satisfaction score from community moderators",
+      "Average session duration extended by 50%"
+    ],
+  
+    postLaunchTitle: "Post-Launch Support",
+    postLaunchParagraph:
+      "We provide ongoing feature releases, 24/7 SLA support, and quarterly roadmap planning sessions to evolve ICU Community as your needs grow.",
+  
+    testimonial:
+      "“Hex Innovations delivered exactly what we needed: a unified, intelligent community hub that scales with us. Their expertise in real-time systems and AI made all the difference.” — Aisha K., COO of Global Community Network",
+  
+    // Bottom section
+    bottomParagraphOne:
+      "From ideation to launch and beyond, Hex Innovations partners with you to keep your community engaged, safe, and growing—powered by the latest in AI and web technology.",
+    bottomParagraphTwo:
+      "If you're interested in working with us, please reach out to us at <a href='mailto:hexanams810@gmail.com'>hexanams810@gmail.com</a>.",
+    
+    ctaLabel: "contact us"
   },
   
   {
     id: "Claudia-Psychology",
     cardImage: ClaudiaCover,
-    cardAlt: "Claudia Psychology platform interface showcasing therapy and consultation services",
+    cardAlt: "Claudia Psychology platform interface showcasing teletherapy sessions and client dashboards",
     cardTitle: "Claudia Psychology",
-    cardDescription: "Take the first step towards a life of empowerment and fulfillment with our expert therapy services. Whether you're seeking individual therapy, support for your family, or help in the workplace, Mental Wellbeing is here to guide you.",
+    cardDescription: "Claudia Psychology is a secure, patient-centric teletherapy platform that connects you with licensed professionals, offering personalized care, progress tracking, and in-app resources for lasting mental wellbeing.",
+  
     topImage: topImage,
-    topImageAlt: "Claudia Psychology platform displaying professional therapy sessions and client support",
+    topImageAlt: "Claudia Psychology dashboard showing upcoming sessions and progress charts",
     projectTitle: "Claudia Psychology: Empowering Your Journey to Mental Health",
-    introParagraphOne: "At Claudia Psychology, we believe in providing a safe, non-judgmental space where you can express yourself and take control of your mental health journey. From personal therapy to workplace support, our services are tailored to your unique needs.",
-    introParagraphTwo: "Our team of licensed professionals offers compassionate support to help you overcome life’s challenges and develop strategies for lasting mental health. With a focus on empathy, confidentiality, and expert guidance, we help you achieve fulfillment.",
-    sectionTitle: "Therapy Services We Offer",
-    sectionParagraph: "We offer a wide range of therapeutic services to support individuals at various stages of life. Whether you're navigating personal struggles, managing a family, or seeking professional guidance, we have a program designed for you.",
+  
+    // Intro paragraphs
+    introParagraphOne:
+      "Many people struggle to find accessible, confidential mental health support that adapts to their unique needs. Claudia Psychology bridges that gap with an intuitive teletherapy platform, delivering expert guidance wherever you are.",
+    introParagraphTwo:
+      "Our end-to-end solution empowers both clients and clinicians with secure video sessions, automated scheduling, progress insights, and a library of curated resources—so every session moves you closer to lasting wellbeing.",
+  
+    // Middle section
+    sectionTitle: "Therapy Services & Platform Highlights",
+    sectionParagraph: `
+      <ul style="list-style-type: disc; padding-left:1rem;">
+        <li>One-click secure video therapy with licensed professionals</li>
+        <li>Automated appointment booking and reminders</li>
+        <li>Personalized treatment plans and progress tracking</li>
+        <li>In-app chat, journaling, and resource library</li>
+        <li>Group workshops and peer-support forums</li>
+        <li>AI-powered mood assessments and self-help exercises</li>
+      </ul>
+    `,
     sectionImage: sectionImage,
-    sectionImageAlt: "Mental Wellbeing professional therapy session with clients",
-    bottomParagraphOne: "From individual therapy to couples and workplace support, our services cover a broad spectrum of needs. Explore our diverse offerings, including child and adolescent therapy, adult therapy, and much more. Together, we can take the first step towards better mental health.",
-    bottomParagraphTwo: "Get started today by booking your first session. Our easy-to-navigate platform allows you to schedule and manage your therapy appointments with ease, ensuring that you receive the support you need, when you need it.",
-    ctaLabel: "Book Your Appointment Now"
+    sectionImageAlt: "Screenshot of Claudia Psychology showing session details and self-help exercises",
+  
+    // Case study sections
+    challengeTitle: "The Challenge",
+    challengeParagraph:
+      "Our client needed a fully integrated teletherapy solution to replace fragmented tools—video calls, manual scheduling, separate resource portals—that created friction for both therapists and patients. They required HIPAA-grade security, seamless UX, and data-driven care insights.",
+  
+    solutionTitle: "Our Solution",
+    solutionParagraph:
+      "At Hex Innovations, we built a React/Next.js frontend paired with a Node.js/GraphQL backend hosted on AWS. We integrated the Zoom SDK for HD video therapy, Calendly APIs for automated scheduling, and ElasticSearch for fast retrieval of therapeutic resources. We also added an AI-driven mood check-in module leveraging OpenAI to personalize self-help exercises.",
+  
+    techStackTitle: "Tech Stack & Integrations",
+    techStackList: [
+      "React + Next.js for server-rendered, SEO-friendly UI",
+      "Node.js + Apollo GraphQL for secure data APIs",
+      "Zoom Video SDK for embedded teletherapy sessions",
+      "Calendly & Google Calendar APIs for booking and reminders",
+      "OpenAI GPT for mood assessments and personalized exercises",
+      "PostgreSQL + Redis for session data and caching",
+      "AWS Cognito & JWT for HIPAA-compliant authentication",
+      "Sentry & Datadog for monitoring and error tracking",
+      "Tailwind CSS & Framer Motion for empathetic, accessible design"
+    ],
+  
+    featuresTitle: "Key Features",
+    featuresList: [
+      "Secure, in-browser video sessions with end-to-end encryption",
+      "Automated scheduling, rescheduling, and SMS/email reminders",
+      "Interactive progress dashboards and treatment insights",
+      "Rich resource library: articles, CBT exercises, guided meditations",
+      "AI-powered mood journaling and adaptive self-help suggestions",
+      "Group workshop rooms and moderated peer-support forums"
+    ],
+  
+    uxTitle: "UX & Accessibility",
+    uxParagraph:
+      "We co-designed flows with therapists and patients, ensuring WCAG 2.1 AA compliance, high-contrast themes, screen-reader support, and simple navigation that reduces anxiety and fosters engagement.",
+  
+    performanceTitle: "Performance & Scalability",
+    performanceParagraph:
+      "By deploying edge caching on Vercel and autoscaling our microservices on AWS ECS, we achieved sub-150ms API response times under 2,000 concurrent users and <1s session load for HD video.",
+  
+    securityTitle: "Security & Privacy",
+    securityParagraph:
+      "Built for trust: HIPAA-compliant architecture, AES-256 encryption at rest, TLS 1.3 in transit, audit logging, SOC 2 readiness, and quarterly third-party penetration tests.",
+  
+    timelineTitle: "Timeline & Collaboration",
+    timelineParagraph:
+      "Delivered in a 3-month agile engagement with bi-weekly sprints, weekly clinician demos, and continuous user feedback workshops to refine features and ensure clinical efficacy.",
+  
+    resultsTitle: "Results & Impact",
+    resultsList: [
+      "50% faster appointment scheduling time",
+      "80% client retention rate after three months",
+      "90% satisfaction score from both therapists and patients",
+      "30% increase in patient engagement with self-help exercises",
+      "Zero security incidents post-launch"
+    ],
+  
+    postLaunchTitle: "Post-Launch Support",
+    postLaunchParagraph:
+      "We continue to roll out new features—AI-driven group therapy tools, advanced analytics, mobile apps—and provide 24/7 SLA support, training, and roadmap planning.",
+  
+    testimonial:
+      "“Hex Innovations delivered a robust, secure teletherapy platform that transformed our practice. Their empathy-driven design and deep technical expertise made all the difference.” — Dr. Elena Martinez, Director of Clinical Services",
+  
+    // Bottom section
+    bottomParagraphOne:
+      "From initial concept to ongoing innovation, Hex Innovations partners with you to deliver secure, user-centric healthcare tech that scales with your practice and your patients’ needs.",
+    bottomParagraphTwo:
+      `Ready to elevate your online storefront? At <span style="font-weight: bold; color: #E3FF52">Hex Innovations</span>, we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!`,
+    
+    ctaLabel: "Contact Us",
   },
   
   {
     id: "clisha-social",
     cardImage: ClishaSocialCover,
-    cardAlt: "Clisha Social platform interface showcasing automated social media management features",
+    cardAlt: "Clisha Social platform interface showcasing AI-powered content calendar and analytics",
     cardTitle: "Clisha Social",
-    cardDescription: "Manage your social media effortlessly with Clisha Social's all-in-one platform, designed to streamline content creation, scheduling, and community engagement.",
+    cardDescription: "Clisha Social is a unified, AI-driven toolkit for content creation, scheduling, and community engagement—designed to help brands publish smarter, faster, and more consistently.",
+  
     topImage: topImage,
-    topImageAlt: "Clisha Social platform showing automated posting and engagement analytics",
-    projectTitle: "Clisha Social: Simplify Your Social Media Management",
-    introParagraphOne: "Clisha Social is the perfect solution for businesses and individuals looking to optimize their social media management. From automating posts to engaging with your audience, Clisha Social provides a seamless experience to help you grow your online presence.",
-    introParagraphTwo: "Our platform makes it easy to schedule posts, track engagement, and show off your expertise through blog automation. With Clisha Social, you can manage your content and connect with your audience across multiple channels effortlessly.",
+    topImageAlt: "Clisha Social dashboard with content calendar, post composer, and engagement metrics",
+    projectTitle: "Clisha Social: Simplify and Supercharge Your Social Media",
+  
+    // Intro paragraphs
+    introParagraphOne:
+      "Brands today juggle multiple platforms, manual workflows, and inconsistent posting schedules. Clisha Social brings everything into one intuitive hub—so you can focus on storytelling, not spreadsheets.",
+    introParagraphTwo:
+      "From AI-generated captions to one-click cross-posting and in-depth performance insights, Clisha Social empowers marketing teams to build authentic connections and accelerate growth across every channel.",
+  
+    // Middle section
     sectionTitle: "Key Features of Clisha Social",
-    sectionParagraph: "Clisha Social offers a range of tools to enhance your social media engagement, including automated posting, blog management, content scheduling, and advanced performance tracking. Take control of your social media strategy with ease.",
+    sectionParagraph: `
+      <ul style="list-style-type: disc; padding-left:1rem;">
+        <li>AI-powered caption & hashtag suggestions</li>
+        <li>Drag-and-drop content calendar with auto-schedule</li>
+        <li>Bulk upload & RSS-to-Post blog automation</li>
+        <li>Multi-account publishing (Facebook, Instagram, Twitter, LinkedIn)</li>
+        <li>Team collaboration with roles, approvals, and comments</li>
+        <li>Advanced analytics: engagement, reach, and optimal post times</li>
+      </ul>
+    `,
     sectionImage: sectionImage,
-    sectionImageAlt: "Clisha Social dashboard showing scheduled posts and engagement metrics",
-    bottomParagraphOne: "With features like auto-scheduling, AI-driven content suggestions, and detailed performance analytics, Clisha Social empowers you to grow your brand and reach a wider audience. Get started today and make social media management easier than ever.",
-    bottomParagraphTwo: "Clisha Social offers flexible pricing plans tailored to your needs. Whether you're a small business or a large enterprise, our platform helps you automate and streamline your social media management. Join Clisha Social today and start growing your online presence.",
-    ctaLabel: "Start Managing Your Social Media Today"
+    sectionImageAlt: "Screenshot of Clisha Social showing content calendar and analytics widgets",
+  
+    // Case study sections
+    challengeTitle: "The Challenge",
+    challengeParagraph:
+      "Our client was drowning in fragmented tools—spreadsheets for scheduling, separate apps for design, and manual posting that led to missed opportunities and inconsistent branding. They needed an all-in-one solution to automate workflows and maintain a cohesive voice at scale.",
+  
+    solutionTitle: "Our Solution",
+    solutionParagraph:
+      "At Hex Innovations, we built Clisha Social on a React/Next.js front end with a Node.js/GraphQL back end. We integrated OpenAI for content suggestions, OAuth for seamless multi-platform publishing, and Redis-backed queues to handle bulk and scheduled posts. A real-time WebSocket channel updates engagement metrics instantly.",
+  
+    techStackTitle: "Tech Stack & Integrations",
+    techStackList: [
+      "React + Next.js for SSR and dynamic routing",
+      "Node.js + Apollo GraphQL for unified APIs",
+      "OpenAI GPT for AI-driven caption & hashtag recommendations",
+      "OAuth 2.0 for secure multi-account authentication",
+      "BullMQ + Redis for reliable scheduling & worker queues",
+      "PostgreSQL for relational data and reporting",
+      "Tailwind CSS & Framer Motion for responsive, accessible UI",
+      "Chart.js for interactive analytics dashboards"
+    ],
+  
+    featuresTitle: "Key Features",
+    featuresList: [
+      "AI-powered caption, hashtag & emoji suggestions",
+      "Drag-and-drop content calendar with auto-schedule",
+      "RSS-to-Post automation for blogs & news feeds",
+      "Real-time team collaboration with drafts, approvals & comments",
+      "Multi-platform publishing (Facebook, Twitter, Instagram, LinkedIn)",
+      "Advanced analytics: engagement, reach, follower growth"
+    ],
+  
+    uxTitle: "UX & Accessibility",
+    uxParagraph:
+      "We ran moderated usability tests with social managers, iterating on the calendar and post-composer UX until we achieved an average task completion time under 30 seconds. Clisha Social meets WCAG 2.1 AA standards, with keyboard shortcuts and high-contrast modes.",
+  
+    performanceTitle: "Performance & Scalability",
+    performanceParagraph:
+      "Deployed on Vercel and DigitalOcean Kubernetes, Clisha Social handles over 100,000 scheduled posts per month with sub-200ms API responses. We use edge caching for analytics queries, delivering dashboards in under 500ms.",
+  
+    securityTitle: "Security & Privacy",
+    securityParagraph:
+      "Built for trust: encrypted OAuth tokens, GDPR-compliant data residency options, SOC 2 readiness, and quarterly third-party penetration tests. No unencrypted PII is ever stored.",
+  
+    timelineTitle: "Timeline & Collaboration",
+    timelineParagraph:
+      "Delivered in a 3-month agile engagement: two-week sprints, weekly stakeholder demos, and integrated user feedback sessions ensured alignment and rapid iteration.",
+  
+    resultsTitle: "Results & Impact",
+    resultsList: [
+      "200% increase in weekly scheduled posts",
+      "50% uplift in average engagement rate",
+      "75% reduction in time spent on manual scheduling",
+      "4.8★ average user rating within first month",
+      "30% growth in follower count across managed channels"
+    ],
+  
+    postLaunchTitle: "Post-Launch Support",
+    postLaunchParagraph:
+      "We provide continuous feature releases—AI-driven story templates, collaborative inbox—and 24/7 SLA support, plus quarterly roadmap workshops to evolve Clisha Social with your needs.",
+  
+    testimonial:
+      "“Hex Innovations delivered a game-changing platform. We went from chaos to cohesion—our entire team loves the AI suggestions and calendar UX.” — Jamie L., Head of Social Media at GreenLeaf Marketing",
+  
+    // Bottom section
+    bottomParagraphOne:
+      "From ideation to daily operations, Hex Innovations partners with you to build social tools that scale with your brand—powered by AI, designed for teams.",
+    bottomParagraphTwo:
+      "Contact us today to learn how we can help your team succeed in the digital world.",
+    
+    ctaLabel: "Contact Us",
   },
 
   {
@@ -152,211 +500,211 @@ const projectsData: ProjectData[] = [
     cardImage: HexSoftwareCover,
     cardAlt: "African Talent Hiring Service platform empowering businesses to hire top talent across Africa",
     cardTitle: "African Talent Hiring Service",
-    cardDescription: "We help businesses connect with Africa's best talent, providing a seamless and efficient HR platform to build, hire, and launch teams that drive success. From development to customer service, we’ve got the talent you need to scale.",
+    cardDescription: "Connect with Africa’s top-tier talent through our end-to-end hiring platform—streamlined sourcing, skill assessments, seamless onboarding, and ongoing team management.",
+  
     topImage: topImage,
-    topImageAlt: "African talent from various industries working remotely",
-    projectTitle: "African Talent Hiring Service",
-    introParagraphOne: "At African Talent Hiring Service, we specialize in empowering businesses to easily hire top professionals from across Africa. With access to a network of talented developers, designers, marketers, and business experts, we make it simple for you to scale your teams efficiently.",
-    introParagraphTwo: "Our platform connects you with skilled professionals from diverse sectors, including full-stack development, UI/UX design, mobile app development, and more. Whether you're a startup or a large enterprise, we provide tailored solutions to help you grow.",
+    topImageAlt: "Dashboard of African Talent Hiring Service showing candidate profiles and project assignments",
+    projectTitle: "African Talent Hiring Service: Hire, Scale & Succeed with Africa’s Best",
+  
+    // Intro paragraphs
+    introParagraphOne:
+      "Global businesses often struggle to source, vet, and onboard skilled professionals across African markets. We built a unified HR platform to bridge the gap—making high-quality talent accessible, vetted, and ready to drive your growth.",
+    introParagraphTwo:
+      "From role-based matching and automated assessments to time-zone scheduling and integrated payroll, our solution empowers companies to build distributed teams without friction or guesswork.",
+  
+    // Middle section
     sectionTitle: "Maximize Your HR Impact",
-    sectionParagraph: "Streamline your hiring process and find the perfect fit for your team. From creating job listings to managing candidate profiles and tracking project progress, our platform simplifies every step of your recruitment journey.",
+    sectionParagraph: `
+      <ul style="list-style-type: disc; padding-left:1rem;">
+        <li>AI-driven candidate matching & skill profiling</li>
+        <li>Customizable assessments: coding tests, case studies & interviews</li>
+        <li>Automated time-zone scheduling & calendar sync</li>
+        <li>Integrated contract management & e-signatures</li>
+        <li>Secure payroll & invoicing with multi-currency support</li>
+        <li>Real-time team analytics: utilization, retention & performance</li>
+      </ul>
+    `,
     sectionImage: sectionImage,
-    sectionImageAlt: "African talent working remotely on laptops and collaborating virtually",
-    bottomParagraphOne: "Our mission is to bridge the gap between global businesses and Africa’s brightest professionals. By offering easy access to a wide range of talent across multiple industries, we ensure that your hiring process is both fast and effective.",
-    bottomParagraphTwo: "With flexible pricing plans, a user-friendly interface, and a diverse range of experts, we’re committed to helping you build exceptional teams that deliver outstanding results.",
-    ctaLabel: "Start Hiring Now"
+    sectionImageAlt: "Screenshot of platform’s candidate dashboard and analytics panel",
+  
+    // Case study sections
+    challengeTitle: "The Challenge",
+    challengeParagraph:
+      "Our client faced long time-to-hire cycles, inconsistent vetting standards, and manual contract and payroll processes. They needed a platform that could scale across multiple African regions while ensuring quality and compliance.",
+  
+    solutionTitle: "Our Solution",
+    solutionParagraph:
+      "At Hex Innovations, we delivered a Next.js/React front end paired with a Node.js/Apollo GraphQL back end. We integrated custom skill-assessment microservices, Calendly for scheduling, Stripe Connect for cross-border payments, and DocuSign for contracts—creating a seamless, end-to-end hiring workflow.",
+  
+    techStackTitle: "Tech Stack & Integrations",
+    techStackList: [
+      "React + Next.js for dynamic, SEO-friendly UI",
+      "Node.js + Apollo GraphQL for unified data APIs",
+      "Python microservices for coding assessments & skill profiling",
+      "Calendly & Google Calendar APIs for interview scheduling",
+      "Stripe Connect for multi-currency payroll",
+      "DocuSign SDK for secure e-signatures",
+      "PostgreSQL + Redis for reliable data storage & caching",
+      "AWS Lambda & S3 for scalable media processing",
+      "Tailwind CSS & Framer Motion for responsive, accessible design"
+    ],
+  
+    featuresTitle: "Key Features",
+    featuresList: [
+      "AI-powered candidate matching based on role requirements",
+      "Automated skill-assessment engine with real-time scoring",
+      "One-click interview scheduling with calendar integration",
+      "Built-in contract generation & e-signature workflow",
+      "Secure, multi-currency payroll & invoicing",
+      "Custom dashboards for team utilization, retention & performance metrics"
+    ],
+  
+    uxTitle: "UX & Accessibility",
+    uxParagraph:
+      "We conducted stakeholder workshops and usability tests with HR teams to refine every flow. The platform meets WCAG 2.1 AA standards, offering keyboard navigation, clear focus states, and high-contrast mode for all users.",
+  
+    performanceTitle: "Performance & Scalability",
+    performanceParagraph:
+      "Deployed on Vercel with edge caching and AWS ECS autoscaling, the platform sustains sub-100ms API responses under 3,000 concurrent recruiters and candidates while processing hundreds of assessments per minute.",
+  
+    securityTitle: "Security & Privacy",
+    securityParagraph:
+      "Designed for trust: SOC 2 Type II–ready, GDPR/CCPA compliant, end-to-end encryption (AES-256 at rest, TLS 1.3 in transit), and quarterly third-party penetration testing.",
+  
+    timelineTitle: "Timeline & Collaboration",
+    timelineParagraph:
+      "Delivered in a 5-month agile engagement: two-week sprints, weekly demos, and continuous client feedback ensured we hit every milestone on time and aligned with evolving hiring needs.",
+  
+    resultsTitle: "Results & Impact",
+    resultsList: [
+      "60% reduction in time-to-hire (from 45 to 18 days)",
+      "50% increase in candidate quality score via automated assessments",
+      "75% decrease in manual contract and payroll overhead",
+      "4.9★ average client satisfaction rating",
+      "90% user adoption rate within first quarter post-launch"
+    ],
+  
+    postLaunchTitle: "Post-Launch Support",
+    postLaunchParagraph:
+      "We continue to deliver quarterly feature releases—advanced referral programs, AI-driven retention alerts—and provide 24/7 SLA support and roadmap workshops to keep your hiring engine running smoothly.",
+  
+    testimonial:
+      "“Hex Innovations transformed our hiring process. What used to take months now happens in weeks—with better candidates and zero administrative headaches.” — Sarah O., Head of Talent Acquisition at GlobalTech Solutions",
+  
+    // Bottom section
+    bottomParagraphOne:
+      "From concept to continuous innovation, Hex Innovations partners with you to build robust, scalable hiring solutions—empowering you to tap into Africa’s brightest professionals.",
+    bottomParagraphTwo:
+      "Ready to unlock Africa’s talent pool? Let’s talk about how our platform can drive growth for your team.",
+    
+    ctaLabel: "Schedule a Demo",
   },
   
+  {
+    id: "clisha-review",
+    cardImage: clishaReviewCover,
+    cardAlt: "Clisha Review dashboard showing review analytics and QR code",
+    cardTitle: "Clisha Review",
+    cardDescription:
+      "Clisha Review is an end-to-end reputation platform that helps businesses capture more 5-star reviews, monitor feedback in real time, and showcase top ratings to attract new customers.",
+  
+    topImage: topImage,
+    topImageAlt:
+      "Clisha Review interface displaying live review feed, analytics charts, and QR-code generator",
+    projectTitle: "Clisha Review: The Ultimate Review Management Tool",
+  
+    // Intro paragraphs
+    introParagraphOne:
+      "Consumers trust online reviews as much as personal recommendations—but collecting and managing feedback can feel like a full-time job. Clisha Review centralizes the process, turning every happy customer into a powerful marketing asset.",
+    introParagraphTwo:
+      "From QR-powered collection to Google Review integration and advanced sentiment analytics, Clisha Review puts you in control of your reputation—so you can build trust, respond faster, and grow your business.",
+  
+    // Middle section
+    sectionTitle: "How It Works",
+    sectionParagraph: `
+      <ol style="list-style-type: decimal; padding-left: 1rem;">
+        <li><strong>Generate QR & Links:</strong> Create branded QR codes and shareable links in seconds.</li>
+        <li><strong>Capture Feedback:</strong> Customers scan or click to leave reviews on your site or Google.</li>
+        <li><strong>Aggregate & Analyze:</strong> Pull in reviews from Google, Facebook, and Yelp for a single view.</li>
+        <li><strong>Showcase & Respond:</strong> Publish top reviews automatically and reply in real time to boost engagement.</li>
+      </ol>
+    `,
+    sectionImage: sectionImage,
+    sectionImageAlt:
+      "Step-by-step flow showing QR code generation, feedback form, and analytics charts",
+  
+    // Case study sections
+    challengeTitle: "The Challenge",
+    challengeParagraph:
+      "Our client struggled with scattered feedback—manual follow-ups, lost review requests, and no single source of truth. Negative comments slipped through the cracks, and strong reviews never reached a wider audience.",
+  
+    solutionTitle: "Our Solution",
+    solutionParagraph:
+      "At Hex Innovations, we built Clisha Review with a React/Next.js front end and Node.js/GraphQL back end. We integrated Google Places & Facebook Graph APIs for automatic review aggregation, implemented qrcode.js for on-brand QR generation, and used Socket.io for real-time review alerts.",
+  
+    techStackTitle: "Tech Stack & Integrations",
+    techStackList: [
+      "React + Next.js for SEO-friendly, server-rendered UI",
+      "Node.js + Apollo GraphQL for unified data endpoints",
+      "Google Places API & Facebook Graph API for review import",
+      "qrcode.js for dynamic QR code generation",
+      "Socket.io + Redis for real-time notifications",
+      "MongoDB Atlas for flexible review storage",
+      "Tailwind CSS & Framer Motion for responsive design",
+      "Chart.js for interactive review analytics"
+    ],
+  
+    featuresTitle: "Key Features",
+    featuresList: [
+      "Branded QR codes & short links for instant review capture",
+      "Multi-source aggregation: Google, Facebook, Yelp & more",
+      "Real-time email & in-app alerts on new reviews",
+      "Sentiment analysis to flag high-impact feedback",
+      "Custom landing pages to showcase top ratings",
+      "Automated negative-review filtering & response templates"
+    ],
+  
+    uxTitle: "UX & Accessibility",
+    uxParagraph:
+      "We conducted user interviews with small business owners and ran accessibility audits to ensure WCAG 2.1 AA compliance, intuitive mobile workflows, and clear error states for seamless adoption.",
+  
+    performanceTitle: "Performance & Scalability",
+    performanceParagraph:
+      "Deployed on Vercel with edge caching and a horizontally-scaled Node cluster, Clisha Review delivers sub-150 ms average API responses and handles bursts of 500+ review imports per minute.",
+  
+    securityTitle: "Security & Privacy",
+    securityParagraph:
+      "Designed for trust: GDPR-compliant data handling, AES-256 encryption at rest, TLS 1.3 in transit, granular role-based access, and quarterly third-party penetration tests.",
+  
+    timelineTitle: "Timeline & Collaboration",
+    timelineParagraph:
+      "Delivered in a rapid 8-week sprint cadence: weekly demos, client feedback loops, and Kanban workflow ensured we hit every milestone and fine-tuned the experience along the way.",
+  
+    resultsTitle: "Results & Impact",
+    resultsList: [
+      "60% uplift in total review volume within one month",
+      "45% increase in average star rating on Google",
+      "80% reduction in negative-feedback response time",
+      "30% growth in organic traffic from review widgets",
+      "4.9★ average user satisfaction score post-launch"
+    ],
+  
+    postLaunchTitle: "Post-Launch Support",
+    postLaunchParagraph:
+      "We provide ongoing feature releases—including AI-powered auto-responses and advanced referral tracking—and 24/7 SLA support to keep your reputation engine running smoothly.",
+  
+    testimonial:
+      "“Clisha Review transformed our feedback process. We now capture three times more 5-star reviews, and our team responds faster than ever. Hex Innovations nailed the perfect balance of power and simplicity.” — Maria T., Owner of Sunshine Café",
+  
+    // Bottom section
+    bottomParagraphOne:
+      "From concept to continuous improvement, Hex Innovations partners with you to build reputation tools that scale—turning every customer voice into your strongest marketing channel.",
+    bottomParagraphTwo:
+      `Ready to elevate your online storefront? At <span style="font-weight: bold; color: #E3FF52">Hex Innovations</span>, we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!`,
+    ctaLabel: "Request for a Service",
+  }
+  
 
-
-
-
-
-
-
-
-  // {
-  //   id: "creqe-mobile-app",
-  //   cardImage: cardImage,
-  //   cardAlt: "Creqe Mobile App",
-  //   cardTitle: "Creqe Mobile App",
-  //   cardDescription:
-  //     "Transform your ideas into reality with our expert software development services. We build intuitive, scalable, and high-performing mobile applications that ensure seamless user experiences and help businesses grow in today’s competitive digital landscape.",
-  //   topImage: topImage,
-  //   topImageAlt: "Mobile App Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "Creqe Mobile App",
-  //   introParagraphOne:
-  //     "At [Your Company Name], we craft cutting-edge mobile experiences designed to engage users and drive growth. Our team excels in building scalable, intuitive apps that stand out in today's market.",
-  //   introParagraphTwo:
-  //     "We leverage modern frameworks and seamless UI/UX design to create powerful, user-friendly applications that elevate your brand’s presence and accessibility.",
-  //   sectionTitle: "Why Creqe?",
-  //   sectionParagraph:
-  //     "From concept to launch, our comprehensive mobile app development process ensures robust features, seamless UX, and efficient performance. Together, let's bring your idea to life!",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "Creqe Mobile App code snippet",
-  //   bottomParagraphOne:
-  //     "We handle everything from UI/UX design to backend infrastructure, ensuring a smooth path to success. Whether you're looking to launch an MVP or a full-fledged product, our team is here to support you every step of the way.",
-  //   bottomParagraphTwo:
-  //     "Partner with us to turn your mobile app vision into a high-performing reality that resonates with users across the globe.",
-  //   ctaLabel: "Request for a Service",
-  // },
-
-  // {
-  //   id: "neo-dashboard",
-  //   cardImage: cardImage,
-  //   cardAlt: "Neo Dashboard Hex Innovations is a global software development",
-  //   cardTitle: "Neo Dashboard",
-  //   cardDescription:
-  //     "Empower decision-making with a dynamic and intuitive dashboard solution designed for real-time analytics, data-driven insights, and seamless business intelligence. Our technology ensures businesses can track performance, identify trends, and optimize operations effectively.",
-  //   topImage: topImage,
-  //   topImageAlt: "Dashboard Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "Neo Dashboard",
-  //   introParagraphOne:
-  //     "Neo Dashboard is built to provide real-time insights and analytics for businesses of all sizes. Our focus is on delivering complex data in a simplified format.",
-  //   introParagraphTwo:
-  //     "Leveraging the latest data visualization tools, we help clients identify trends, spot bottlenecks, and make data-driven decisions with confidence.",
-  //   sectionTitle: "Real-Time Analytics",
-  //   sectionParagraph:
-  //     "Our advanced analytics modules pull data from multiple sources, updating key performance indicators in real time. You’ll have a clear view of your operations at any moment.",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "Neo Dashboard code snippet Hex Innovations is a global software development",
-  //   bottomParagraphOne:
-  //     "Security and scalability are at the core of Neo Dashboard’s architecture, ensuring safe and smooth handling of high-volume data as your business grows.",
-  //   bottomParagraphTwo:
-  //     "Whether it’s integrating new datasets or customizing analytics, our team is ready to tailor Neo Dashboard to your unique requirements.",
-  //   ctaLabel: "Request for a Service",
-  // },
-
-  // {
-  //   id: "skyfarm-website",
-  //   cardImage: cardImage,
-  //   cardAlt: "SkyFarm Website Hex Innovations is a global software development",
-  //   cardTitle: "SkyFarm Website",
-  //   cardDescription:
-  //     "A next-level website designed to showcase and manage modern urban farming practices. Our solutions integrate seamless UI/UX, e-commerce features, and automation to drive efficiency, increase engagement, and empower sustainable agricultural initiatives.",
-  //   topImage: topImage,
-  //   topImageAlt: "SkyFarm Website Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "SkyFarm Website",
-  //   introParagraphOne:
-  //     "SkyFarm's mission is to revolutionize urban agriculture with innovative solutions for vertical farming. We designed a website that captures their vision and connects with stakeholders.",
-  //   introParagraphTwo:
-  //     "From highlighting sustainable growing techniques to facilitating online orders for fresh produce, our platform seamlessly integrates all aspects of SkyFarm’s operations.",
-  //   sectionTitle: "User-Centric Design",
-  //   sectionParagraph:
-  //     "Every page on the SkyFarm website is thoughtfully designed to engage visitors and provide the information they need. We ensured intuitive navigation and captivating visuals that reflect the brand's eco-friendly ethos.",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "SkyFarm Website snippet Hex Innovations is a global software development",
-  //   bottomParagraphOne:
-  //     "Behind the scenes, robust backend systems support product listings, order management, and customer feedback loops, ensuring smooth day-to-day operations.",
-  //   bottomParagraphTwo:
-  //     "SkyFarm’s online presence not only boosts credibility but also educates the public on modern farming solutions, driving awareness and advocacy.",
-  //   ctaLabel: "Request for a Service",
-  // },
-
-  // {
-  //   id: "verito-enterprise",
-  //   cardImage: cardImage,
-  //   cardAlt: "Verito Enterprise Hex Innovations is a global software development",
-  //   cardTitle: "Verito Enterprise",
-  //   cardDescription:
-  //     "A custom enterprise solution built for efficiency, scalability, and seamless collaboration. Our advanced platform integrates project management, analytics, automation, and security, allowing businesses to streamline operations and enhance productivity.",
-  //   topImage: topImage,
-  //   topImageAlt: "Verito Enterprise Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "Verito Enterprise",
-  //   introParagraphOne:
-  //     "Verito Enterprise was developed with large-scale teams and complex workflows in mind, offering a centralized platform for project management, communication, and analytics.",
-  //   introParagraphTwo:
-  //     "By integrating various tools and processes, Verito Enterprise cuts down operational overhead and enhances team productivity across multiple locations.",
-  //   sectionTitle: "End-to-End Integration",
-  //   sectionParagraph:
-  //     "Our solution merges CRM, ERP, and analytics modules into one cohesive ecosystem. This single source of truth ensures accurate data flow and minimal redundancy.",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "Verito Enterprise code snippet Hex Innovations is a global software development",
-  //   bottomParagraphOne:
-  //     "With enterprise-grade security and robust access controls, sensitive data is protected, while still enabling stakeholders to access critical information when they need it.",
-  //   bottomParagraphTwo:
-  //     "Ongoing support and updates keep Verito Enterprise aligned with evolving business needs, ensuring that it remains a cornerstone of operational excellence.",
-  //   ctaLabel: "Request for a Service",
-  // },
-
-  // {
-  //   id: "roadsync-e-commerce",
-  //   cardImage: cardImage,
-  //   cardAlt: "RoadSync E-Commerce Hex Innovations is a global software development",
-  //   cardTitle: "RoadSync E-Commerce",
-  //   cardDescription:
-  //     "An end-to-end e-commerce platform optimized for high-volume and diverse product catalogs. Our system offers seamless inventory management, secure payments, and personalized shopping experiences to help businesses scale effortlessly.",
-  //   topImage: topImage,
-  //   topImageAlt: "RoadSync E-Commerce Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "RoadSync E-Commerce",
-  //   introParagraphOne:
-  //     "RoadSync E-Commerce caters to businesses looking to sell products and services online with ease. Its modular design supports expansions, integrations, and heavy traffic.",
-  //   introParagraphTwo:
-  //     "Our approach emphasizes secure transactions, user-friendly interfaces, and streamlined inventory management to maximize conversions and reduce friction.",
-  //   sectionTitle: "Omnichannel Experience",
-  //   sectionParagraph:
-  //     "Beyond a simple storefront, RoadSync connects with social media, physical retail points, and third-party logistics providers, offering a cohesive shopping journey for customers.",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "RoadSync code snippet Hex Innovations is a global software development",
-  //   bottomParagraphOne:
-  //     "Adaptive layout and mobile responsiveness ensure that customers enjoy a consistent experience, whether they're on a desktop, tablet, or smartphone.",
-  //   bottomParagraphTwo:
-  //     "Advanced analytics provide insights into buying patterns, helping you refine strategies and stay competitive in the fast-paced world of online retail.",
-  //   ctaLabel: "Request for a Service",
-  // },
-
-  // {
-  //   id: "aquadex-data",
-  //   cardImage: cardImage,
-  //   cardAlt: "Aquadex Data Platform Hex Innovations is a global software development",
-  //   cardTitle: "Aquadex Data Platform",
-  //   cardDescription:
-  //     "A high-performance data platform designed to monitor, analyze, and protect water resources. With real-time data tracking, predictive analytics, and AI-driven insights, we empower organizations to drive sustainable water management strategies.",
-  //   topImage: topImage,
-  //   topImageAlt: "Aquadex Data Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "Aquadex Data Platform",
-  //   introParagraphOne:
-  //     "Aquadex is a robust data platform for environmental agencies and water management organizations. It tracks water quality metrics, usage patterns, and real-time sensor inputs.",
-  //   introParagraphTwo:
-  //     "We built Aquadex to handle massive data flows and deliver clear, actionable insights for sustainable water management, risk mitigation, and policy planning.",
-  //   sectionTitle: "Scalable Monitoring",
-  //   sectionParagraph:
-  //     "From small-scale local communities to sprawling utilities, Aquadex adapts to various needs. Its modular architecture supports custom analytics, forecasting, and alert systems.",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "Aquadex code snippet Hex Innovations is a global software development",
-  //   bottomParagraphOne:
-  //     "Cutting-edge security measures protect sensitive environmental data while enabling researchers, technicians, and decision-makers to collaborate effectively.",
-  //   bottomParagraphTwo:
-  //     "By integrating historical datasets, predictive models, and real-time monitoring, Aquadex empowers stakeholders to adopt proactive water resource strategies.",
-  //   ctaLabel: "Request for a Service",
-  // },
-
-  // {
-  //   id: "enigma-automation",
-  //   cardImage: cardImage,
-  //   cardAlt: "Enigma Automation Suite Hex Innovations is a global software developments",
-  //   cardTitle: "Enigma Automation Suite",
-  //   cardDescription:
-  //     "An intelligent automation platform streamlining repetitive tasks and boosting productivity. Using AI-driven workflows and robotic process automation, we help businesses reduce manual workload and optimize efficiency at scale.",
-  //   topImage: topImage,
-  //   topImageAlt: "Enigma Automation Hero Image Hex Innovations is a global software development",
-  //   projectTitle: "Enigma Automation Suite",
-  //   introParagraphOne:
-  //     "Enigma Automation Suite combines AI-driven workflows and robotic process automation to eliminate mundane tasks and free up teams for high-value projects.",
-  //   introParagraphTwo:
-  //     "From document processing to advanced analytics, Enigma’s flexible architecture allows for quick deployment of new automations and seamless integration with legacy systems.",
-  //   sectionTitle: "AI & RPA Synergy",
-  //   sectionParagraph:
-  //     "Our platform’s core AI engine continuously learns from user actions, making suggestions to optimize processes further. RPA bots handle repetitive tasks, ensuring speed and accuracy.",
-  //   sectionImage: sectionImage,
-  //   sectionImageAlt: "Enigma Automation code snippet Hex Innovations is a global software development",
-  //   bottomParagraphOne:
-  //     "Enigma’s automation potential spans multiple industries, including finance, healthcare, and manufacturing, reducing costs and turnaround times.",
-  //   bottomParagraphTwo:
-  //     "Ongoing updates ensure the suite remains compatible with evolving technology stacks and security standards, safeguarding your investment for years to come.",
-  //   ctaLabel: "Request for a Service",
-  // },
 ];
-
 
 export default projectsData;

@@ -3,7 +3,8 @@
 import React, { FC, useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitterSquare, FaInstagramSquare } from "react-icons/fa";
+
 import Image from "next/image";
 
 const Footer: FC = () => {
@@ -35,17 +36,17 @@ const Footer: FC = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-white text-black py-12"
+      className="bg-white text-black py-12 px-6 h-auto"
     >
       <div className="mx-auto max-w-7xl px-6">
         {/* Top Section */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="flex flex-col md:flex-row md:justify-between  md:space-x-12">
           {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="space-y-4"
+            className="space-y-4 flex flex-col items-start w-[329px]"
           >
             <div className="text-[24px] font-bold text-[#1B1C1E]">
               <Image width={100} height={100} src="/icons/HEX-logo-second-png.png" alt="Hex Innovations is a global software development Hex Innovations Logo" />
@@ -103,7 +104,7 @@ const Footer: FC = () => {
                   aria-label="LinkedIn"
                   className="text-[#1B1C1E] hover:text-black transition-colors"
                 >
-                  <FaLinkedinIn size={18} />
+                  <FaLinkedin size={32} />
                 </Link>
               </motion.div>
 
@@ -116,7 +117,7 @@ const Footer: FC = () => {
                   aria-label="Twitter"
                   className="text-[#1B1C1E] hover:text-black transition-colors"
                 >
-                  <FaTwitter size={18} />
+                  <FaTwitterSquare size={32} />
                 </Link>
               </motion.div>
 
@@ -129,7 +130,7 @@ const Footer: FC = () => {
                   aria-label="Instagram"
                   className="text-[#1B1C1E] hover:text-black transition-colors"
                 >
-                  <FaInstagram size={18} />
+                  <FaInstagramSquare size={32} />
                 </Link>
               </motion.div>
             </div>
