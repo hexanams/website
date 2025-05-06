@@ -9,7 +9,7 @@ export default function LeadingCompanySection() {
   return (
     <section className="relative bg-white text-[#1B1C1E] pt-12 px-6 overflow-hidden">
       {/* 1. TOP (Heading & Paragraph) */}
-      <div className="container mx-auto">
+      <div className="mx-auto max-w-5xl container">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
             <span className="text-[#004953]">Digital Disruption?</span> We&apos;re On It!{" "}

@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function WhatWeOfferSection() {
   return (
     <section className="relative bg-[#1B1C1E] text-white py-20 px-6">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-4xl">
       {/* Highlight SVG */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}

@@ -15,7 +15,7 @@ export default function HeroBanner({
   highlightColor = "#C8FF00",
 }: HeroBannerProps) {
   return (
-    <section className="w-full bg-white py-12 px-6">
+    <section className="w-full bg-white py-12 mx-auto max-w-4xl container">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row">
         {/* Left Column */}
         <div className="relative w-full md:w-1/2">

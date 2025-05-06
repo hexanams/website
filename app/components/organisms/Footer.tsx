@@ -38,7 +38,7 @@ const Footer: FC = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="bg-white text-black py-12 px-6 h-auto"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-5xl container px-6">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row md:justify-between  md:space-x-12">
           {/* Left Column */}

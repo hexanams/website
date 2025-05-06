@@ -85,8 +85,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
       <Navbar />
 
       <HeroBanner
-        title={project.projectTitle}
-        subtitle={project.introParagraphOne}
+        title="Project Details" 
+        subtitle="Innovative solutions, seamless experiences—transforming ideas into powerful digital products. Let’s build the future together!"
         highlightColor="#E3FF52"
       />
 
@@ -105,18 +105,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           </div>
 
           {/* Intro */}
-          <p className="mb-4 text-gray-200">{project.introParagraphTwo}</p>
+          <p className="mb-9 text-gray-200">{project.introParagraphTwo}</p>
 
-          {/* Download PDF CTA */}
-          <div className="mb-8">
-            <a
-              href={`/projects/${project.id}/case-study.pdf`}
-              className="inline-block px-5 py-3 bg-yellow-400 text-gray-900 font-medium rounded-md hover:bg-yellow-500 transition"
-              aria-label={`Download the ${project.projectTitle} case study as PDF`}
-            >
-              Download Case Study (PDF)
-            </a>
-          </div>
 
           {/* Accordion Case‑Study Sections */}
           {optionalSections.map(({ title, content, isList }, i) =>
@@ -152,16 +142,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             </div>
           </div>
 
-          {/* After‑Results CTA */}
-          <div className="text-center mb-10">
-            <a
-              href="/contact-us"
-              className="inline-block px-6 py-3 bg-transparent border-2 border-white rounded-md text-white font-semibold hover:bg-white hover:text-gray-900 transition"
-              aria-label={`Speak to us about achieving similar results to ${project.projectTitle}`}
-            >
-              Let’s Talk Results
-            </a>
-          </div>
 
           {/* Bottom Paragraphs */}
           <div className="prose prose-invert mb-6" dangerouslySetInnerHTML={{ __html: project.bottomParagraphOne }} />
@@ -171,7 +151,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           <div className="text-center">
             <a
               href="/contact-us"
-              className="inline-block px-8 py-3 bg-yellow-400 text-gray-900 font-medium rounded-md hover:bg-yellow-500 transition"
+              className="inline-block text-lg font-medium text-white  border-white border-b-2  hover:text-gray-300 transition"
               aria-label={`Contact Hex Innovations about ${project.projectTitle}`}
             >
               {project.ctaLabel}

@@ -1,12 +1,30 @@
 import { StaticImageData } from "next/image";
 import sectionImage from "@/public/images/cardImage.png";
 import topImage from "@/public/images/topImage-projectDetails.png";
-import kinderlyCover from "@/public/images/kinderlyCover.png";
+
+// clisha review images
 import clishaReviewCover from "@/public/images/clishaReviewCover.png";
-import ICUResetCover from "@/public/images/ICUResetCover.png";
-import ClaudiaCover from "@/public/images/ClaudiaCover.png";
-import HexSoftwareCover from "@/public/images/HexSoftwareCover.png";
+import ClishaReviewtopImage from "@/public/images/ClishaReviewtopImage.png";
+
+// clisha social image
 import ClishaSocialCover from "@/public/images/ClishaSocialCover.png";
+import ClishaSocialtopImage from "@/public/images/ClishaSocialtopImage.png";
+
+// claudia social image
+import ClaudiaCover from "@/public/images/ClaudiaCover.png";
+import ClaudiaTopImage from "@/public/images/ClaudiatopImage.png";
+
+// icu reset image
+import ICUResetCover from "@/public/images/ICUResetCover.png";
+import ICUResetTopImage from "@/public/images/ICUResettopImage.png";
+
+// kinderly image
+import kinderlyCover from "@/public/images/kinderlyCover.png";
+import kinderlyTopImage from "@/public/images/kinderlytopImage.png";
+
+// hex software
+import HexSoftwareCover from "@/public/images/HexSoftwareCover.png";
+import HexSoftwareTopImage from "@/public/images/HexSoftwaretopImage.png";
 
 export interface ProjectData {
   // Card display
@@ -81,7 +99,7 @@ const projectsData: ProjectData[] = [
     cardDescription:
       "Kinderly is the first AI-driven parenting app that delivers personalized guidance tailored to your child’s unique development, health, and behavior—right when you need it.",
 
-    topImage,
+    topImage: kinderlyTopImage,
     topImageAlt: "Parent using Kinderly app on smartphone with child",
     projectTitle: "Kinderly: AI-Powered Parenting Companion",
 
@@ -109,7 +127,7 @@ const projectsData: ProjectData[] = [
         <li>Zero user data breaches—ever</li>
       </ul>
     `,
-    sectionImage,
+    sectionImage : kinderlyCover,
     sectionImageAlt: "Screens showcasing Kinderly’s AI tips and child-profile dashboard",
 
     challengeTitle: "The Challenge",
@@ -189,7 +207,7 @@ const projectsData: ProjectData[] = [
     cardTitle: "ICU Community",
     cardDescription: "ICU Community is an all-in-one engagement platform that empowers you to build, grow, and nurture vibrant communities with ease and intelligence.",
   
-    topImage: topImage,
+    topImage: ICUResetTopImage,
     topImageAlt: "ICU Community dashboard displaying member analytics and live discussions",
     projectTitle: "ICU Community: Empowering and Transforming Community Engagement",
   
@@ -211,7 +229,7 @@ const projectsData: ProjectData[] = [
         <li>In-depth analytics & growth insights</li>
       </ul>
     `,
-    sectionImage: sectionImage,
+    sectionImage: ICUResetCover,
     sectionImageAlt: "Screenshot of ICU Community showing analytics widgets and engagement tools",
   
     // Case study sections
@@ -293,7 +311,7 @@ const projectsData: ProjectData[] = [
     cardTitle: "Claudia Psychology",
     cardDescription: "Claudia Psychology is a secure, patient-centric teletherapy platform that connects you with licensed professionals, offering personalized care, progress tracking, and in-app resources for lasting mental wellbeing.",
   
-    topImage: topImage,
+    topImage: ClaudiaTopImage,
     topImageAlt: "Claudia Psychology dashboard showing upcoming sessions and progress charts",
     projectTitle: "Claudia Psychology: Empowering Your Journey to Mental Health",
   
@@ -315,7 +333,7 @@ const projectsData: ProjectData[] = [
         <li>AI-powered mood assessments and self-help exercises</li>
       </ul>
     `,
-    sectionImage: sectionImage,
+    sectionImage: ClaudiaCover,
     sectionImageAlt: "Screenshot of Claudia Psychology showing session details and self-help exercises",
   
     // Case study sections
@@ -398,7 +416,7 @@ const projectsData: ProjectData[] = [
     cardTitle: "Clisha Social",
     cardDescription: "Clisha Social is a unified, AI-driven toolkit for content creation, scheduling, and community engagement—designed to help brands publish smarter, faster, and more consistently.",
   
-    topImage: topImage,
+    topImage: ClishaSocialtopImage,
     topImageAlt: "Clisha Social dashboard with content calendar, post composer, and engagement metrics",
     projectTitle: "Clisha Social: Simplify and Supercharge Your Social Media",
   
@@ -420,7 +438,7 @@ const projectsData: ProjectData[] = [
         <li>Advanced analytics: engagement, reach, and optimal post times</li>
       </ul>
     `,
-    sectionImage: sectionImage,
+    sectionImage: ClishaSocialCover,
     sectionImageAlt: "Screenshot of Clisha Social showing content calendar and analytics widgets",
   
     // Case study sections
@@ -502,7 +520,7 @@ const projectsData: ProjectData[] = [
     cardTitle: "African Talent Hiring Service",
     cardDescription: "Connect with Africa’s top-tier talent through our end-to-end hiring platform—streamlined sourcing, skill assessments, seamless onboarding, and ongoing team management.",
   
-    topImage: topImage,
+    topImage: HexSoftwareTopImage,
     topImageAlt: "Dashboard of African Talent Hiring Service showing candidate profiles and project assignments",
     projectTitle: "African Talent Hiring Service: Hire, Scale & Succeed with Africa’s Best",
   
@@ -524,7 +542,7 @@ const projectsData: ProjectData[] = [
         <li>Real-time team analytics: utilization, retention & performance</li>
       </ul>
     `,
-    sectionImage: sectionImage,
+    sectionImage: HexSoftwareCover,
     sectionImageAlt: "Screenshot of platform’s candidate dashboard and analytics panel",
   
     // Case study sections
@@ -608,7 +626,7 @@ const projectsData: ProjectData[] = [
     cardDescription:
       "Clisha Review is an end-to-end reputation platform that helps businesses capture more 5-star reviews, monitor feedback in real time, and showcase top ratings to attract new customers.",
   
-    topImage: topImage,
+    topImage: ClishaReviewtopImage,
     topImageAlt:
       "Clisha Review interface displaying live review feed, analytics charts, and QR-code generator",
     projectTitle: "Clisha Review: The Ultimate Review Management Tool",
@@ -629,7 +647,7 @@ const projectsData: ProjectData[] = [
         <li><strong>Showcase & Respond:</strong> Publish top reviews automatically and reply in real time to boost engagement.</li>
       </ol>
     `,
-    sectionImage: sectionImage,
+    sectionImage: clishaReviewCover,
     sectionImageAlt:
       "Step-by-step flow showing QR code generation, feedback form, and analytics charts",
   

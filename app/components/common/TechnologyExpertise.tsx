@@ -32,7 +32,7 @@ export default function TechnologyExpertise() {
     >
       {/* Teal overlay */}
       <div className="absolute inset-0 bg-[#0D4F4F]/90" />
-      <div className="relative container mx-auto px-4 sm:px-8 lg:px-15 lg:py-14">
+      <div className="relative mx-auto max-w-5xl container px-4 sm:px-8  lg:py-14">
       {/* Content Container */}
       <div className="relative mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         {/* Heading */}

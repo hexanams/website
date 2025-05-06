@@ -220,7 +220,7 @@ export default function ServiceCatalog() {
                     whileTap={{ scale: 0.95 }}
                     type="button"
                     onClick={() => toggleAccordion(index)}
-                    className="ml-4 text-sm underline hover:text-gray-200"
+                    className="inline-block text-[20px] font-medium text-[#FFFFFF]  border-white border-b-2  hover:text-gray-300 transition"
                   >
                     {isOpen ? "Less Information" : "More Information"}
                   </motion.button>
@@ -251,7 +251,7 @@ export default function ServiceCatalog() {
                         {requestLink && requestLinkText && (
                           <Link
                             href={requestLink}
-                            className="mt-2 inline-block text-sm underline hover:text-gray-200 sm:text-base"
+                            className="inline-block text-lg font-medium text-white mt-4 border-white border-b-2  hover:text-gray-300 transition"
                           >
                             {requestLinkText}
                           </Link>

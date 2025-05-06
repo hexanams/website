@@ -61,7 +61,7 @@ export default function OurProjects(): React.ReactElement {
                 </p>
                 <Link
                   href={`/projects/${project.id}`}
-                  className="inline-block text-sm font-medium text-white underline hover:text-gray-300"
+                  className="inline-block text-lg font-medium text-white  border-white border-b-2  hover:text-gray-300 transition "
                 >
                   Explore Project
                 </Link>

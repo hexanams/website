@@ -44,7 +44,7 @@ export default function HearFromClients() {
     <section className="bg-white text-[#1B1C1E] pt-16 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Top Section: Heading & Subheading */}
-        <div className="text-center mb-12">
+        <div className="text-center mx-auto max-w-4xl container mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

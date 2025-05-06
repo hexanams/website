@@ -119,7 +119,7 @@ export default function ContactFormSection() {
               required
               className="
                 w-full border-b border-white bg-transparent
-                py-3 text-base text-white placeholder-white
+                p-3 text-base text-white placeholder-white
                 focus:outline-none focus:ring-0
               "
             />
