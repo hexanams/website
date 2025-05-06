@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import sectionImage from "@/public/images/cardImage.png";
-import topImage from "@/public/images/topImage-projectDetails.png";
+//import sectionImage from "@/public/images/cardImage.png";
+//import topImage from "@/public/images/topImage-projectDetails.png";
 
 // clisha review images
 import clishaReviewCover from "@/public/images/clishaReviewCover.png";
