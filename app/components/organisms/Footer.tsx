@@ -90,8 +90,9 @@ const Footer: FC = () => {
             className="space-y-2"
           >
             <p className="text-sm text-[#1B1C1E]">Federal Capital Territory Abuja, Nigeria.</p>
-            <p className="text-sm text-[#1B1C1E]">Hello@hexng.com</p>
-            <p className="text-sm text-[#1B1C1E]">+234 7063749967</p>
+            <p className="text-sm text-[#1B1C1E]"><a href="mailto:operations@hexng.com"></a>operations@hexng.com</p>
+
+            <p className="text-sm text-[#1B1C1E]">+234 706 801 8618</p>
 
             {/* Social Icons */}
             <div className="mt-3 flex items-center space-x-4">

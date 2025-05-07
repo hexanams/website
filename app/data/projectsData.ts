@@ -241,17 +241,14 @@ const projectsData: ProjectData[] = [
     solutionParagraph:
       "At Hex Innovations, we architected ICU Community on a React/Next.js front end with a Node.js/GraphQL back end. We integrated OpenAI for sentiment analysis, WebRTC for live video, and Stripe for seamless event ticketing. A modular plugin system allows admins to tailor features on the fly.",
   
-    techStackTitle: "Tech Stack & Integrations",
-    techStackList: [
-      "React + Next.js for server-rendered UI",
-      "Node.js + Apollo GraphQL for data orchestration",
-      "OpenAI Moderation & Sentiment APIs",
-      "WebRTC for peer-to-peer video meetups",
-      "Stripe for event payments & subscriptions",
-      "Redis + Socket.io for real-time messaging",
-      "PostgreSQL for relational data and analytics",
-      "Tailwind CSS & Framer Motion for responsive, accessible design"
-    ],
+      techStackTitle: "Tech Stack & Integrations",
+      techStackList: [
+        "Linux for OS-level performance and stability",
+        "Nginx as a high-performance web server",
+        "MySQL for robust relational data management",
+        "PHP for dynamic server-side scripting",
+      ],
+      
   
     featuresTitle: "Key Features",
     featuresList: [
@@ -299,7 +296,7 @@ const projectsData: ProjectData[] = [
     bottomParagraphOne:
       "From ideation to launch and beyond, Hex Innovations partners with you to keep your community engaged, safe, and growing—powered by the latest in AI and web technology.",
     bottomParagraphTwo:
-      "If you're interested in working with us, please reach out to us at <a href='mailto:hexanams810@gmail.com'>hexanams810@gmail.com</a>.",
+      "If you're interested in working with us, please reach out to us at <a href='mailto:hexanams810@gmail.com'>operations@hexng.com</a>.",
     
     ctaLabel: "Let’s talk about your next project"
   },

@@ -79,7 +79,7 @@ export default function SoftwareShowcase() {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            href="\projects"
+            href="\about"
             className="
               relative inline-flex items-center justify-center w-80 h-[48px]
               rounded-full border border-white
