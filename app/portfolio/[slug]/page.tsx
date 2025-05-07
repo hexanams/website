@@ -5,10 +5,10 @@ import { notFound } from "next/navigation";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/app/components/organisms/Navbar";
-import HeroBanner from "@/app/components/common/HeroBanner";
 import BrainstormIdeateBuildSection from "@/app/components/common/BrainstormIdeateBuildSection";
 import SubscribeSection from "@/app/components/common/SubscribeSection";
 import projectsData, { ProjectData } from "@/app/data/projectsData";
+import PortfolioHeroBanner from "@/app/components/common/PortfolioHeroBanner";
 
 // Simple Accordion component
 function Accordion({
@@ -27,7 +27,7 @@ function Accordion({
         aria-expanded={open}
       >
         <span className="text-xl font-semibold">{title}</span>
-        <span aria-hidden="true">{open ? "−" : "+"}</span>
+        <span className="text-2xl" aria-hidden="true">{open ? "−" : "+"}</span>
       </button>
       {open && <div className="pt-2 text-gray-200 leading-relaxed">{children}</div>}
     </div>
@@ -84,9 +84,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
 
       <Navbar />
 
-      <HeroBanner
-        title="Project Details" 
-        subtitle="Innovative solutions, seamless experiences—transforming ideas into powerful digital products. Let’s build the future together!"
+      <PortfolioHeroBanner
+        title={project.projectTitle} 
+        subtitle={project.introParagraphOne}
         highlightColor="#E3FF52"
       />
 
@@ -105,6 +105,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           </div>
 
           {/* Intro */}
+          <h2 className="text-2xl font-semibold mb-3">Overview</h2>
           <p className="mb-9 text-gray-200">{project.introParagraphTwo}</p>
 
 
@@ -150,7 +151,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           {/* Final CTA */}
           <div className="text-center">
             <a
-              href="/contact-us"
+              href="/contact"
               className="inline-block text-lg font-medium text-white  border-white border-b-2  hover:text-gray-300 transition"
               aria-label={`Contact Hex Innovations about ${project.projectTitle}`}
             >

@@ -130,11 +130,11 @@ export default function WhatWeOfferSection() {
             ))}
             {/* Get In Touch Button */}
             <div className="pt-6">
-                <Link href="/contact-us">
+                <Link href="/contact">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white text-black font-semibold py-3 px-6 rounded-lg shadow-md transition hover:bg-gray-200"
+                    className="inline-block text-lg font-medium text-white  border-white border-b-2  hover:text-gray-300 transition"
                   >
                     Get In Touch
                   </motion.button>

@@ -36,7 +36,7 @@ export default function Navbar() {
   const navItems = [
     { href: "/services", label: "Services", icon: "/icons/serviceIcon.svg" },
     { href: "/about",    label: "About",    icon: "/icons/aboutIcon.svg" },
-    { href: "/projects", label: "Portfolio",icon: "/icons/portfolioIcon.svg" },
+    { href: "/portfolio", label: "Portfolio",icon: "/icons/portfolioIcon.svg" },
   ];
 
   const isActive = (href: string) =>
@@ -101,7 +101,7 @@ export default function Navbar() {
           className="hidden md:block ml-4"
         >
           <Link
-            href="/contact-us"
+            href="/contact"
             className="rounded-full bg-black px-5 py-2 text-white hover:bg-gray-800"
           >
             Contact us
@@ -162,7 +162,7 @@ export default function Navbar() {
 
               <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   onClick={toggleMenu}
                   className="rounded-full bg-black px-5 py-2 text-white hover:bg-gray-800"
                 >

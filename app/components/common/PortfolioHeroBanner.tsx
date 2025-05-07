@@ -3,17 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface HeroBannerProps {
+interface PortfolioHeroBannerProps {
   title: string;
   subtitle: string;
   highlightColor?: string;
 }
 
-export default function HeroBanner({
+export default function PortfolioHeroBanner({
   title,
   subtitle,
   highlightColor = "#C8FF00",
-}: HeroBannerProps) {
+}: PortfolioHeroBannerProps) {
   return (
     <section className="w-full bg-white px-6 py-12 mx-auto max-w-4xl container">
       <div className="mx-auto max-w-7xl flex flex-col md:flex-row">
@@ -35,7 +35,7 @@ export default function HeroBanner({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative z-10 text-4xl font-bold text-black sm:text-5xl lg:text-6xl"
+            className="relative z-10 text-4xl font-bold text-black sm:text-4xl lg:text-5xl"
           >
             {title}
           </motion.h1>

@@ -60,7 +60,7 @@ export default function OurProjects(): React.ReactElement {
                   {project.cardDescription}
                 </p>
                 <Link
-                  href={`/projects/${project.id}`}
+                  href={`/portfolio/${project.id}`}
                   className="inline-block text-lg font-medium text-white  border-white border-b-2  hover:text-gray-300 transition "
                 >
                   Explore Project

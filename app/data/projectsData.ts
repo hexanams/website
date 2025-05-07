@@ -134,7 +134,7 @@ const projectsData: ProjectData[] = [
     challengeParagraph:
       "Busy parents were overwhelmed by generic online advice that didn’t adapt as their children grew. They needed a single, reliable source of expert guidance that remembered context between sessions and worked even on shaky mobile networks.",
 
-    solutionTitle: "Our Solution Approach buildin Kinderly App At Hex Innovations",
+    solutionTitle: "Our Solution",
     solutionParagraph:
       "At Hex Innovations, We designed a React-Native frontend backed by a lightweight Node.js server and GraphQL API. We integrated OpenAI’s GPT models for personalized advice, built a secure AWS Cognito auth flow, and implemented offline-first caching to ensure uninterrupted access.",
 
@@ -197,7 +197,7 @@ const projectsData: ProjectData[] = [
     bottomParagraphTwo:
       `Ready to elevate your online storefront? At <span style="font-weight: bold; color: #E3FF52">Hex Innovations</span>, we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!`,
 
-    ctaLabel: "contact us",
+    ctaLabel: "Let’s talk about your next project",
   },
 
   {
@@ -301,7 +301,7 @@ const projectsData: ProjectData[] = [
     bottomParagraphTwo:
       "If you're interested in working with us, please reach out to us at <a href='mailto:hexanams810@gmail.com'>hexanams810@gmail.com</a>.",
     
-    ctaLabel: "contact us"
+    ctaLabel: "Let’s talk about your next project"
   },
   
   {
@@ -406,7 +406,7 @@ const projectsData: ProjectData[] = [
     bottomParagraphTwo:
       `Ready to elevate your online storefront? At <span style="font-weight: bold; color: #E3FF52">Hex Innovations</span>, we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!`,
     
-    ctaLabel: "Contact Us",
+    ctaLabel: "Let’s talk about your next project",
   },
   
   {
@@ -510,7 +510,7 @@ const projectsData: ProjectData[] = [
     bottomParagraphTwo:
       "Contact us today to learn how we can help your team succeed in the digital world.",
     
-    ctaLabel: "Contact Us",
+    ctaLabel: "Let’s talk about your next project",
   },
 
   {
@@ -615,7 +615,7 @@ const projectsData: ProjectData[] = [
     bottomParagraphTwo:
       "Ready to unlock Africa’s talent pool? Let’s talk about how our platform can drive growth for your team.",
     
-    ctaLabel: "Schedule a Demo",
+    ctaLabel: "Let’s talk about your next project",
   },
   
   {
@@ -719,7 +719,7 @@ const projectsData: ProjectData[] = [
       "From concept to continuous improvement, Hex Innovations partners with you to build reputation tools that scale—turning every customer voice into your strongest marketing channel.",
     bottomParagraphTwo:
       `Ready to elevate your online storefront? At <span style="font-weight: bold; color: #E3FF52">Hex Innovations</span>, we bring your ideas to life. With modern technologies and stacks, we walk with you from ideation to launching your products together!`,
-    ctaLabel: "Request for a Service",
+    ctaLabel: "Request for Our Service",
   }
   
 
