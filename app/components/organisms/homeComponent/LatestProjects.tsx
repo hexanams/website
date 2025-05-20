@@ -62,12 +62,13 @@ export default function LatestProjects(): React.ReactElement {
 
               <p className="text-sm text-gray-300">{project.cardDescription}</p>
 
-              <Link
+              
+                <Link
                   href={`/portfolio/${project.id}`}
-                className="inline-block text-sm font-medium text-[#FFFFFF] underline hover:text-gray-300"
-              >
-                Explore Project
-              </Link>
+                  className="inline-block text-lg font-medium text-white  border-white border-b-2  hover:text-gray-300 transition "
+                >
+                  Explore Project
+                </Link>
             </motion.div>
           ))}
         </motion.div>

@@ -10,7 +10,7 @@ import Softwaredevelopment from "@/public/images/SOFTWARE-DEVELOPMENT.svg";
 import Mobileappdevelopment from "@/public/images/MOBILE-APPLICATION-DEVELOPMENT.svg";
 import Webapp from "@/public/images/WEB-DEVELOPMENT.svg";
 import Ecommerce from "@/public/images/E-COMMERCE-SOLUTIONS.svg";
-// Example service data
+
 const servicesData = [
   {
     number: "01/",
@@ -37,7 +37,6 @@ const servicesData = [
   {
     number: "03/",
     title: "Mobile Application Development",
-    // 3 sentences: first 2 in descriptionOne, last in descriptionTwo.
     descriptionOne:
       "Our team builds custom iOS and Android applications that are optimized for performance, security, and excellence user experiences. We work with you through every stage, from ideation and design to development and deployment, ensuring the final product meets your unique requirements.",
     descriptionTwo:
@@ -71,15 +70,11 @@ const servicesData = [
 ];
 
 export default function ServiceSection() {
-  // Track which indexes are expanded in the accordion
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
-  // Toggle accordion open/close for a specific service index
   const toggleAccordion = (index: number) => {
-    setOpenIndexes((prevIndexes) =>
-      prevIndexes.includes(index)
-        ? prevIndexes.filter((i) => i !== index)
-        : [...prevIndexes, index]
+    setOpenIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
@@ -98,9 +93,20 @@ export default function ServiceSection() {
         </motion.h2>
 
         {/* Services List */}
-        <div className="space-y-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 },
+            },
+          }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
           {servicesData.map((service, index) => {
-            // Remove "description" from destructuring
             const {
               number,
               title,
@@ -115,10 +121,11 @@ export default function ServiceSection() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
                 className="border-b border-[#FFFFFF] pb-6"
               >
                 {/* Accordion Header */}
@@ -132,7 +139,7 @@ export default function ServiceSection() {
                     whileTap={{ scale: 0.95 }}
                     type="button"
                     onClick={() => toggleAccordion(index)}
-                    className="ml-4 text-sm underline hover:text-gray-200"
+                    className="inline-block text-[20px] font-medium text-[#FFFFFF] border-white border-b-2 hover:text-gray-300 transition"
                   >
                     {isOpen ? "Less Information" : "More Information"}
                   </motion.button>
@@ -148,20 +155,20 @@ export default function ServiceSection() {
                       transition={{ duration: 0.5, ease: "easeOut" }}
                       className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2"
                     >
-                      {/* Description + Request Link */}
+                      {/* Text Content */}
                       <div>
                         <div className="text-sm leading-relaxed sm:text-base">
-                          {descriptionOne && descriptionTwo && (
-                            <div>
+                          {descriptionOne ? (
+                            <>
                               <p className="mb-2">{descriptionOne}</p>
                               <p>{descriptionTwo}</p>
-                            </div>
-                          )}
+                            </>
+                          ) : null}
                         </div>
                         {requestLink && requestLinkText && (
                           <Link
                             href={requestLink}
-                            className="mt-2 inline-block text-sm underline hover:text-gray-200 sm:text-base"
+                            className="inline-block text-lg font-medium text-white mt-4 border-white border-b-2 hover:text-gray-300 transition"
                           >
                             {requestLinkText}
                           </Link>
@@ -189,19 +196,7 @@ export default function ServiceSection() {
               </motion.div>
             );
           })}
-        </div>
-
-        {/* Explore Services Button */}
-        <div className="text-center mt-10">
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center border border-white px-8 py-3 text-white text-base bg-[#004953]/10 font-semibold rounded-full transition-all duration-300 ease-in-out 
-                      hover:bg-[#004953] hover:border-[#004953] hover:shadow-lg hover:scale-105 
-                      focus:outline-none focus:ring-2 focus:ring-teal-300 active:scale-95"
-          >
-            Explore Services
-          </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
