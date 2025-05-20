@@ -63,7 +63,7 @@ export default function LatestProjects(): React.ReactElement {
               <p className="text-sm text-gray-300">{project.cardDescription}</p>
 
               <Link
-                href={`/projects/${project.id}`}
+                  href={`/portfolio/${project.id}`}
                 className="inline-block text-sm font-medium text-[#FFFFFF] underline hover:text-gray-300"
               >
                 Explore Project
@@ -89,7 +89,7 @@ export default function LatestProjects(): React.ReactElement {
               bg-[#262730] border border-[#FFFFFF] px-6 py-3 text-sm font-semibold text-white 
               transition-colors duration-200 
               hover:bg-[#FFFFFF] hover:text-[#262730]
-              focus:outline-none focus:ring-2 focus:ring-teal-300
+              focus:outline-none focus:ring-2 focus:ring-[#FFFFFF] focus:ring-offset-2
             "
           >
             Explore Portfolio
